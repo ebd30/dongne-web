@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>동네가게 홈페이지 제작</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#fafaf7;--ink:#151515;--muted:#666;--accent:#ff5a1f;--card:#fff;--line:#e8e6e0}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:'Noto Sans KR',sans-serif;line-height:1.7}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+  .logo{font-weight:900}.logo em{color:var(--accent);font-style:normal}
+  .btn{display:inline-block;background:var(--ink);color:#fff;padding:13px 24px;border-radius:10px;font-weight:700}
+  .btn.o{background:var(--accent)}
+  .hero{padding:60px 0 50px}
+  .hero h1{font-size:46px;font-weight:900;line-height:1.3;margin-bottom:18px}
+  .hero h1 em{color:var(--accent);font-style:normal}
+  .hero p{font-size:18px;color:var(--muted);max-width:600px;margin-bottom:28px}
+  .checks{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+  .checks span{background:var(--card);border:1px solid var(--line);padding:6px 14px;border-radius:30px;font-size:14px}
+  section{padding:60px 0;border-top:1px solid var(--line)}
+  h2{font-size:30px;font-weight:900;margin-bottom:26px}
+  .works{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .work{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .15s}
+  .work:hover{transform:translateY(-4px)}
+  .thumb{height:180px;display:grid;place-items:center;font-weight:900;font-size:22px;color:#fff}
+  .t1{background:linear-gradient(160deg,#d9c4ad,#5d4636)}
+  .t2{background:radial-gradient(circle at 70% 30%,#e9a15b,#1f1a17 70%)}
+  .t3{background:linear-gradient(135deg,#2f6bff,#16213e)}
+  .work div.m{padding:18px}
+  .work small{color:var(--muted)}
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .plan{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px}
+  .plan.best{border:2px solid var(--accent);position:relative}
+  .plan.best:before{content:"추천";position:absolute;top:-12px;left:24px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;padding:2px 10px;border-radius:20px}
+  .plan h3{font-size:18px}
+  .price{font-size:32px;font-weight:900;margin:8px 0 14px}
+  .price small{font-size:15px;color:var(--muted);font-weight:500}
+  .plan li{list-style:none;padding:5px 0;font-size:15px;color:#333}
+  .plan li:before{content:"✓ ";color:var(--accent);font-weight:700}
+  .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
+  .flow div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .flow div:before{counter-increment:s;content:"STEP " counter(s);display:block;color:var(--accent);font-weight:700;font-size:13px}
+  .flow p{color:var(--muted);font-size:14px}
+  .contact{background:var(--ink);color:#fff;border-radius:22px;padding:50px;text-align:center;margin:60px 0}
+  .contact p{color:#bbb;margin:10px 0 24px}
+  footer{padding:20px 0 40px;color:var(--muted);font-size:13px;text-align:center}
+  @media(max-width:760px){.hero h1{font-size:32px}.works,.plans{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.contact{padding:36px 20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><div class="logo">동네<em>웹</em>공방</div><a class="btn o" href="#contact">무료 시안 받기</a></header>
+
+  <div class="hero">
+    <h1>사장님 가게,<br><em>3일 안에</em> 홈페이지 만들어 드립니다</h1>
+    <p>네이버 지도와 인스타그램만으로는 다 담기 어려운 메뉴, 가격, 위치, 예약 안내를 한 페이지에 깔끔하게 정리해 드립니다.</p>
+    <div class="checks"><span>휴대폰 최적화</span><span>네이버 예약·카톡 버튼 연결</span><span>월 유지비 0원 호스팅</span><span>수정 2회 무료</span></div>
+    <a class="btn" href="#works">작업 샘플 보기</a>
+  </div>
+
+  <section id="works">
+    <h2>작업 샘플</h2>
+    <div class="works">
+      <a class="work" href="samples/hair.html"><div class="thumb t1">미용실</div><div class="m"><b>결 헤어</b><br><small>예약 버튼 · 시술 메뉴판 · 후기</small></div></a>
+      <a class="work" href="samples/cafe.html"><div class="thumb t2">카페</div><div class="m"><b>온기 커피</b><br><small>시그니처 메뉴 · 단체주문 안내</small></div></a>
+      <a class="work" href="samples/academy.html"><div class="thumb t3">학원</div><div class="m"><b>한걸음 수학</b><br><small>시간표 · 수강료 · 상담 신청</small></div></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>가격</h2>
+    <div class="plans">
+      <div class="plan"><h3>베이직</h3><div class="price">99,000<small>원</small></div>
+        <ul><li>1페이지 홈페이지</li><li>휴대폰 최적화</li><li>전화·지도 버튼</li><li>무료 호스팅 세팅</li><li>수정 1회</li></ul></div>
+      <div class="plan best"><h3>스탠다드</h3><div class="price">190,000<small>원</small></div>
+        <ul><li>베이직 전부 포함</li><li>메뉴·가격표, 후기 섹션</li><li>네이버 예약·카톡 연결</li><li>소개글 작성 대행</li><li>수정 2회</li></ul></div>
+      <div class="plan"><h3>프리미엄</h3><div class="price">290,000<small>원</small></div>
+        <ul><li>스탠다드 전부 포함</li><li>스마트플레이스 소개글 정리</li><li>개인 도메인 연결</li><li>네이버·구글 검색 등록</li><li>1개월 무료 수정</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>진행 순서</h2>
+    <div class="flow">
+      <div><b>상담</b><p>10분 통화나 방문으로 가게 정보를 받습니다</p></div>
+      <div><b>무료 시안</b><p>하루 안에 시안 링크를 보내드립니다</p></div>
+      <div><b>결제·수정</b><p>마음에 드시면 결제하고, 원하는 부분을 수정합니다</p></div>
+      <div><b>오픈</b><p>주소를 연결하고 사용법을 안내해 드립니다</p></div>
+    </div>
+  </section>
+
+  <div class="contact" id="contact">
+    <h2>시안은 무료입니다</h2>
+    <p>마음에 안 드시면 비용은 한 푼도 받지 않습니다.</p>
+    <a class="btn o" id="contact-link" href="#">크몽 메시지로 문의하기</a>
+  </div>
+  <footer>© 동네웹공방</footer>
+</div>
+</body>
+</html>
