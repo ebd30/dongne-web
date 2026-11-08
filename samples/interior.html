@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>담온 인테리어 | 가상 샘플</title>
+<meta name="description" content="주거·상가·부분 시공 인테리어 업체 소개 페이지 (포트폴리오용 가상 샘플)">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#2a2622;--ink2:#3a342e;--muted:#6f665c;--bg:#fffdf9;--sand:#f5efe6;--line:#e8dfd2;--wood:#a8744a;--wood2:#d8b48c;--sage:#6e7d68;--sage2:#dfe5d9}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Noto Sans KR',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;line-height:1.7;word-break:keep-all;overflow-wrap:break-word;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  .demo{background:var(--ink);color:var(--wood2);text-align:center;font-size:13px;font-weight:700;padding:7px 12px}
+  .serif{font-family:'Noto Serif KR',serif}
+
+  /* 헤더 */
+  header{position:sticky;top:0;z-index:10;background:rgba(255,253,249,.96);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;height:62px}
+  .logo{display:flex;align-items:center;gap:9px;font-weight:900;font-size:18px;color:var(--ink);white-space:nowrap}
+  .logo i{display:inline-block;width:26px;height:26px;flex:none;background:var(--wood);clip-path:polygon(50% 0,100% 42%,100% 100%,0 100%,0 42%);position:relative}
+  .logo i:after{content:"";position:absolute;left:9px;bottom:0;width:8px;height:10px;background:var(--bg)}
+  nav{display:flex;gap:22px;font-size:15px;color:var(--muted)}
+  nav a:hover{color:var(--wood)}
+  .btn{display:inline-block;background:var(--ink);color:#fff;padding:13px 24px;border-radius:8px;font-weight:700;font-size:15px;text-align:center;border:0;cursor:pointer;font-family:inherit}
+  .btn.sm{padding:9px 16px;font-size:14px;white-space:nowrap}
+  .btn.wood{background:var(--wood);color:#fff}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+
+  /* 히어로 */
+  .hero{background:var(--sand);position:relative;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:72px}
+  .eyebrow{display:inline-block;color:var(--sage);font-size:13px;font-weight:700;letter-spacing:1px;background:#fff;border:1px solid var(--line);padding:5px 12px;border-radius:30px;margin-bottom:20px}
+  .hero h1{font-family:'Noto Serif KR',serif;font-size:42px;font-weight:700;line-height:1.4;margin-bottom:18px}
+  .hero h1 em{font-style:normal;color:var(--wood)}
+  .hero p{color:var(--muted);font-size:17px;max-width:500px;margin-bottom:28px}
+  .hero .acts{display:flex;flex-wrap:wrap;gap:10px}
+  .trust{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:30px;font-size:14px;color:var(--muted)}
+  .trust span:before{content:"";display:inline-block;width:8px;height:8px;background:var(--sage);border-radius:2px;margin-right:7px;vertical-align:1px}
+
+  /* 히어로 방 일러스트 (CSS 도형) */
+  .room{position:relative;aspect-ratio:5/4;border-radius:18px;overflow:hidden;background:linear-gradient(#efe6da 0 64%,transparent 64%),repeating-linear-gradient(90deg,#c99a6b 0 46px,#b9895b 46px 48px);box-shadow:0 20px 40px rgba(60,40,20,.12);min-width:0}
+  .room .win{position:absolute;left:9%;top:10%;width:34%;height:42%;background:linear-gradient(180deg,#dce8ef,#f4f1e8);border:7px solid #fff;box-shadow:inset 0 0 0 1px var(--line)}
+  .room .win:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:5px;margin-left:-2px;background:#fff}
+  .room .lamp{position:absolute;right:22%;top:0;width:2px;height:22%;background:var(--ink2)}
+  .room .lamp:after{content:"";position:absolute;left:-22px;bottom:-18px;width:46px;height:24px;border-radius:46px 46px 0 0;background:var(--sage)}
+  .room .sofa{position:absolute;right:8%;bottom:28%;width:48%;height:22%;background:var(--sage);border-radius:14px 14px 6px 6px}
+  .room .sofa:before{content:"";position:absolute;left:-6%;right:-6%;bottom:-4px;height:55%;background:#5f6d59;border-radius:12px}
+  .room .plant{position:absolute;left:28%;bottom:30%;width:26px;height:34px;background:#fff;border-radius:0 0 8px 8px}
+  .room .plant:before{content:"";position:absolute;left:-10px;top:-40px;width:46px;height:46px;border-radius:50% 0 50% 0;background:#7f9273;transform:rotate(45deg)}
+  .room .rug{position:absolute;left:18%;right:12%;bottom:6%;height:14%;background:rgba(255,255,255,.55);border-radius:50%}
+  .room .tagv{position:absolute;left:12px;bottom:12px;background:rgba(42,38,34,.78);color:#fff;font-size:12px;padding:4px 10px;border-radius:6px}
+
+  /* 공통 섹션 */
+  section{padding:80px 0;scroll-margin-top:62px}
+  section.soft{background:var(--sand)}
+  .label{color:var(--wood);font-weight:700;font-size:13px;letter-spacing:2px;margin-bottom:6px}
+  h2{font-family:'Noto Serif KR',serif;font-size:30px;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:10px}
+  .sub{color:var(--muted);margin-bottom:36px;max-width:620px}
+
+  /* 시공 분야 */
+  .svc{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 22px;min-width:0}
+  .ico{width:46px;height:46px;border-radius:12px;background:var(--sand);display:grid;place-items:center;margin-bottom:16px}
+  .ico b{display:block;width:20px;height:20px}
+  .ico.a b{background:var(--wood);clip-path:polygon(50% 0,100% 45%,85% 45%,85% 100%,15% 100%,15% 45%,0 45%)}
+  .ico.b b{border:4px solid var(--wood);border-top-width:8px;border-radius:3px}
+  .ico.c b{background:repeating-linear-gradient(90deg,var(--sage) 0 5px,transparent 5px 8px);border-radius:3px}
+  .card h3{font-size:18px;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:14.5px}
+  .card ul{list-style:none;margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);font-size:14px}
+  .card li{padding-left:14px;position:relative;margin-bottom:4px}
+  .card li:before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:1px;background:var(--wood2)}
+
+  /* 시공 사례 */
+  .works{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .work{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;min-width:0}
+  .ph{position:relative;aspect-ratio:16/9;overflow:hidden}
+  .ph .vt{position:absolute;right:10px;top:10px;background:rgba(255,255,255,.88);color:var(--ink);font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:5px}
+  /* 거실: 마루 + 창 */
+  .ph.p1{background:linear-gradient(#ece3d6 0 60%,transparent 60%),repeating-linear-gradient(90deg,#c39468 0 38px,#b38457 38px 40px)}
+  .ph.p1:before{content:"";position:absolute;left:12%;top:12%;width:30%;height:38%;background:linear-gradient(#d9e6ee,#f3efe6);border:6px solid #fff}
+  .ph.p1:after{content:"";position:absolute;right:10%;bottom:30%;width:40%;height:18%;background:#8a9a82;border-radius:10px 10px 4px 4px}
+  /* 주방: 타일 + 상부장 */
+  .ph.p2{background:linear-gradient(transparent 62%,#4a433c 62% 66%,#e9e2d7 66%),repeating-linear-gradient(0deg,#f7f4ee 0 18px,#ddd5c8 18px 19px),#f7f4ee}
+  .ph.p2:before{content:"";position:absolute;left:0;right:0;top:0;height:28%;background:repeating-linear-gradient(90deg,#fff 0 calc(25% - 2px),#d6cdbf calc(25% - 2px) 25%)}
+  .ph.p2:after{content:"";position:absolute;left:0;right:0;top:0;height:28%;background:repeating-linear-gradient(90deg,transparent 0 calc(12.5% - 12px),#b08a64 calc(12.5% - 12px) calc(12.5% - 8px),transparent calc(12.5% - 8px) 12.5%);clip-path:inset(70% 0 18% 0)}
+  /* 카페 상가: 펜던트 조명 + 카운터 */
+  .ph.p3{background:linear-gradient(transparent 64%,#6d5541 64%),linear-gradient(90deg,#3b4a40,#55665a)}
+  .ph.p3:before{content:"";position:absolute;left:0;right:0;top:0;height:46%;background:radial-gradient(circle at 20% 100%,#f0cf8f 0 13px,transparent 14px),radial-gradient(circle at 50% 100%,#f0cf8f 0 13px,transparent 14px),radial-gradient(circle at 80% 100%,#f0cf8f 0 13px,transparent 14px),linear-gradient(90deg,transparent calc(20% - 1px),#222 calc(20% - 1px) calc(20% + 1px),transparent calc(20% + 1px) calc(50% - 1px),#222 calc(50% - 1px) calc(50% + 1px),transparent calc(50% + 1px) calc(80% - 1px),#222 calc(80% - 1px) calc(80% + 1px),transparent calc(80% + 1px))}
+  .ph.p3:after{content:"";position:absolute;left:8%;right:8%;bottom:14%;height:22%;background:repeating-linear-gradient(90deg,#a7784e 0 24px,#986b43 24px 26px);border-radius:4px 4px 0 0}
+  /* 욕실: 큰 타일 + 원형 거울 */
+  .ph.p4{background:linear-gradient(transparent 70%,#cfd6d2 70%),repeating-linear-gradient(0deg,transparent 0 44px,#c9cfcc 44px 45px),repeating-linear-gradient(90deg,#e8ecea 0 88px,#c9cfcc 88px 89px)}
+  .ph.p4:before{content:"";position:absolute;left:50%;top:12%;width:70px;height:70px;margin-left:-35px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,#d5e0e4);border:4px solid #b8916b}
+  .ph.p4:after{content:"";position:absolute;left:30%;right:30%;bottom:22%;height:16%;background:#fff;border-radius:6px;box-shadow:0 4px 0 #a9b3ae}
+  .work .m{padding:20px 22px 22px}
+  .work .tag{display:inline-block;background:var(--sage2);color:#45523f;font-size:12.5px;font-weight:700;padding:3px 10px;border-radius:6px;margin-bottom:10px}
+  .work h3{font-size:17px;margin-bottom:10px}
+  .work dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:14.5px}
+  .work dt{color:var(--wood);font-weight:700}
+  .work dd{color:var(--muted)}
+  .note{font-size:13px;color:var(--muted);margin-top:18px}
+
+  /* 진행 절차 */
+  .flow{display:grid;grid-template-columns:repeat(5,1fr)}
+  .st{position:relative;padding:0 14px 0 0;min-width:0}
+  .st .n{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--wood);color:#fff;font-weight:900;margin-bottom:16px;position:relative;z-index:1}
+  .st:not(:last-child):after{content:"";position:absolute;left:46px;right:0;top:23px;height:2px;background:var(--wood2)}
+  .st small{display:block;color:var(--sage);font-weight:700;font-size:13px;margin-bottom:4px}
+  .st h3{font-size:17px;margin-bottom:4px}
+  .st p{color:var(--muted);font-size:14.5px}
+
+  /* FAQ */
+  .faq{max-width:780px}
+  .faq details{border-bottom:1px solid var(--line);padding:18px 0}
+  .faq summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary:after{content:"+";color:var(--wood);font-size:20px;line-height:1.3;flex:none}
+  .faq details[open] summary:after{content:"−"}
+  .faq p{color:var(--muted);margin-top:10px;font-size:15px}
+
+  /* 견적 문의 */
+  .contact{background:var(--ink);color:#fff}
+  .contact h2{color:#fff}
+  .contact .label{color:var(--wood2)}
+  .contact .sub{color:#c9c0b4}
+  .cbox{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:start}
+  .info li{list-style:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12);color:#c9c0b4;font-size:15px}
+  .info b{display:block;color:#fff;margin-bottom:2px}
+  form{background:#fff;color:var(--ink);border-radius:16px;padding:28px;min-width:0}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .f{margin-bottom:14px;min-width:0}
+  label{display:block;font-size:14px;font-weight:700;margin-bottom:6px}
+  label small{font-weight:400;color:var(--muted)}
+  input,select,textarea{width:100%;max-width:100%;font:inherit;font-size:15px;color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:11px 12px;background:#fff}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--wood2);border-color:var(--wood)}
+  textarea{min-height:96px;resize:vertical}
+  .agree{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;font-weight:400;color:var(--muted);margin:4px 0 6px}
+  .agree input{width:auto;margin-top:5px;flex:none}
+  .agree-detail{font-size:12.5px;color:var(--muted);background:var(--sand);border-radius:8px;padding:10px 12px;margin-bottom:18px}
+  form .btn{width:100%}
+  .msg{display:none;margin-top:14px;border-radius:8px;padding:12px;font-size:14px}
+  .msg.show{display:block}
+  .msg.ok{background:var(--sage2);color:#3d4a37}
+  .msg.err{background:#f7e4de;color:#8a3b25}
+
+  footer{background:#1d1a17;color:#9a9086;font-size:13px;padding:28px 0;text-align:center}
+  footer p+p{margin-top:4px}
+  footer strong{color:var(--wood2)}
+
+  @media(max-width:960px){
+    .svc{grid-template-columns:1fr 1fr}
+    .flow{grid-template-columns:1fr;gap:0}
+    .st{display:grid;grid-template-columns:46px 1fr;column-gap:16px;padding:0 0 22px}
+    .st .n{grid-row:1/4;margin:0}
+    .st:not(:last-child):after{left:22px;right:auto;top:46px;bottom:0;width:2px;height:auto}
+  }
+  @media(max-width:860px){
+    nav{display:none}
+    section{padding:60px 0}
+    .hero .wrap{grid-template-columns:1fr;gap:32px;padding-top:48px;padding-bottom:56px}
+    .hero h1{font-size:30px}
+    .hero p{font-size:16px}
+    h2{font-size:25px}
+    .works{grid-template-columns:1fr}
+    .cbox{grid-template-columns:1fr;gap:28px}
+  }
+  @media(max-width:560px){
+    .wrap{padding:0 18px}
+    .logo{font-size:16px}
+    .hero h1{font-size:28px}
+    .hero .acts .btn{flex:1 1 100%}
+    .svc{grid-template-columns:1fr}
+    .row{grid-template-columns:1fr;gap:0}
+    form{padding:22px 18px}
+    .room .win{border-width:5px}
+  }
+</style>
+</head>
+<body>
+<div class="demo">포트폴리오용 가상 업체입니다 · 업체명·주소·숫자는 모두 가상입니다</div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top"><i></i>담온 인테리어</a>
+    <nav>
+      <a href="#service">시공 분야</a><a href="#works">시공 사례</a><a href="#process">진행 절차</a><a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn sm" href="#contact">견적 문의</a>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">주거 · 상가 · 부분 시공</span>
+      <h1>실측한 그대로 견적하고,<br><em>견적서대로</em> 시공합니다</h1>
+      <p>현장을 직접 재고 항목별 견적서를 드립니다. 공사 중에는 진행 사진을 공유하고, 마감 후에도 A/S로 다시 찾아갑니다.</p>
+      <div class="acts">
+        <a class="btn wood" href="#contact">실측 상담 신청</a>
+        <a class="btn ghost" href="#works">시공 사례 보기</a>
+      </div>
+      <div class="trust"><span>방문 실측 후 견적</span><span>항목별 견적서 제공</span><span>공정별 진행 사진 공유</span></div>
+    </div>
+    <div class="room" role="img" aria-label="거실 인테리어를 표현한 도형 일러스트">
+      <span class="win"></span><span class="lamp"></span><span class="plant"></span><span class="sofa"></span><span class="rug"></span>
+      <span class="tagv">일러스트 · 실제 시공 사진 아님</span>
+    </div>
+  </div>
+</div>
+
+<section id="service">
+  <div class="wrap">
+    <p class="label">SERVICE</p>
+    <h2>시공 분야</h2>
+    <p class="sub">집 전체부터 한 공간만 바꾸는 부분 시공까지, 예산과 일정에 맞춰 범위를 정합니다.</p>
+    <div class="svc">
+      <div class="card">
+        <div class="ico a"><b></b></div>
+        <h3>주거 인테리어</h3>
+        <p>아파트·빌라·주택의 전체 리모델링. 철거부터 마감까지 공정을 한 번에 관리합니다.</p>
+        <ul><li>도배 · 바닥 · 조명 · 몰딩</li><li>주방 · 욕실 · 붙박이장</li><li>확장 · 단열 · 창호</li></ul>
+      </div>
+      <div class="card">
+        <div class="ico b"><b></b></div>
+        <h3>상가 인테리어</h3>
+        <p>카페·음식점·사무실·학원 등 업종 동선에 맞춘 상업 공간 시공입니다.</p>
+        <ul><li>평면 배치 · 동선 계획</li><li>카운터 · 간판 · 조명</li><li>영업 일정에 맞춘 공정표</li></ul>
+      </div>
+      <div class="card">
+        <div class="ico c"><b></b></div>
+        <h3>부분 시공</h3>
+        <p>욕실만, 주방만, 도배·장판만. 거주 중에도 가능한 범위로 짧게 진행합니다.</p>
+        <ul><li>욕실 · 주방 교체</li><li>도배 · 장판 · 필름</li><li>중문 · 조명 교체</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="works">
+  <div class="wrap">
+    <p class="label">WORKS</p>
+    <h2>시공 사례</h2>
+    <p class="sub">아래 사례·평수·기간은 디자인 예시를 위한 가상 내용이며, 이미지는 도형으로 그린 자리표시입니다.</p>
+    <div class="works">
+      <div class="work">
+        <div class="ph p1" role="img" aria-label="거실 시공 자리표시 이미지"><span class="vt">가상 사례</span></div>
+        <div class="m">
+          <span class="tag">주거 · 아파트 32평</span>
+          <h3>밝은 마루와 간접조명으로 바꾼 거실</h3>
+          <dl><dt>범위</dt><dd>전체 도배 · 강마루 · 거실 간접조명</dd><dt>기간</dt><dd>약 3주 (가상)</dd></dl>
+        </div>
+      </div>
+      <div class="work">
+        <div class="ph p2" role="img" aria-label="주방 시공 자리표시 이미지"><span class="vt">가상 사례</span></div>
+        <div class="m">
+          <span class="tag">부분 시공 · 주방</span>
+          <h3>수납을 늘린 ㄱ자 주방 교체</h3>
+          <dl><dt>범위</dt><dd>상·하부장 교체 · 벽 타일 · 상판</dd><dt>기간</dt><dd>약 5일 (가상)</dd></dl>
+        </div>
+      </div>
+      <div class="work">
+        <div class="ph p3" role="img" aria-label="카페 상가 시공 자리표시 이미지"><span class="vt">가상 사례</span></div>
+        <div class="m">
+          <span class="tag">상가 · 카페 18평</span>
+          <h3>원목 카운터와 펜던트 조명의 동네 카페</h3>
+          <dl><dt>범위</dt><dd>철거 · 전기 · 카운터 제작 · 조명</dd><dt>기간</dt><dd>약 4주 (가상)</dd></dl>
+        </div>
+      </div>
+      <div class="work">
+        <div class="ph p4" role="img" aria-label="욕실 시공 자리표시 이미지"><span class="vt">가상 사례</span></div>
+        <div class="m">
+          <span class="tag">부분 시공 · 욕실</span>
+          <h3>큰 타일로 정리한 깔끔한 욕실</h3>
+          <dl><dt>범위</dt><dd>방수 · 타일 · 도기 · 욕실장 교체</dd><dt>기간</dt><dd>약 6일 (가상)</dd></dl>
+        </div>
+      </div>
+    </div>
+    <p class="note">※ 실제 시공 사례가 아닙니다. 공사 기간과 비용은 현장 상태와 자재에 따라 달라집니다.</p>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <p class="label">PROCESS</p>
+    <h2>진행 절차</h2>
+    <p class="sub">견적에 동의하신 뒤에만 계약하고, 계약서에 공정 일정과 A/S 기간을 적어 드립니다.</p>
+    <div class="flow">
+      <div class="st"><span class="n">1</span><small>STEP 1</small><h3>상담</h3><p>원하시는 분위기, 예산, 일정을 먼저 듣습니다.</p></div>
+      <div class="st"><span class="n">2</span><small>STEP 2</small><h3>실측</h3><p>현장을 방문해 치수와 설비 상태를 확인합니다.</p></div>
+      <div class="st"><span class="n">3</span><small>STEP 3</small><h3>견적</h3><p>자재·공정별로 나눈 견적서와 공정표를 드립니다.</p></div>
+      <div class="st"><span class="n">4</span><small>STEP 4</small><h3>시공</h3><p>공정마다 진행 사진을 공유하고 변경 사항은 미리 상의합니다.</p></div>
+      <div class="st"><span class="n">5</span><small>STEP 5</small><h3>A/S</h3><p>마감 점검 후에도 계약서의 A/S 기간 동안 하자를 보수합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="faq">
+  <div class="wrap">
+    <p class="label">FAQ</p>
+    <h2>자주 묻는 질문</h2>
+    <div class="faq">
+      <details><summary>실측과 견적에 비용이 드나요?</summary><p>방문 실측과 견적서 작성에는 비용을 받지 않습니다(가상 조건). 견적을 받아 보신 뒤 진행 여부를 정하시면 됩니다.</p></details>
+      <details><summary>살면서 공사할 수 있나요?</summary><p>부분 시공은 거주 중에도 가능한 경우가 많습니다. 전체 리모델링은 먼지와 소음 때문에 짐 보관이나 임시 거처를 권해 드립니다.</p></details>
+      <details><summary>공사 중 비용이 추가될 수 있나요?</summary><p>철거 후 숨은 누수·설비 문제가 발견되면 추가 공사가 필요할 수 있습니다. 이때는 사진과 함께 먼저 설명드리고, 동의하신 뒤에만 진행합니다.</p></details>
+      <details><summary>관리사무소 신고나 이웃 동의는 누가 하나요?</summary><p>공사 신고 서류 준비와 엘리베이터 보양, 안내문 부착은 업체에서 맡습니다. 단지 규정에 따라 입주민 동의가 필요하면 함께 안내드립니다.</p></details>
+      <details><summary>A/S 기간은 얼마나 되나요?</summary><p>공정과 자재에 따라 다르며, 계약서에 항목별 A/S 기간을 적어 드립니다.</p></details>
+      <details><summary>상가 공사는 영업 일정에 맞출 수 있나요?</summary><p>오픈 예정일을 기준으로 역산한 공정표를 짜고, 소음이 큰 공정은 건물 규정에 맞는 시간대로 조정합니다.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="cbox">
+      <div>
+        <p class="label">CONTACT</p>
+        <h2>견적 문의</h2>
+        <p class="sub">남겨 주신 내용을 확인한 뒤 실측 가능 일정을 안내드립니다.</p>
+        <ul class="info">
+          <li><b>상담 시간</b>평일 09:00 – 18:00 · 토요일 실측 가능 (가상)</li>
+          <li><b>사무실</b>OO시 OO구 OO로 00 (가상 주소)</li>
+          <li><b>준비하면 좋은 것</b>평면도나 현장 사진, 원하는 분위기 참고 이미지 (없어도 괜찮습니다)</li>
+        </ul>
+      </div>
+      <form id="demoForm" novalidate>
+        <div class="row">
+          <div class="f"><label for="nm">이름</label><input id="nm" type="text" placeholder="홍길동" autocomplete="off"></div>
+          <div class="f"><label for="ph">연락처</label><input id="ph" type="tel" placeholder="연락받을 번호" autocomplete="off"></div>
+        </div>
+        <div class="row">
+          <div class="f"><label for="rg">지역</label><input id="rg" type="text" placeholder="예: OO구 OO동" autocomplete="off"></div>
+          <div class="f"><label for="py">평수 <small>(대략)</small></label><input id="py" type="text" inputmode="numeric" placeholder="예: 32평" autocomplete="off"></div>
+        </div>
+        <div class="row">
+          <div class="f"><label for="tp">시공 분야</label>
+            <select id="tp"><option>주거 인테리어</option><option>상가 인테리어</option><option>부분 시공</option><option>아직 모르겠어요</option></select></div>
+          <div class="f"><label for="dt">희망 일정</label>
+            <select id="dt"><option>1개월 이내</option><option>1~3개월 이내</option><option>3개월 이후</option><option>일정 미정</option></select></div>
+        </div>
+        <div class="f"><label for="msg">요청 사항 <small>(선택)</small></label><textarea id="msg" placeholder="바꾸고 싶은 공간과 예산을 간단히 적어 주세요."></textarea></div>
+        <label class="agree"><input type="checkbox" id="agree"> 견적 상담을 위한 개인정보 수집·이용에 동의합니다. (필수)</label>
+        <p class="agree-detail">수집 항목: 이름, 연락처, 지역, 평수 · 이용 목적: 견적 상담 연락 · 보관 기간: 상담 종료 후 파기 (데모 문구)</p>
+        <button class="btn wood" type="submit">견적 문의 보내기</button>
+        <p class="msg" id="formMsg" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 담온 인테리어 (가상 업체) · OO시 OO구 OO로 00 (가상 주소)</p>
+    <p><strong>포트폴리오용 가상 업체입니다 · AI 도구로 제작한 샘플</strong></p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('demoForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var m=document.getElementById('formMsg');
+    if(!document.getElementById('agree').checked){
+      m.className='msg err show';m.textContent='개인정보 수집·이용에 동의해 주세요.';return;
+    }
+    m.className='msg ok show';m.textContent='데모 폼입니다. 실제로 전송되지 않으며 입력한 내용은 저장되지 않습니다.';
+  });
+</script>
+</body>
+</html>
