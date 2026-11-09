@@ -5,7 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>담온 인테리어 | 가상 샘플</title>
 <meta name="description" content="주거·상가·부분 시공 인테리어 업체 소개 페이지 (포트폴리오용 가상 샘플)">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
+<meta property="og:type" content="website">
+<meta property="og:title" content="담온 인테리어 | 가상 샘플">
+<meta property="og:description" content="주거·상가·부분 시공 인테리어 업체 소개 페이지 (포트폴리오용 가상 샘플)">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:url" content="https://ebd30.github.io/dongne-web/samples/interior.html">
+<meta property="og:image" content="https://ebd30.github.io/dongne-web/portfolio-img/interior-pc.png">
+<meta property="og:image:alt" content="담온 인테리어 샘플 페이지 PC 화면">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232a2622'/><text x='32' y='43' font-size='30' font-family='Arial,sans-serif' font-weight='700' text-anchor='middle' fill='%23ffffff'>D</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<!-- 제목용 명조: 제목 글자 32자만 받음(text=). 제목 문구를 바꾸면 다시 만든다 -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700&text=%2C%EA%B2%AC%EA%B3%A0%EA%B3%B5%EA%B7%B8%EB%8A%94%EB%8B%88%EB%8B%A4%EB%8C%80%EB%A1%80%EB%A1%9C%EB%AC%B8%EB%AC%BB%EB%B6%84%EC%82%AC%EC%84%9C%EC%8B%9C%EC%8B%A4%EC%95%BC%EC%9D%98%EC%9E%90%EC%A0%81%EC%A0%88%EC%A3%BC%EC%A7%84%EC%A7%88%EC%B0%A8%EC%B8%A1%ED%95%98%ED%95%9C%ED%95%A9%ED%96%89&display=swap" rel="stylesheet">
 <style>
   :root{--ink:#2a2622;--ink2:#3a342e;--muted:#6f665c;--bg:#fffdf9;--sand:#f5efe6;--line:#e8dfd2;--wood:#a8744a;--wood2:#d8b48c;--sage:#6e7d68;--sage2:#dfe5d9}
   *{box-sizing:border-box;margin:0;padding:0}
@@ -14,7 +26,7 @@
   a{color:inherit;text-decoration:none}
   .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
   .demo{background:var(--ink);color:var(--wood2);text-align:center;font-size:13px;font-weight:700;padding:7px 12px}
-  .serif{font-family:'Noto Serif KR',serif}
+  .serif{font-family:'Noto Serif KR','AppleMyungjo','Batang',serif}
 
   /* 헤더 */
   header{position:sticky;top:0;z-index:10;background:rgba(255,253,249,.96);border-bottom:1px solid var(--line)}
@@ -33,7 +45,7 @@
   .hero{background:var(--sand);position:relative;overflow:hidden}
   .hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:72px}
   .eyebrow{display:inline-block;color:var(--sage);font-size:13px;font-weight:700;letter-spacing:1px;background:#fff;border:1px solid var(--line);padding:5px 12px;border-radius:30px;margin-bottom:20px}
-  .hero h1{font-family:'Noto Serif KR',serif;font-size:42px;font-weight:700;line-height:1.4;margin-bottom:18px}
+  .hero h1{font-family:'Noto Serif KR','AppleMyungjo','Batang',serif;font-size:42px;font-weight:700;line-height:1.4;margin-bottom:18px}
   .hero h1 em{font-style:normal;color:var(--wood)}
   .hero p{color:var(--muted);font-size:17px;max-width:500px;margin-bottom:28px}
   .hero .acts{display:flex;flex-wrap:wrap;gap:10px}
@@ -51,13 +63,13 @@
   .room .plant{position:absolute;left:28%;bottom:30%;width:26px;height:34px;background:#fff;border-radius:0 0 8px 8px}
   .room .plant:before{content:"";position:absolute;left:-10px;top:-40px;width:46px;height:46px;border-radius:50% 0 50% 0;background:#7f9273;transform:rotate(45deg)}
   .room .rug{position:absolute;left:18%;right:12%;bottom:6%;height:14%;background:rgba(255,255,255,.55);border-radius:50%}
-  .room .tagv{position:absolute;left:12px;bottom:12px;background:rgba(42,38,34,.78);color:#fff;font-size:12px;padding:4px 10px;border-radius:6px}
+  .room .tagv{position:absolute;left:12px;bottom:12px;background:rgba(42,38,34,.78);color:#fff;font-size:13px;padding:4px 10px;border-radius:6px}
 
   /* 공통 섹션 */
   section{padding:80px 0;scroll-margin-top:62px}
   section.soft{background:var(--sand)}
   .label{color:var(--wood);font-weight:700;font-size:13px;letter-spacing:2px;margin-bottom:6px}
-  h2{font-family:'Noto Serif KR',serif;font-size:30px;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:10px}
+  h2{font-family:'Noto Serif KR','AppleMyungjo','Batang',serif;font-size:30px;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:10px}
   .sub{color:var(--muted);margin-bottom:36px;max-width:620px}
 
   /* 시공 분야 */
@@ -78,7 +90,7 @@
   .works{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
   .work{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;min-width:0}
   .ph{position:relative;aspect-ratio:16/9;overflow:hidden}
-  .ph .vt{position:absolute;right:10px;top:10px;background:rgba(255,255,255,.88);color:var(--ink);font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:5px}
+  .ph .vt{position:absolute;right:10px;top:10px;background:rgba(255,255,255,.88);color:var(--ink);font-size:13px;font-weight:700;padding:3px 8px;border-radius:5px}
   /* 거실: 마루 + 창 */
   .ph.p1{background:linear-gradient(#ece3d6 0 60%,transparent 60%),repeating-linear-gradient(90deg,#c39468 0 38px,#b38457 38px 40px)}
   .ph.p1:before{content:"";position:absolute;left:12%;top:12%;width:30%;height:38%;background:linear-gradient(#d9e6ee,#f3efe6);border:6px solid #fff}
@@ -96,7 +108,7 @@
   .ph.p4:before{content:"";position:absolute;left:50%;top:12%;width:70px;height:70px;margin-left:-35px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,#d5e0e4);border:4px solid #b8916b}
   .ph.p4:after{content:"";position:absolute;left:30%;right:30%;bottom:22%;height:16%;background:#fff;border-radius:6px;box-shadow:0 4px 0 #a9b3ae}
   .work .m{padding:20px 22px 22px}
-  .work .tag{display:inline-block;background:var(--sage2);color:#45523f;font-size:12.5px;font-weight:700;padding:3px 10px;border-radius:6px;margin-bottom:10px}
+  .work .tag{display:inline-block;background:var(--sage2);color:#45523f;font-size:13px;font-weight:700;padding:3px 10px;border-radius:6px;margin-bottom:10px}
   .work h3{font-size:17px;margin-bottom:10px}
   .work dl{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:14.5px}
   .work dt{color:var(--wood);font-weight:700}
@@ -139,7 +151,7 @@
   textarea{min-height:96px;resize:vertical}
   .agree{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;font-weight:400;color:var(--muted);margin:4px 0 6px}
   .agree input{width:auto;margin-top:5px;flex:none}
-  .agree-detail{font-size:12.5px;color:var(--muted);background:var(--sand);border-radius:8px;padding:10px 12px;margin-bottom:18px}
+  .agree-detail{font-size:13px;color:var(--muted);background:var(--sand);border-radius:8px;padding:10px 12px;margin-bottom:18px}
   form .btn{width:100%}
   .msg{display:none;margin-top:14px;border-radius:8px;padding:12px;font-size:14px}
   .msg.show{display:block}
@@ -191,6 +203,7 @@
     <a class="btn sm" href="#contact">견적 문의</a>
   </div>
 </header>
+<main>
 
 <div class="hero" id="top">
   <div class="wrap">
@@ -349,6 +362,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <div class="wrap">
