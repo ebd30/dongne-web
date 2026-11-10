@@ -4,10 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
-<title>온기 커피 | 샘플</title>
+<title>온기 커피 | 로스터리 카페 샘플</title>
 <meta name="description" content="동네 로스터리 카페 온기 커피(가상 매장)의 소개 페이지 샘플입니다. 직접 볶은 원두와 시그니처 메뉴, 영업시간과 찾아오는 길을 담았습니다.">
+<link rel="canonical" href="https://ebd30.github.io/dongne-web/samples/cafe.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="온기 커피 | 샘플">
+<meta property="og:title" content="온기 커피 | 로스터리 카페 샘플">
 <meta property="og:description" content="동네 로스터리 카페 온기 커피(가상 매장)의 소개 페이지 샘플입니다. 직접 볶은 원두와 시그니처 메뉴, 영업시간과 찾아오는 길을 담았습니다.">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:url" content="https://ebd30.github.io/dongne-web/samples/cafe.html">
@@ -53,6 +54,40 @@
   footer{padding:30px 0;color:var(--muted);font-size:13px;text-align:center}
   @media(max-width:760px){.grid,.band,.info{grid-template-columns:1fr}}
 </style>
+<!-- 구조화 데이터(LocalBusiness 계열). 가상 샘플이라 주소·전화는 가상 값. 납품 때는 고객이 준 정보만 넣는다 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "온기 커피",
+  "description": "동네 로스터리 카페 온기 커피. 포트폴리오용 가상 샘플입니다. 실존하는 가게가 아니며 주소·전화번호는 모두 가상 값입니다.",
+  "url": "https://ebd30.github.io/dongne-web/samples/cafe.html",
+  "telephone": "+82-10-0000-0000",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "샘플동 00-0, 1층",
+    "addressLocality": "샘플구",
+    "addressRegion": "샘플시",
+    "addressCountry": "KR"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "08:00",
+      "closes": "21:00"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="demo">포트폴리오용 샘플 페이지입니다 · 실제 매장이 아닙니다</div>
@@ -88,7 +123,7 @@
     <h2>찾아오는 길</h2>
     <div class="info">
       <div>
-        <p><b>주소</b>OO시 OO동 00-0, 1층</p>
+        <p><b>주소</b>샘플시 샘플구 샘플동 00-0, 1층 (가상 주소)</p>
         <p><b>영업</b>매일 08:00–21:00</p>
         <p><b>전화</b>010-0000-0000</p>
         <p><b>인스타</b>@ongi.coffee (예시)</p>

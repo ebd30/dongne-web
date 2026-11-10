@@ -4,11 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
-<title>담온 인테리어 | 가상 샘플</title>
-<meta name="description" content="주거·상가·부분 시공 인테리어 업체 소개 페이지 (포트폴리오용 가상 샘플)">
+<title>담온 인테리어 | 주거·상가 인테리어 가상 샘플</title>
+<meta name="description" content="담온 인테리어(가상 업체)의 소개 페이지 샘플입니다. 주거·상가·부분 시공을 실측 후 항목별 견적서로 안내하고, 공사 중 진행 사진 공유와 마감 후 A/S까지 담았습니다.">
+<link rel="canonical" href="https://ebd30.github.io/dongne-web/samples/interior.html">
 <meta property="og:type" content="website">
-<meta property="og:title" content="담온 인테리어 | 가상 샘플">
-<meta property="og:description" content="주거·상가·부분 시공 인테리어 업체 소개 페이지 (포트폴리오용 가상 샘플)">
+<meta property="og:title" content="담온 인테리어 | 주거·상가 인테리어 가상 샘플">
+<meta property="og:description" content="담온 인테리어(가상 업체)의 소개 페이지 샘플입니다. 주거·상가·부분 시공을 실측 후 항목별 견적서로 안내하고, 공사 중 진행 사진 공유와 마감 후 A/S까지 담았습니다.">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:url" content="https://ebd30.github.io/dongne-web/samples/interior.html">
 <meta property="og:image" content="https://ebd30.github.io/dongne-web/portfolio-img/interior-pc.png">
@@ -192,6 +193,37 @@
     .room .win{border-width:5px}
   }
 </style>
+<!-- 구조화 데이터(LocalBusiness 계열). 가상 샘플이라 주소·전화는 가상 값. 납품 때는 고객이 준 정보만 넣는다 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "담온 인테리어",
+  "description": "주거·상가·부분 시공 인테리어 업체. 포트폴리오용 가상 샘플입니다. 실존하는 가게가 아니며 주소·전화번호는 모두 가상 값입니다.",
+  "url": "https://ebd30.github.io/dongne-web/samples/interior.html",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "샘플로 00",
+    "addressLocality": "샘플구",
+    "addressRegion": "샘플시",
+    "addressCountry": "KR"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div class="demo">포트폴리오용 가상 업체입니다 · 업체명·주소·숫자는 모두 가상입니다</div>
@@ -336,7 +368,7 @@
         <p class="sub">남겨 주신 내용을 확인한 뒤 실측 가능 일정을 안내드립니다.</p>
         <ul class="info">
           <li><b>상담 시간</b>평일 09:00 – 18:00 · 토요일 실측 가능 (가상)</li>
-          <li><b>사무실</b>OO시 OO구 OO로 00 (가상 주소)</li>
+          <li><b>사무실</b>샘플시 샘플구 샘플로 00 (가상 주소)</li>
           <li><b>준비하면 좋은 것</b>평면도나 현장 사진, 원하는 분위기 참고 이미지 (없어도 괜찮습니다)</li>
         </ul>
       </div>
@@ -369,7 +401,7 @@
 
 <footer>
   <div class="wrap">
-    <p>© 담온 인테리어 (가상 업체) · OO시 OO구 OO로 00 (가상 주소)</p>
+    <p>© 담온 인테리어 (가상 업체) · 샘플시 샘플구 샘플로 00 (가상 주소)</p>
     <p><strong>포트폴리오용 가상 업체입니다 · AI 도구로 제작한 샘플</strong></p>
   </div>
 </footer>
