@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <title>결 헤어 | 샘플</title>
 <meta name="description" content="1인 미용실 결 헤어(가상 매장)의 소개 페이지 샘플입니다. 커트·펌·염색을 한 디자이너가 상담부터 마무리까지 맡는 과정을 담았습니다.">
 <meta property="og:type" content="website">
@@ -19,40 +20,47 @@
 <!-- 제목용 명조: 제목 글자 34자만 받음(text=). 제목 문구를 바꾸면 다시 만든다 -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700&text=1%3AAHIR%EA%B0%80%EA%B0%9D%EA%B2%B0%EA%B3%A0%EA%B8%B0%EA%B8%B8%EB%89%B4%EB%8A%94%EB%8B%A4%EB%8B%B9%EB%94%94%EB%A5%B8%EB%A6%AC%EB%A9%94%EC%82%B4%EC%88%A0%EC%8B%9C%EC%8B%A0%EC%96%B4%EC%98%A4%EC%9C%A0%EC%9D%84%EC%9D%98%EC%9D%B4%EC%9D%B8%EC%9E%90%ED%97%A4%ED%9B%84&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#f7f3ee;--ink:#2b2622;--muted:#7a6f66;--accent:#b0875f;--card:#fff;--line:#e6ddd3}
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  :root{--bg:#f7f3ee;--ink:#2b2622;--muted:#6A6058;--accent:#b0875f;--accent-text:#7F5D3C;--card:#fff;--line:#e6ddd3;
+    /* 여백 단계(플레이북 규칙 32): 8의 배수, 4·12는 반 단계 */
+    --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:24px;--sp-6:32px;--sp-7:40px;--sp-8:48px;--sp-9:64px;--sp-10:80px;--sp-11:96px;
+    --gutter:var(--sp-4);--section:var(--sp-9);--title-gap:var(--sp-4);--stack:var(--sp-3);--card-pad:var(--sp-5);--card-gap:var(--sp-3)}
+  @media(min-width:861px){:root{--gutter:var(--sp-5);--section:var(--sp-11);--title-gap:var(--sp-5);--stack:var(--sp-4);--card-pad:var(--sp-6);--card-gap:var(--sp-5)}}
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--ink);font-family:'Noto Sans KR',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;line-height:1.7;word-break:keep-all;overflow-wrap:break-word}
   a{color:inherit;text-decoration:none}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-  .demo{background:var(--ink);color:#fff;text-align:center;font-size:13px;padding:6px}
-  header{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+  .wrap{max-width:1088px;margin:0 auto;padding:0 var(--gutter)}
+  .demo{background:var(--ink);color:#fff;text-align:center;font-size:13px;padding:var(--sp-1) var(--sp-3)}
+  header{display:flex;justify-content:space-between;align-items:center;padding:var(--sp-5) 0}
   .logo{font-family:'Noto Serif KR','AppleMyungjo','Batang',serif;font-size:22px;font-weight:700;letter-spacing:2px}
-  nav a{margin-left:22px;font-size:15px;color:var(--muted)}
-  .hero{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding:50px 0 80px}
-  .hero h1{font-family:'Noto Serif KR','AppleMyungjo','Batang',serif;font-size:44px;line-height:1.3;margin-bottom:18px}
-  .hero p{color:var(--muted);font-size:17px;margin-bottom:28px}
-  .btn{display:inline-block;background:var(--ink);color:#fff;padding:14px 28px;border-radius:40px;font-weight:500}
-  .btn.line{background:none;border:1px solid var(--ink);color:var(--ink);margin-left:8px}
+  nav a{margin-left:var(--sp-5);font-size:15px;color:var(--muted)}
+  .hero{display:grid;grid-template-columns:1.1fr 1fr;gap:var(--sp-7);align-items:center;padding:var(--sp-8) 0 var(--sp-10)}
+  .hero h1{font-family:'Noto Serif KR','AppleMyungjo','Batang',serif;font-size:44px;line-height:1.3;margin-bottom:var(--sp-4)}
+  .hero p{color:var(--muted);font-size:17px;margin-bottom:var(--sp-5)}
+  .acts{display:flex;flex-wrap:wrap;gap:var(--sp-3)}
+  .btn{display:inline-block;background:var(--ink);color:#fff;padding:var(--sp-3) var(--sp-6);border:1px solid var(--ink);border-radius:40px;font-weight:500;text-align:center}
+  .btn.line{background:none;border:1px solid var(--ink);color:var(--ink)}
   .visual{aspect-ratio:4/5;border-radius:200px 200px 16px 16px;background:linear-gradient(160deg,#d9c4ad,#9c7a5b 60%,#5d4636)}
-  section{padding:70px 0;border-top:1px solid var(--line)}
-  h2{font-family:'Noto Serif KR','AppleMyungjo','Batang',serif;font-size:30px;margin-bottom:30px}
-  .menu{display:grid;grid-template-columns:repeat(2,1fr);gap:0 50px}
-  .menu div{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px dashed var(--line)}
-  .menu span:last-child{color:var(--accent);font-weight:700}
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .card{background:var(--card);padding:26px;border-radius:14px}
-  .card b{display:block;margin-bottom:8px;font-size:17px}
+  section{padding-block:calc(var(--section) / 2);border-top:1px solid var(--line)}
+  h2{font-family:'Noto Serif KR','AppleMyungjo','Batang',serif;font-size:30px;margin-bottom:var(--title-gap)}
+  .menu{display:grid;grid-template-columns:repeat(2,1fr);gap:0 var(--sp-8)}
+  .menu div{display:flex;justify-content:space-between;padding:var(--sp-4) 0;border-bottom:1px dashed var(--line)}
+  .menu span:last-child{color:var(--accent-text);font-weight:700}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--card-gap)}
+  .card{background:var(--card);padding:var(--card-pad);border-radius:12px}
+  .card b{display:block;margin-bottom:var(--sp-2);font-size:17px}
   .card p{color:var(--muted);font-size:15px}
   .review{font-size:17px}
-  .review small{display:block;margin-top:12px;color:var(--muted);font-size:13px}
-  .info{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .review small{display:block;margin-top:var(--sp-3);color:var(--muted);font-size:13px}
+  .rv-note{margin:0 0 var(--sp-5);color:var(--muted);font-size:13px}
+  .info{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-7)}
   .map{background:repeating-linear-gradient(45deg,#e9e1d7 0 10px,#efe8df 10px 20px);border-radius:14px;min-height:220px;display:grid;place-items:center;color:var(--muted)}
-  footer{padding:30px 0;color:var(--muted);font-size:13px;text-align:center}
-  .float{position:fixed;right:18px;bottom:18px;background:#037a3a;color:#fff;padding:14px 20px;border-radius:40px;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+  footer{padding:var(--sp-6) 0;color:var(--muted);font-size:13px;text-align:center}
+  .float{position:fixed;right:var(--sp-4);bottom:var(--sp-4);background:#037a3a;color:#fff;padding:var(--sp-3) var(--sp-5);border-radius:40px;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,.18)}
   @media(max-width:760px){
-    nav{display:none}.hero{grid-template-columns:1fr;padding:20px 0 50px}.hero h1{font-size:32px}
+    nav{display:none}.hero{grid-template-columns:1fr;padding:var(--sp-5) 0 var(--sp-8)}.hero h1{font-size:32px}
     .visual{max-height:340px;aspect-ratio:auto;height:340px}
-    .menu,.cards,.info{grid-template-columns:1fr}.btn.line{margin:10px 0 0}
+    .menu,.cards,.info{grid-template-columns:1fr}.acts{flex-direction:column}
   }
 </style>
 </head>
@@ -69,7 +77,7 @@
     <div>
       <h1>당신의 결을 살리는<br>1:1 헤어 디자인</h1>
       <p>상담부터 마무리까지 한 디자이너가 끝까지 책임집니다.<br>손상은 줄이고, 매일 손질하기 쉬운 스타일로.</p>
-      <a class="btn" href="#">네이버 예약하기</a><a class="btn line" href="#info">위치 보기</a>
+      <div class="acts"><a class="btn" href="#">네이버 예약하기</a><a class="btn line" href="#info">위치 보기</a></div>
     </div>
     <div class="visual"></div>
   </div>
@@ -97,10 +105,11 @@
 
   <section>
     <h2>고객 후기</h2>
+    <p class="rv-note">포트폴리오용 가상 후기입니다. 실제 손님이 남긴 글이 아니며 디자인 예시를 위한 문구입니다.</p>
     <div class="cards">
-      <div class="card review">“처음으로 손질이 쉬운 펌을 했어요.”<small>네이버 예약 고객</small></div>
-      <div class="card review">“상담을 오래 해주셔서 믿음이 갔어요.”<small>네이버 예약 고객</small></div>
-      <div class="card review">“예민한 두피인데도 따갑지 않았어요.”<small>네이버 예약 고객</small></div>
+      <div class="card review">“처음으로 손질이 쉬운 펌을 했어요.”<small>가상 예시 · 실제 후기 아님</small></div>
+      <div class="card review">“상담을 오래 해주셔서 믿음이 갔어요.”<small>가상 예시 · 실제 후기 아님</small></div>
+      <div class="card review">“예민한 두피인데도 따갑지 않았어요.”<small>가상 예시 · 실제 후기 아님</small></div>
     </div>
   </section>
 
