@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <title>누리온 창업컨설팅 | 가상 샘플</title>
 <meta name="description" content="소상공인·예비 창업자를 위한 창업·경영 컨설팅 소개 페이지 (포트폴리오용 가상 샘플)">
 <meta property="og:type" content="website">
@@ -15,25 +16,26 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2314254a'/><text x='32' y='43' font-size='30' font-family='Arial,sans-serif' font-weight='700' text-anchor='middle' fill='%23ffffff'>N</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-  :root{--navy:#14254a;--navy2:#1e3566;--ink:#1a2238;--muted:#5b6478;--bg:#ffffff;--soft:#f3f6fb;--line:#dfe5ef;--gold:#c8a464;--gold2:#e9d6ad}
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  :root{--navy:#14254a;--navy2:#1e3566;--ink:#1a2238;--muted:#5b6478;--bg:#ffffff;--soft:#f3f6fb;--line:#dfe5ef;--gold:#c8a464;--gold2:#e9d6ad;--gold-text:#8C6A2F}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--ink);font-family:'Noto Sans KR',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;line-height:1.7;word-break:keep-all;overflow-wrap:break-word;overflow-x:hidden}
+  body{background:var(--bg);color:var(--ink);font-family:'Noto Sans KR',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;line-height:1.7;word-break:keep-all;overflow-wrap:break-word}
   a{color:inherit;text-decoration:none}
   .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
   .demo{background:var(--gold);color:var(--navy);text-align:center;font-size:13px;font-weight:700;padding:7px 12px}
 
   /* 헤더 */
   header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
-  header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;height:62px}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:62px}
   .logo{display:flex;align-items:center;gap:9px;font-weight:900;font-size:18px;color:var(--navy);white-space:nowrap}
   .logo i{display:inline-block;width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,var(--navy) 50%,var(--gold) 50%);flex:none}
   nav{display:flex;gap:22px;font-size:15px;color:var(--muted)}
   nav a:hover{color:var(--navy)}
   .btn{display:inline-block;background:var(--navy);color:#fff;padding:13px 24px;border-radius:10px;font-weight:700;font-size:15px;text-align:center;border:0;cursor:pointer;font-family:inherit}
-  .btn.sm{padding:9px 16px;font-size:14px;white-space:nowrap}
+  .btn.sm{padding:9px 16px;font-size:14px;white-space:nowrap;min-height:44px}
   .btn.gold{background:var(--gold);color:var(--navy)}
   .btn.line{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.45)}
 
@@ -53,7 +55,7 @@
   /* 공통 섹션 */
   section{padding:80px 0}
   section.soft{background:var(--soft)}
-  .label{color:var(--gold);font-weight:700;font-size:13px;letter-spacing:2px;margin-bottom:6px}
+  .label{color:var(--gold-text);font-weight:700;font-size:13px;letter-spacing:2px;margin-bottom:6px}
   h2{font-size:30px;font-weight:900;color:var(--navy);line-height:1.4;margin-bottom:10px}
   .sub{color:var(--muted);margin-bottom:36px;max-width:620px}
 
@@ -78,7 +80,7 @@
   .st .n{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;font-weight:900;margin-bottom:16px;position:relative;z-index:1}
   .st:not(:last-child):after{content:"";position:absolute;left:46px;right:0;top:23px;height:2px;background:var(--line)}
   .st h3{font-size:17px;color:var(--navy);margin-bottom:4px}
-  .st small{display:block;color:var(--gold);font-weight:700;font-size:13px;margin-bottom:6px}
+  .st small{display:block;color:var(--gold-text);font-weight:700;font-size:13px;margin-bottom:6px}
   .st p{color:var(--muted);font-size:14.5px}
 
   /* 사례·숫자 */
@@ -91,7 +93,7 @@
   .case .tag{display:inline-block;background:var(--soft);color:var(--navy2);font-size:13px;font-weight:700;padding:4px 10px;border-radius:6px;margin-bottom:12px}
   .case h3{font-size:17px;color:var(--navy);margin-bottom:10px}
   .case dl{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:14.5px}
-  .case dt{color:var(--gold);font-weight:700}
+  .case dt{color:var(--gold-text);font-weight:700}
   .case dd{color:var(--muted)}
   .note{font-size:13px;color:var(--muted);margin-top:18px}
 
@@ -109,7 +111,7 @@
   /* FAQ */
   .faq{max-width:780px}
   .faq details{border-bottom:1px solid var(--line);padding:18px 0}
-  .faq summary{font-weight:700;cursor:pointer;color:var(--navy);list-style:none;display:flex;justify-content:space-between;gap:12px}
+  .faq summary{font-weight:700;cursor:pointer;color:var(--navy);list-style:none;display:flex;justify-content:space-between;gap:12px;min-height:48px;align-items:center}
   .faq summary::-webkit-details-marker{display:none}
   .faq summary:after{content:"+";color:var(--gold);font-size:20px;line-height:1.3;flex:none}
   .faq details[open] summary:after{content:"−"}
@@ -119,6 +121,7 @@
   .contact{background:var(--navy);color:#fff}
   .contact h2{color:#fff}
   .contact .sub{color:#c4cde0}
+  .contact .label{color:var(--gold)}
   .cbox{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:start}
   .info li{list-style:none;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12);color:#c4cde0;font-size:15px}
   .info b{display:block;color:#fff;margin-bottom:2px}
@@ -126,7 +129,7 @@
   .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
   .f{margin-bottom:14px;min-width:0}
   label{display:block;font-size:14px;font-weight:700;margin-bottom:6px;color:var(--navy)}
-  input,select,textarea{width:100%;max-width:100%;font:inherit;font-size:15px;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:11px 12px;background:#fff}
+  input,select,textarea{width:100%;max-width:100%;font:inherit;font-size:16px;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:11px 12px;background:#fff}
   input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);border-color:var(--gold)}
   textarea{min-height:110px;resize:vertical}
   .agree{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;font-weight:400;color:var(--muted);margin:4px 0 18px}
@@ -307,7 +310,7 @@
     <h2>자주 묻는 질문</h2>
     <div class="faq">
       <details><summary>첫 상담은 어떻게 진행되나요?</summary><p>30분 동안 지금 상황과 고민을 듣고 방향을 함께 정리합니다. 이후 진행 여부는 상담을 듣고 결정하시면 됩니다.</p></details>
-      <details><summary>아직 가게를 열기 전인데도 상담할 수 있나요?</summary><p>가능합니다. 창업 준비 단계에서 비용과 상권을 미리 점검하는 상담이 가장 많습니다.</p></details>
+      <details><summary>아직 가게를 열기 전인데도 상담할 수 있나요?</summary><p>가능합니다. 창업 준비 단계에서 비용과 상권을 미리 점검하는 상담도 자주 합니다.</p></details>
       <details><summary>비용은 어떻게 정해지나요?</summary><p>진단 범위와 기간에 따라 달라지며, 첫 상담 후 견적서를 먼저 드립니다. 견적에 동의하신 뒤에만 진행합니다.</p></details>
       <details><summary>정부지원사업 선정까지 책임져 주나요?</summary><p>선정 여부는 심사 기관이 결정하므로 미리 약속드릴 수 없습니다. 대신 서류를 빠짐없이, 읽기 쉽게 준비하도록 돕습니다.</p></details>
       <details><summary>상담 내용이 외부에 알려지지 않나요?</summary><p>상담 중 들은 매출·개인 정보는 동의 없이 외부에 공개하거나 사례로 쓰지 않습니다.</p></details>

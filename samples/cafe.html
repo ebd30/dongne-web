@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <title>온기 커피 | 샘플</title>
 <meta name="description" content="동네 로스터리 카페 온기 커피(가상 매장)의 소개 페이지 샘플입니다. 직접 볶은 원두와 시그니처 메뉴, 영업시간과 찾아오는 길을 담았습니다.">
 <meta property="og:type" content="website">
@@ -17,6 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   :root{--bg:#1f1a17;--ink:#f4ece2;--muted:#b9ab9b;--accent:#e9a15b;--card:#2a2420}
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--ink);font-family:'Noto Sans KR',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;line-height:1.7;word-break:keep-all;overflow-wrap:break-word}
@@ -26,7 +28,7 @@
   header{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
   .logo{font-weight:900;font-size:20px}.logo em{color:var(--accent);font-style:normal}
   .hero{min-height:70vh;display:flex;flex-direction:column;justify-content:center;padding:40px 0;
-        background:radial-gradient(circle at 80% 40%,rgba(233,161,91,.28),transparent 45%)}
+        background:radial-gradient(circle at 80% 40%,rgba(233,161,91,.18),transparent 45%)}
   .tag{color:var(--accent);font-weight:700;letter-spacing:3px;font-size:13px;margin-bottom:14px}
   .hero h1{font-size:clamp(30px,8vw,56px);font-weight:900;line-height:1.2;margin-bottom:20px}
   .hero p{color:var(--muted);font-size:18px;max-width:520px;margin-bottom:30px}
@@ -61,16 +63,16 @@
   <div class="hero">
     <div class="tag">SPECIALTY · ROASTERY</div>
     <h1>매일 아침,<br>직접 볶은 원두로.</h1>
-    <p>일주일 안에 볶은 원두만 씁니다. 동네에서 가장 신선한 한 잔을 내려드립니다.</p>
+    <p>일주일 안에 볶은 원두만 씁니다. 주문이 들어오면 한 잔씩 갈아서 내립니다.</p>
     <div><a class="btn" href="#menu">시그니처 보기</a></div>
   </div>
 
   <section id="menu">
     <h2>시그니처 메뉴</h2>
     <div class="grid">
-      <div class="item"><div class="ph a"></div><div class="t"><b>온기 라떼</b><span>5,800</span><p>흑당 시럽과 고소한 우유 거품</p></div></div>
-      <div class="item"><div class="ph b"></div><div class="t"><b>바닐라 크림 콜드브루</b><span>6,200</span><p>18시간 저온 추출 콜드브루</p></div></div>
-      <div class="item"><div class="ph c"></div><div class="t"><b>오늘의 핸드드립</b><span>6,500</span><p>매주 바뀌는 싱글 오리진</p></div></div>
+      <div class="item"><div class="ph a"></div><div class="t"><b>온기 라떼</b><span>5,800원</span><p>흑당 시럽과 고소한 우유 거품</p></div></div>
+      <div class="item"><div class="ph b"></div><div class="t"><b>바닐라 크림 콜드브루</b><span>6,200원</span><p>18시간 저온 추출 콜드브루</p></div></div>
+      <div class="item"><div class="ph c"></div><div class="t"><b>오늘의 핸드드립</b><span>6,500원</span><p>매주 바뀌는 싱글 오리진</p></div></div>
     </div>
   </section>
 
