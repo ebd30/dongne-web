@@ -2,8 +2,8 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="only light">
 <title>결 헤어 | 1인 미용실 샘플</title>
 <meta name="description" content="1인 미용실 결 헤어(가상 매장)의 소개 페이지 샘플입니다. 커트·펌·염색을 한 디자이너가 상담부터 마무리까지 맡는 과정을 담았습니다.">
 <link rel="canonical" href="https://ebd30.github.io/dongne-web/samples/hair.html">
@@ -22,7 +22,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700&text=1%3AAHIR%EA%B0%80%EA%B0%9D%EA%B2%B0%EA%B3%A0%EA%B8%B0%EA%B8%B8%EB%89%B4%EB%8A%94%EB%8B%A4%EB%8B%B9%EB%94%94%EB%A5%B8%EB%A6%AC%EB%A9%94%EC%82%B4%EC%88%A0%EC%8B%9C%EC%8B%A0%EC%96%B4%EC%98%A4%EC%9C%A0%EC%9D%84%EC%9D%98%EC%9D%B4%EC%9D%B8%EC%9E%90%ED%97%A4%ED%9B%84&display=swap" rel="stylesheet">
 <style>
   html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-  :root{--bg:#f7f3ee;--ink:#2b2622;--muted:#6A6058;--accent:#b0875f;--accent-text:#7F5D3C;--card:#fff;--line:#e6ddd3;
+  :root{color-scheme:only light;--bg:#f7f3ee;--ink:#2b2622;--muted:#6A6058;--accent:#b0875f;--accent-text:#7F5D3C;--card:#fff;--line:#e6ddd3;
     /* 여백 단계(플레이북 규칙 32): 8의 배수, 4·12는 반 단계 */
     --sp-1:4px;--sp-2:8px;--sp-3:12px;--sp-4:16px;--sp-5:24px;--sp-6:32px;--sp-7:40px;--sp-8:48px;--sp-9:64px;--sp-10:80px;--sp-11:96px;
     --gutter:var(--sp-4);--section:var(--sp-9);--title-gap:var(--sp-4);--stack:var(--sp-3);--card-pad:var(--sp-5);--card-gap:var(--sp-3)}
@@ -57,7 +57,7 @@
   .info{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-7)}
   .map{background:repeating-linear-gradient(45deg,#e9e1d7 0 10px,#efe8df 10px 20px);border-radius:14px;min-height:220px;display:grid;place-items:center;color:var(--muted)}
   footer{padding:var(--sp-6) 0;color:var(--muted);font-size:13px;text-align:center}
-  .float{position:fixed;right:var(--sp-4);bottom:var(--sp-4);background:#037a3a;color:#fff;padding:var(--sp-3) var(--sp-5);border-radius:40px;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,.18)}
+  .float{position:fixed;right:var(--sp-4);bottom:var(--sp-4);bottom:calc(var(--sp-4) + env(safe-area-inset-bottom));background:#037a3a;color:#fff;padding:var(--sp-3) var(--sp-5);border-radius:40px;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,.18)}
   @media(max-width:760px){
     nav{display:none}.hero{grid-template-columns:1fr;padding:var(--sp-5) 0 var(--sp-8)}.hero h1{font-size:32px}
     .visual{max-height:340px;aspect-ratio:auto;height:340px}
