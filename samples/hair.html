@@ -4,255 +4,233 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="only light">
-<meta name="theme-color" content="#282828">
+<meta name="theme-color" content="#F2EFEA">
 <meta name="format-detection" content="telephone=no">
 <title>결 헤어 | 1인 미용실 샘플</title>
-<meta name="description" content="1인 미용실 결 헤어(가상 매장)의 소개 페이지 샘플입니다. 커트·펌·염색을 한 디자이너가 상담부터 마무리까지 맡는 과정을 담았습니다.">
+<meta name="description" content="1인 미용실 결 헤어(가상 매장)의 소개 페이지 샘플입니다. 머릿결부터 보고 자르고, 집에서 결 정리하는 법까지 한 디자이너가 맡습니다.">
 <link rel="canonical" href="https://ebd30.github.io/dongne-web/samples/hair.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="결 헤어 | 1인 미용실 샘플">
-<meta property="og:description" content="1인 미용실 결 헤어(가상 매장)의 소개 페이지 샘플입니다. 커트·펌·염색을 한 디자이너가 상담부터 마무리까지 맡는 과정을 담았습니다.">
+<meta property="og:description" content="1인 미용실 결 헤어(가상 매장)의 소개 페이지 샘플입니다. 머릿결부터 보고 자르고, 집에서 결 정리하는 법까지 한 디자이너가 맡습니다.">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:url" content="https://ebd30.github.io/dongne-web/samples/hair.html">
 <meta property="og:image" content="https://ebd30.github.io/dongne-web/portfolio-img/hair-pc.png">
-<meta property="og:image:alt" content="결 헤어 샘플 페이지 PC 화면">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='4' fill='%23282828'/><text x='32' y='43' font-size='30' font-family='Georgia,serif' font-weight='700' text-anchor='middle' fill='%23ffffff'>G</text></svg>">
+<meta property="og:image:alt" content="결 헤어 샘플 페이지 화면">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='4' fill='%23262626'/><text x='32' y='44' font-size='30' font-family='serif' font-weight='700' text-anchor='middle' fill='%23F2EFEA'>G</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+<!--
+  2026-11-17 새 디자인 순서 첫 적용 (company/design/workflow.md, 작업 기록 samples/_iter/hair/brief.md)
+  목적: 아침 손질이 쉬워지는 머리 / 콘셉트 단어: 결 / 모티프: 머릿결 곡선
+  레퍼런스 3곳: Parlour(사진 끝 예약 + 정보 3칸) · Salon SCK(사진 카드 + 세리프 한 단어 이름) · Kaleido(짙은 띠 위 큰 문장)
+  첫 화면 3안 비교 2바퀴: A21 B21 C19 → B1 23 · B2 18 → B1 확정
+  이전 버전: samples/_old-2026-11-16/hair-kaleido-2026-11-16.html
+  대비(WCAG, Python): ink #262626 / bg #F2EFEA 13.2 · muted #5E5A55 / bg 5.97, / 흰 6.84 · on-band #F2EFEA / band #262626 13.2 · on-band-soft #C9C2B8 / band 8.57
+  --motif #8A7F72는 선 전용(글자 아님, 3.42)
+-->
 <style>
-/* 레퍼런스: Kaleido Hair (시그니처 카드 1) / 시스템: company/design/systems/salon.css
-   바꾼 값: --overlay(사진 위 어두운 막) 추가, --fs-h1 30→34px(세리프 제목을 크게), --fs-label 13px 추가
-   대비(Python WCAG 계산):
-     ink #2F3735 / 흰 바탕 12.22, / 크림 #F6F1EB 10.88
-     muted #5B6461 / 흰 6.10, / 크림 5.44
-     흰 글자 / 검은 띠 #282828 14.74, on-band #F6F1EB / #282828 13.13
-     흰 글자 / 사진 + 막 60%(사진이 가장 밝은 흰색일 때 기준 #666666) 5.74
-   최소 5.44 */
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
 :root{color-scheme:only light;
-  --bg:#FFFFFF; --surface:#F6F1EB; --ink:#2F3735; --muted:#5B6461; --line:#E4DED6; --band:#282828; --on-band:#F6F1EB;
-  --accent:#282828; --on-accent:#FFFFFF; --overlay:rgba(0,0,0,.6);
-  --success:#1E6B45; --warning:#8A5300; --error:#B42318;
-  --font-body:'Noto Sans KR',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
-  --font-head:'Gowun Batang','AppleMyungjo','Batang',serif; --head-weight:700;
-  --fs-body:16px; --lh-body:1.75; --fs-h1:34px; --fs-h2:26px; --fs-h3:19px; --fs-small:14px; --fs-label:13px; --lh-head:1.4; --ls-label-en:0.2em;
-  --sp-1:8px; --sp-2:16px; --sp-3:24px; --sp-4:32px; --sp-6:48px; --sp-section:64px; --max:1040px;
-  --r-btn:3px; --r-card:3px; --btn-h:52px; --head-h:60px}
-@media(min-width:861px){:root{--fs-h1:52px; --fs-h2:32px; --sp-section:96px}}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--font-body);background:var(--bg);color:var(--ink);font-size:var(--fs-body);line-height:var(--lh-body);word-break:keep-all;overflow-wrap:break-word}
-img{display:block;max-width:100%;height:auto}
+  --bg:#F2EFEA;--surface:#FFFFFF;--ink:#262626;--muted:#5E5A55;--line:#DDD7CF;--band:#262626;--on-band:#F2EFEA;--on-band-soft:#C9C2B8;--motif:#8A7F72;
+  --f-head:'Gowun Batang','AppleMyungjo','Batang',serif;--f-body:'Noto Sans KR',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  --fs-h1:36px;--fs-h2:28px;--fs-h3:18px;--fs-body:16px;--fs-small:14px;--fs-label:12.5px;--lh:1.7;
+  --s1:8px;--s2:16px;--s3:24px;--s4:32px;--s6:48px;--sec:72px;--pad:20px;--max:980px;
+  --r:2px;--r-arch:999px;--btn-h:52px;
+  --wave:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='36' viewBox='0 0 240 36'%3E%3Cg fill='none' stroke='%238A7F72' stroke-width='1'%3E%3Cpath d='M0 6 C60 0 120 14 240 6'/%3E%3Cpath d='M0 14 C60 8 120 22 240 14'/%3E%3Cpath d='M0 22 C60 16 120 30 240 22'/%3E%3Cpath d='M0 30 C60 24 120 38 240 30'/%3E%3C/g%3E%3C/svg%3E")}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:var(--fs-body);line-height:var(--lh);word-break:keep-all;overflow-wrap:break-word;overflow-x:hidden}
+p,h1,h2,h3,ol,ul,dl,dd,figure{margin:0;padding:0}
+ol,ul{list-style:none}
 a{color:inherit;text-decoration:none}
-:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
-h1,h2,h3{font-family:var(--font-head);font-weight:var(--head-weight);line-height:var(--lh-head)}
-.wrap{max-width:var(--max);margin:0 auto;padding-inline:max(var(--sp-2),env(safe-area-inset-left)) max(var(--sp-2),env(safe-area-inset-right))}
-.en{font-size:var(--fs-label);letter-spacing:var(--ls-label-en);text-transform:uppercase;font-weight:500}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.demo{background:var(--band);color:var(--on-band);font-size:var(--fs-label);text-align:center;padding:5px var(--pad)}
+.tag{display:block;font-size:var(--fs-label);font-weight:700;letter-spacing:.08em;color:var(--muted);margin-bottom:var(--s1)}
+h2{font-family:var(--f-head);font-size:var(--fs-h2);line-height:1.35}
+.wave{height:36px;background:var(--wave) repeat-x center;opacity:.8}
+.btn{display:flex;align-items:center;justify-content:center;min-height:var(--btn-h);padding:0 var(--s3);border-radius:var(--r);font-weight:700}
+.btn-fill{background:var(--ink);color:var(--on-band)}
+.btn-line{border:1px solid var(--ink)}
 
-/* 안내 띠 */
-.demo{background:var(--surface);color:var(--ink);text-align:center;font-size:var(--fs-label);padding:var(--sp-1) var(--sp-2)}
+/* 머리글 */
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid transparent}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.logo{font-family:var(--f-head);font-size:22px;letter-spacing:.06em}.logo small{font-family:var(--f-body);font-size:11px;letter-spacing:.2em;margin-left:6px;color:var(--muted)}
+nav{display:flex;align-items:center;gap:var(--s2);font-size:var(--fs-small)}
+nav .hide-m{display:none}
+nav .btn{min-height:36px;padding:0 14px;font-size:13px}
 
-/* ① 머리글: 검은 띠 + 흰 로고 */
-header{background:var(--band);color:var(--on-accent);position:sticky;top:0;z-index:10}
-.head{display:flex;align-items:center;justify-content:space-between;min-height:var(--head-h);gap:var(--sp-2)}
-.logo{font-family:var(--font-head);font-weight:700;font-size:var(--fs-h3)}
-.logo span{letter-spacing:var(--ls-label-en);margin-left:var(--sp-1)}
-.head nav{display:flex;gap:var(--sp-3)}
-.head nav a{font-size:var(--fs-small);color:var(--on-band);display:inline-flex;align-items:center;min-height:48px}
-.head .btn{min-height:44px;padding:0 var(--sp-2);border-color:var(--on-band);color:var(--on-band);font-size:var(--fs-small)}
-@media(max-width:860px){.head nav{display:none}}
+/* 첫 화면 (B1) */
+.hero{position:relative;padding-top:12px;overflow:hidden}
+.lines{position:absolute;left:-20px;right:-20px;top:108px;height:260px;z-index:0}
+.lines path{fill:none;stroke:var(--motif);stroke-width:1.2;opacity:.75}
+.hero h1{position:relative;z-index:1;font-family:var(--f-head);font-size:var(--fs-h1);line-height:1.3}
+.hero h1 em{font-style:normal;border-bottom:2px solid var(--ink)}
+.arch{position:relative;z-index:1;margin:var(--s3) 0 0 38%;height:300px;border-radius:var(--r-arch) var(--r-arch) var(--r) var(--r);background:#3A3631 url(img/hair/3.jpg) center 20%/cover}
+.mini{position:relative;z-index:1;margin-top:-120px;width:56%;display:grid;gap:10px}
+.mini li{background:var(--surface);padding:10px 12px;font-size:var(--fs-small);border-left:2px solid var(--ink)}
+.mini b{display:block;font-family:var(--f-head);font-size:15px}.mini span{color:var(--muted);font-size:var(--fs-label)}
+.hero .btn{margin-top:var(--s3)}
+.info{display:grid;grid-template-columns:repeat(3,1fr);text-align:center;border-top:1px solid var(--line);margin-top:var(--s2);padding:var(--s2) 0 var(--s3)}
+.info b{display:block;font-family:var(--f-head);font-size:15px}.info span{display:block;margin-top:4px;font-size:var(--fs-label);color:var(--muted);line-height:1.5}
 
-/* 버튼: 각진 3px, 검정 채움 / 얇은 테두리 */
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:var(--btn-h);padding:0 var(--sp-3);border-radius:var(--r-btn);font-weight:500;font-size:var(--fs-small);border:1px solid transparent}
-.btn-fill{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
-.btn-line{border-color:var(--ink);color:var(--ink)}
-.btn-line.on-dark{border-color:var(--on-accent);color:var(--on-accent)}
+/* 결 3단계 상세 */
+.sec{padding:var(--sec) 0}
+.steps{display:grid;gap:var(--s6);margin-top:var(--s4)}
+.step{display:grid;gap:var(--s2)}
+.step .ph{height:220px;border-radius:var(--r);background:#3A3631 center/cover}
+.step .num{font-family:var(--f-head);font-size:14px;color:var(--muted)}
+.step h3{font-family:var(--f-head);font-size:22px;line-height:1.35}
+.step p{color:var(--muted)}
+.step p b{color:var(--ink)}
 
-/* ② 첫 화면: 사진 전면 + 어두운 막 + 가운데 세리프 */
-.hero{position:relative;color:var(--on-accent);text-align:center;overflow:hidden;background:var(--band)}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero::after{content:"";position:absolute;inset:0;background:var(--overlay)}
-.hero .in{position:relative;z-index:1;min-height:560px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--sp-2);padding:var(--sp-6) var(--sp-2)}
-.hero h1{font-size:var(--fs-h1)}
-.hero p{max-width:30em}
-.hero .acts{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--sp-1);margin-top:var(--sp-2)}
-.hero .acts .btn{min-width:150px}
-.hero .btn-fill{border-color:var(--on-accent)}
+/* 가격 */
+.price{background:var(--surface)}
+.plist{margin-top:var(--s4);border-top:1px solid var(--ink)}
+.plist div{display:flex;justify-content:space-between;gap:var(--s2);padding:14px 0;border-bottom:1px solid var(--line)}
+.plist dt{font-weight:700}
+.plist dd{font-family:var(--f-head);white-space:nowrap}
+.pnote{margin-top:var(--s2);font-size:var(--fs-small);color:var(--muted)}
 
-/* 섹션 리듬: 흰 ↔ 크림 번갈아, 제목 가운데 + 위 영문 라벨 */
-section{padding:var(--sp-section) 0}
-.cream{background:var(--surface)}
-.sec-head{text-align:center;margin-bottom:var(--sp-4)}
-.sec-head .en{display:block;color:var(--muted);margin-bottom:var(--sp-1)}
-.sec-head h2{font-size:var(--fs-h2)}
-.sec-head p{color:var(--muted);margin-top:var(--sp-1)}
+/* 스타일 사진 카드 (SCK식) */
+.cards{display:grid;grid-auto-flow:column;grid-auto-columns:72%;gap:12px;overflow-x:auto;margin-top:var(--s4);padding-bottom:var(--s1);scroll-snap-type:x mandatory}
+.cards figure{scroll-snap-align:start}
+.cards .ph{height:260px;border-radius:var(--r);background:#3A3631 center/cover}
+.cards figcaption{margin-top:var(--s1);font-family:var(--f-head);font-size:19px}
+.cards figcaption span{display:block;font-family:var(--f-body);font-size:var(--fs-label);color:var(--muted)}
 
-/* 소개 3가지 */
-.why{display:grid;gap:var(--sp-4);text-align:center;max-width:880px;margin:0 auto}
-.why b{display:block;font-family:var(--font-head);font-size:var(--fs-h3);margin-bottom:var(--sp-1)}
-.why .num{display:block;color:var(--muted);margin-bottom:var(--sp-1)}
-.why p{color:var(--muted)}
-@media(min-width:861px){.why{grid-template-columns:repeat(3,1fr)}}
+/* 짙은 띠 (Kaleido) */
+.band{background:var(--band);color:var(--on-band);padding:var(--sec) 0;text-align:center}
+.band p{font-family:var(--f-head);font-size:24px;line-height:1.5}
+.band small{display:block;margin-top:var(--s2);font-size:var(--fs-small);color:var(--on-band-soft)}
 
-/* ③ 가격표: 얇은 줄 2단 */
-.price{max-width:880px;margin:0 auto;display:grid;column-gap:var(--sp-6);border-top:1px solid var(--ink)}
-.price div{display:flex;justify-content:space-between;align-items:baseline;gap:var(--sp-2);padding:var(--sp-2) 0;border-bottom:1px solid var(--line)}
-.price dd{font-weight:500;white-space:nowrap}
-.price-note{max-width:880px;margin:var(--sp-2) auto 0;color:var(--muted);font-size:var(--fs-small);text-align:center}
-@media(min-width:861px){.price{grid-template-columns:1fr 1fr}}
+/* 후기 자리 */
+.rv{margin-top:var(--s4);border:1px dashed var(--motif);border-radius:var(--r);padding:var(--s4) var(--s3);text-align:center;color:var(--muted);background:var(--surface)}
+.rv b{display:block;color:var(--ink);margin-bottom:4px;font-family:var(--f-head);font-size:18px}
 
-/* 검은 띠 위 큰 세리프 한 줄 */
-.band{background:var(--band);color:var(--on-band);text-align:center;padding:var(--sp-section) var(--sp-2)}
-.band .en{display:block;margin-bottom:var(--sp-2)}
-.band p.big{font-family:var(--font-head);font-weight:700;font-size:var(--fs-h2);line-height:var(--lh-head)}
+/* 오시는 길 */
+.visit dl{margin-top:var(--s4);border-top:1px solid var(--ink)}
+.visit dl div{display:grid;grid-template-columns:4.5em 1fr;gap:var(--s2);padding:14px 0;border-bottom:1px solid var(--line)}
+.visit dt{font-weight:700}
+.visit dd{color:var(--ink)}
+.map{margin-top:var(--s3);height:180px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;color:var(--muted);font-size:var(--fs-small);text-align:center}
+.visit .btns{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;margin-top:var(--s3)}
 
-/* 사진 3장 */
-.gallery{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-2) var(--sp-1)}
-.gallery figure:first-child{grid-column:1/-1}
-.gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r-card)}
-.gallery figure:first-child img{aspect-ratio:3/2}
-.gallery figcaption{font-size:var(--fs-small);color:var(--muted);margin-top:var(--sp-1);text-align:center}
-@media(min-width:600px){.gallery{grid-template-columns:repeat(3,1fr)}.gallery figure:first-child{grid-column:auto}.gallery figure:first-child img{aspect-ratio:4/5}}
+footer{padding:var(--s6) var(--pad);text-align:center;font-size:var(--fs-label);color:var(--muted)}
+footer strong{color:var(--ink)}
 
-/* 후기 */
-.reviews{display:grid;gap:var(--sp-2);max-width:880px;margin:0 auto}
-.reviews blockquote{background:var(--bg);border-radius:var(--r-card);padding:var(--sp-3);text-align:center}
-.reviews p{font-family:var(--font-head);font-weight:700;font-size:var(--fs-h3);line-height:var(--lh-head)}
-.reviews small{display:block;margin-top:var(--sp-1);color:var(--muted);font-size:var(--fs-label)}
-@media(min-width:861px){.reviews{grid-template-columns:repeat(3,1fr)}}
-
-/* ⑤ 오시는 길 */
-.info{display:grid;gap:var(--sp-4);max-width:880px;margin:0 auto}
-.info dl div{display:grid;grid-template-columns:4em 1fr;gap:var(--sp-2);padding:var(--sp-2) 0;border-bottom:1px solid var(--line)}
-.info dt{font-weight:500}
-.info dd{color:var(--muted)}
-.map{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);min-height:240px;display:grid;place-items:center;color:var(--muted);text-align:center;padding:var(--sp-3)}
-.info .acts{display:flex;flex-wrap:wrap;gap:var(--sp-1);margin-top:var(--sp-3)}
-.info .acts .btn{flex:1;min-width:140px}
-@media(min-width:861px){.info{grid-template-columns:1fr 1fr}}
-
-/* ⑥ 바닥글 */
-footer{background:var(--band);color:var(--on-band);text-align:center;padding:var(--sp-4) var(--sp-2);font-size:var(--fs-small)}
-footer .logo{display:block;margin-bottom:var(--sp-1)}
-footer p{margin-top:var(--sp-1)}
-</style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HairSalon",
-  "name": "결 헤어",
-  "description": "1인 미용실 결 헤어. 포트폴리오용 가상 샘플입니다. 실존하는 가게가 아니며 주소·전화번호는 모두 가상 값입니다.",
-  "url": "https://ebd30.github.io/dongne-web/samples/hair.html",
-  "telephone": "+82-2-000-0000",
-  "address": {"@type": "PostalAddress","streetAddress": "샘플로 00, 2층","addressLocality": "샘플구","addressRegion": "샘플시","addressCountry": "KR"},
-  "openingHoursSpecification": [{"@type": "OpeningHoursSpecification","dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens": "10:00","closes": "20:00"}]
+@media(min-width:860px){
+  :root{--fs-h1:52px;--fs-h2:34px;--sec:104px}
+  nav .hide-m{display:inline}
+  .arch{height:440px;margin-left:50%}
+  .mini{width:44%;margin-top:-320px}
+  .hero .btn{max-width:420px}
+  .info{max-width:720px}
+  .steps{grid-template-columns:repeat(3,1fr);gap:var(--s4)}
+  .step .ph{height:260px}
+  .price .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:var(--s6);align-items:start}
+  .price .plist{margin-top:0}
+  .cards{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);grid-auto-columns:auto;overflow:visible}
+  .cards .ph{height:340px}
+  .band p{font-size:32px}
+  .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:var(--s6)}
+  .map{height:100%;min-height:280px;margin-top:0}
 }
-</script>
+</style>
 </head>
 <body>
 <div class="demo">포트폴리오용 가상 가게 샘플 · 실제 매장이 아닙니다</div>
 
-<header>
-  <div class="wrap head">
-    <a class="logo" href="#top">결<span>HAIR</span></a>
-    <nav aria-label="주 메뉴"><a href="#menu">시술 가격</a><a href="#gallery">스타일</a><a href="#info">오시는 길</a></nav>
-    <a class="btn btn-line" href="#info">예약 문의</a>
-  </div>
-</header>
+<header><div class="wrap">
+  <a class="logo" href="#top">결<small>HAIR</small></a>
+  <nav aria-label="바로가기"><a class="hide-m" href="#steps">결 순서</a><a class="hide-m" href="#price">가격</a><a class="hide-m" href="#visit">오시는 길</a><a class="btn btn-fill" href="#visit">예약</a></nav>
+</div></header>
 
 <main id="top">
-  <section class="hero" aria-label="첫 화면" style="padding:0">
-    <img src="img/hair/1.jpg" width="1400" height="935" alt="디자이너가 드라이로 손님 머리 결을 정리하는 모습">
-    <div class="in">
-      <span class="en">1:1 Private Hair · Since 2019</span>
-      <h1>머릿결부터 보고<br>맞추는 헤어</h1>
-      <p>상담한 디자이너가 마무리까지 혼자 맡습니다.<br>손상은 줄이고, 아침에 손질하기 쉽게 잘라 드려요.</p>
-      <div class="acts">
-        <a class="btn btn-fill" href="#info">예약 문의하기</a>
-        <a class="btn btn-line on-dark" href="#menu">시술 가격 보기</a>
-      </div>
-    </div>
-  </section>
+<!-- 1. 첫 화면 (4단계 확정 B1) -->
+<section class="hero wrap" aria-labelledby="hero-h">
+  <svg class="lines" viewBox="0 0 400 260" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 C120 0 200 60 400 30"/><path d="M0 50 C120 30 200 90 400 60"/><path d="M0 80 C120 60 200 120 400 90"/><path d="M0 110 C120 90 200 150 400 120"/><path d="M0 140 C120 120 200 180 400 150"/><path d="M0 170 C120 150 200 210 400 180"/><path d="M0 200 C120 180 200 240 400 210"/></svg>
+  <h1 id="hero-h">결대로 자르면<br><em>아침이 짧아져요</em></h1>
+  <div class="arch" role="img" aria-label="결이 고르게 정리된 긴 머리 뒷모습"></div>
+  <ol class="mini"><li><b>1. 결 보기</b><span>자르기 전 머릿결부터</span></li><li><b>2. 결 따라 자르기</b><span>상담한 사람이 끝까지</span></li><li><b>3. 집에서 결 정리</b><span>말리는 방향까지 안내</span></li></ol>
+  <a class="btn btn-fill" href="#visit">내 결 상담 예약</a>
+  <div class="info"><div><b>영업</b><span>화~일 10~20시<br>월요일 휴무</span></div><div><b>주차</b><span>건물 뒤편<br>2대 가능</span></div><div><b>전화</b><span>02-000-0000<br>(번호 자리)</span></div></div>
+</section>
 
-  <section id="why">
-    <div class="wrap">
-      <div class="sec-head"><span class="en">About</span><h2>한 사람이 끝까지 봅니다</h2></div>
-      <div class="why">
-        <div><span class="en num">01</span><b>1인 담당제</b><p>상담한 디자이너가 시술과 마무리까지 직접 합니다. 중간에 사람이 바뀌지 않아요.</p></div>
-        <div><span class="en num">02</span><b>저자극 약제</b><p>두피가 예민한 분도 편하게 받으실 수 있는 약제를 씁니다.</p></div>
-        <div><span class="en num">03</span><b>홈케어 안내</b><p>집에서 말리는 방향, 쓰면 좋은 제품까지 알려 드립니다.</p></div>
-      </div>
-    </div>
-  </section>
+<div class="wave" aria-hidden="true"></div>
 
-  <section id="menu" class="cream">
-    <div class="wrap">
-      <div class="sec-head"><span class="en">Price</span><h2>시술 가격</h2><p>기장과 모량에 따라 달라지는 항목은 ~로 표시했어요.</p></div>
-      <dl class="price">
-        <div><dt>여성 커트</dt><dd>25,000원</dd></div>
-        <div><dt>남성 커트</dt><dd>18,000원</dd></div>
-        <div><dt>볼륨매직</dt><dd>120,000원~</dd></div>
-        <div><dt>디자인 펌</dt><dd>90,000원~</dd></div>
-        <div><dt>뿌리 염색</dt><dd>50,000원~</dd></div>
-        <div><dt>클리닉 트리트먼트</dt><dd>40,000원~</dd></div>
-      </dl>
-      <p class="price-note">정확한 금액은 상담 때 머리 상태를 보고 먼저 말씀드립니다.</p>
-    </div>
-  </section>
-
-  <div class="band">
-    <span class="en">Our Rule</span>
-    <p class="big">머릿결부터 보고 맞춥니다</p>
+<!-- 2. 결 3단계 상세 -->
+<section class="sec" id="steps" aria-labelledby="steps-h"><div class="wrap">
+  <span class="tag">결 순서</span>
+  <h2 id="steps-h">자르기 전부터<br>집에 가신 뒤까지</h2>
+  <div class="steps">
+    <article class="step"><div class="ph" style="background-image:url(img/hair/3.jpg);background-position:center 30%" role="img" aria-label="긴 머리 뒷모습"></div><span class="num">01</span><h3>결 보기</h3><p>자르기 전에 <b>머릿결이 눕는 방향</b>과 손상된 곳부터 봅니다. 평소 손질 시간도 여쭤봐요.</p></article>
+    <article class="step"><div class="ph" style="background-image:url(img/hair/1.jpg)" role="img" aria-label="디자이너가 드라이로 머리를 말리는 모습"></div><span class="num">02</span><h3>결 따라 자르기</h3><p>상담한 디자이너가 <b>자르고 마무리까지 혼자</b> 맡아요. 중간에 사람이 바뀌지 않습니다.</p></article>
+    <article class="step"><div class="ph" style="background-image:url(img/hair/2.jpg)" role="img" aria-label="샴푸대에서 머리를 감기는 모습"></div><span class="num">03</span><h3>집에서 결 정리</h3><p>집에서 <b>말리는 방향</b>과 쓰면 좋은 제품을 알려 드려요. 두피가 예민하면 약제부터 맞춥니다.</p></article>
   </div>
+</div></section>
 
-  <section id="gallery">
-    <div class="wrap">
-      <div class="sec-head"><span class="en">Style</span><h2>매장과 스타일</h2></div>
-      <div class="gallery">
-        <figure><img src="img/hair/2.jpg" width="1400" height="933" loading="lazy" alt="샴푸대에서 머리를 감기는 모습"><figcaption>샴푸 전에 두피 상태부터 봅니다</figcaption></figure>
-        <figure><img src="img/hair/3.jpg" width="1400" height="2100" loading="lazy" alt="결을 살려 마무리한 긴 웨이브 머리"><figcaption>결 살린 웨이브 펌</figcaption></figure>
-        <figure><img src="img/hair/1.jpg" width="1400" height="935" loading="lazy" alt="둥근 빗과 드라이로 마무리하는 모습"><figcaption>드라이 마무리까지 같은 디자이너</figcaption></figure>
-      </div>
-    </div>
-  </section>
+<!-- 3. 가격 -->
+<section class="sec price" id="price" aria-labelledby="price-h"><div class="wrap">
+  <div><span class="tag">가격</span><h2 id="price-h">시술 가격</h2><p class="pnote">기장과 모량에 따라 달라지는 항목은 ~로 표시했어요. 정확한 금액은 상담 때 머리 상태를 보고 먼저 말씀드립니다.</p></div>
+  <dl class="plist">
+    <div><dt>여성 커트</dt><dd>25,000원</dd></div>
+    <div><dt>남성 커트</dt><dd>18,000원</dd></div>
+    <div><dt>디자인 펌</dt><dd>90,000원~</dd></div>
+    <div><dt>볼륨매직</dt><dd>120,000원~</dd></div>
+    <div><dt>뿌리 염색</dt><dd>50,000원~</dd></div>
+    <div><dt>클리닉 트리트먼트</dt><dd>40,000원~</dd></div>
+  </dl>
+</div></section>
 
-  <section class="cream">
-    <div class="wrap">
-      <div class="sec-head"><span class="en">Review</span><h2>손님 이야기</h2><p>포트폴리오용 가상 후기입니다. 실제 손님이 남긴 글이 아닙니다.</p></div>
-      <div class="reviews">
-        <blockquote><p>“처음으로 손질이 쉬운 펌을 했어요.”</p><small>가상 예시 · 실제 후기 아님</small></blockquote>
-        <blockquote><p>“상담을 오래 해 주셔서 믿음이 갔어요.”</p><small>가상 예시 · 실제 후기 아님</small></blockquote>
-        <blockquote><p>“예민한 두피인데도 따갑지 않았어요.”</p><small>가상 예시 · 실제 후기 아님</small></blockquote>
-      </div>
-    </div>
-  </section>
+<!-- 4. 스타일 사진 카드 -->
+<section class="sec" aria-labelledby="style-h"><div class="wrap">
+  <span class="tag">스타일</span>
+  <h2 id="style-h">결을 살린 머리</h2>
+  <div class="cards">
+    <figure><div class="ph" style="background-image:url(img/hair/3.jpg);background-position:center 40%" role="img" aria-label="결이 살아 있는 긴 웨이브 머리"></div><figcaption>웨이브<span>결 따라 넣은 자연스러운 컬</span></figcaption></figure>
+    <figure><div class="ph" style="background-image:url(img/hair/1.jpg)" role="img" aria-label="드라이로 마무리하는 모습"></div><figcaption>드라이<span>마무리까지 같은 디자이너</span></figcaption></figure>
+    <figure><div class="ph" style="background-image:url(img/hair/2.jpg)" role="img" aria-label="샴푸 전 두피 상태를 보는 모습"></div><figcaption>두피 상담<span>샴푸 전에 두피 상태부터</span></figcaption></figure>
+  </div>
+</div></section>
 
-  <section id="info">
-    <div class="wrap">
-      <div class="sec-head"><span class="en">Visit</span><h2>오시는 길</h2></div>
-      <div class="info">
-        <div>
-          <dl>
-            <div><dt>주소</dt><dd>샘플시 샘플구 샘플로 00, 2층 (가상 주소)</dd></div>
-            <div><dt>영업</dt><dd>화요일~일요일 10:00~20:00, 월요일 휴무</dd></div>
-            <div><dt>전화</dt><dd>02-000-0000 (번호 자리)</dd></div>
-            <div><dt>주차</dt><dd>건물 뒤편 2대 가능</dd></div>
-          </dl>
-          <div class="acts">
-            <a class="btn btn-fill" href="#info">예약 문의하기</a>
-            <a class="btn btn-line" href="#info">지도 보기</a>
-          </div>
-        </div>
-        <div class="map">지도 자리<br>실제 가게는 네이버 지도 링크를 연결합니다</div>
-      </div>
-    </div>
-  </section>
+<!-- 5. 짙은 띠 -->
+<section class="band" aria-label="가게 약속"><div class="wrap">
+  <p>오늘 자른 머리가<br>내일 아침에도 쉽게 정리되도록</p>
+  <small>결 헤어가 매번 지키는 기준이에요</small>
+</div></section>
+
+<!-- 6. 후기 자리 -->
+<section class="sec" aria-labelledby="rv-h"><div class="wrap">
+  <span class="tag">손님 이야기</span>
+  <h2 id="rv-h">후기는 실제 손님 글만</h2>
+  <div class="rv"><b>후기 자리</b>사장님이 주신 실제 손님 후기를 그대로 넣는 곳입니다.</div>
+</div></section>
+
+<div class="wave" aria-hidden="true"></div>
+
+<!-- 7. 오시는 길 -->
+<section class="sec visit" id="visit" aria-labelledby="visit-h"><div class="wrap">
+  <div>
+    <span class="tag">오시는 길</span>
+    <h2 id="visit-h">예약하고 오시면<br>바로 결부터 봐 드려요</h2>
+    <dl>
+      <div><dt>주소</dt><dd>샘플시 샘플구 샘플로 00, 2층 (가상 주소)</dd></div>
+      <div><dt>영업</dt><dd>화요일~일요일 10:00~20:00, 월요일 휴무</dd></div>
+      <div><dt>전화</dt><dd>02-000-0000 (번호 자리)</dd></div>
+      <div><dt>주차</dt><dd>건물 뒤편 2대 가능</dd></div>
+    </dl>
+    <div class="btns"><a class="btn btn-line" href="#visit">지도 보기</a><a class="btn btn-fill" href="#visit">내 결 상담 예약</a></div>
+  </div>
+  <div class="map">지도 자리<br>실제 가게는 네이버 지도 링크를 연결합니다</div>
+</div></section>
 </main>
 
 <footer>
-  <span class="logo">결 HAIR</span>
-  <p>샘플시 샘플구 샘플로 00, 2층 (가상 주소)</p>
-  <p>사진: Unsplash · 동네웹공방 제작(AI 도구 사용)</p>
+  <p><strong>결 HAIR</strong> · 샘플시 샘플구 샘플로 00, 2층 (가상 주소)</p>
+  <p>포트폴리오용 가상 가게 샘플 · 사진: Unsplash · 동네웹공방 제작(AI 도구 사용)</p>
 </footer>
 </body>
 </html>

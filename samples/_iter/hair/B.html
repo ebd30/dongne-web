@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="color-scheme" content="only light">
+<title>결 헤어 B안</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Gowun+Batang:wght@700&display=swap" rel="stylesheet">
+<!-- B안: 모티프(머릿결 곡선)를 가장 크게. 곡선이 사진 속 머리 결로 이어지고, 3단계 순서를 결 이름으로 -->
+<style>
+:root{--bg:#F2EFEA;--surface:#FFFFFF;--ink:#262626;--muted:#5E5A55;--line:#DDD7CF;--band:#262626;--on-band:#F2EFEA;--on-band-soft:#C9C2B8;--motif:#8A7F72;
+--f-head:'Gowun Batang',serif;--f-body:'Noto Sans KR','Malgun Gothic',sans-serif;--r:2px;--btn-h:52px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);word-break:keep-all;-webkit-text-size-adjust:100%}
+p,h1,ol{margin:0;padding:0}.demo{background:var(--band);color:var(--on-band);font-size:12px;text-align:center;padding:5px}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.logo{font-family:var(--f-head);font-size:22px;letter-spacing:.06em}.logo small{font-family:var(--f-body);font-size:11px;letter-spacing:.2em;margin-left:6px;color:var(--muted)}
+.btn-s{font-size:13px;font-weight:700;background:var(--ink);color:var(--on-band);padding:8px 14px;border-radius:var(--r)}
+.hero{position:relative;padding:12px 20px 0;overflow:hidden}
+.lines{position:absolute;left:-20px;right:-20px;top:120px;height:260px;z-index:0}
+.lines path{fill:none;stroke:var(--motif);stroke-width:1.2;opacity:.75}
+.hero h1{position:relative;z-index:1;font-family:var(--f-head);font-size:36px;line-height:1.3}
+.hero h1 em{font-style:normal;border-bottom:2px solid var(--ink)}
+.photo{position:relative;z-index:1;margin:24px 0 0 38%;height:300px;border-radius:999px 999px var(--r) var(--r);background:#3A3631 url(../../img/hair/3.jpg) center 20%/cover}
+.steps{position:relative;z-index:1;list-style:none;margin-top:-120px;width:56%;display:grid;gap:10px}
+.steps li{background:var(--surface);padding:10px 12px;font-size:14px;border-left:2px solid var(--ink)}
+.steps b{display:block;font-family:var(--f-head);font-size:15px}.steps span{color:var(--muted);font-size:12.5px}
+.cta{display:flex;align-items:center;justify-content:center;height:var(--btn-h);margin:24px 0 8px;background:var(--ink);color:var(--on-band);font-weight:700;border-radius:var(--r)}
+.note{font-size:13px;color:var(--muted);text-align:center;padding-bottom:20px}
+@media(min-width:860px){.hero{max-width:980px;margin:0 auto}.hero h1{font-size:52px}.photo{height:420px;margin-left:50%}.steps{width:44%;margin-top:-300px}.cta{max-width:420px}}
+</style></head><body>
+<div class="demo">포트폴리오용 가상 가게 샘플 · 실제 매장이 아닙니다</div>
+<header><span class="logo">결<small>HAIR</small></span><span class="btn-s">예약</span></header>
+<section class="hero">
+<svg class="lines" viewBox="0 0 400 260" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 C120 0 200 60 400 30"/><path d="M0 50 C120 30 200 90 400 60"/><path d="M0 80 C120 60 200 120 400 90"/><path d="M0 110 C120 90 200 150 400 120"/><path d="M0 140 C120 120 200 180 400 150"/><path d="M0 170 C120 150 200 210 400 180"/><path d="M0 200 C120 180 200 240 400 210"/></svg>
+<h1>결대로 자르면<br><em>아침이 짧아져요</em></h1>
+<div class="photo" role="img" aria-label="결이 고르게 정리된 긴 머리 뒷모습"></div>
+<ol class="steps"><li><b>1. 결 보기</b><span>자르기 전 머릿결부터</span></li><li><b>2. 결 따라 자르기</b><span>상담한 사람이 끝까지</span></li><li><b>3. 집에서 결 정리</b><span>말리는 방향까지 안내</span></li></ol>
+<a class="cta">내 결 상담 예약</a>
+<p class="note">화~일 10~20시 · 월요일 휴무 · 건물 뒤편 주차 2대</p>
+</section>
+</body></html>

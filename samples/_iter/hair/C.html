@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="color-scheme" content="only light">
+<title>결 헤어 C안</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Gowun+Batang:wght@700&display=swap" rel="stylesheet">
+<!-- C안: 배치 뒤집기. 글자 먼저(짙은 띠 위 큰 문장, Kaleido 독창 포인트) → 사진 띠 3장 옆으로 → 아래 고정 예약 바 -->
+<style>
+:root{--bg:#F2EFEA;--surface:#FFFFFF;--ink:#262626;--muted:#5E5A55;--line:#DDD7CF;--band:#262626;--on-band:#F2EFEA;--on-band-soft:#C9C2B8;--motif:#8A7F72;
+--f-head:'Gowun Batang',serif;--f-body:'Noto Sans KR','Malgun Gothic',sans-serif;--r:2px;--btn-h:52px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);word-break:keep-all;-webkit-text-size-adjust:100%;padding-bottom:76px}
+p,h1{margin:0}.demo{background:#000;color:var(--on-band);font-size:12px;text-align:center;padding:5px}
+.top{background:var(--band);color:var(--on-band);padding:16px 22px 34px}
+.logo{font-family:var(--f-head);font-size:20px;letter-spacing:.06em}.logo small{font-family:var(--f-body);font-size:11px;letter-spacing:.2em;margin-left:6px;color:var(--on-band-soft)}
+.top h1{margin-top:40px;font-family:var(--f-head);font-size:38px;line-height:1.3}
+.top p{margin-top:16px;font-size:15px;line-height:1.7;color:var(--on-band-soft)}
+.comb{margin-top:26px;display:grid;gap:6px}.comb i{display:block;height:1px;background:var(--on-band-soft);opacity:.5}.comb i:nth-child(2){margin-right:14%}.comb i:nth-child(3){margin-right:28%}.comb i:nth-child(4){margin-right:42%}
+.strip{display:grid;grid-auto-flow:column;grid-auto-columns:62%;gap:8px;overflow-x:auto;padding:16px 22px;scroll-snap-type:x mandatory}
+.strip figure{margin:0;scroll-snap-align:start}.strip div{height:210px;border-radius:var(--r);background:#3A3631 center/cover}
+.strip figcaption{margin-top:6px;font-family:var(--f-head);font-size:15px}
+.fix{position:fixed;left:0;right:0;bottom:0;display:flex;gap:8px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--surface);border-top:1px solid var(--line)}
+.fix a{flex:1;display:flex;align-items:center;justify-content:center;height:var(--btn-h);font-weight:700;border-radius:var(--r);border:1px solid var(--ink)}
+.fix a.on{background:var(--ink);color:var(--on-band);flex:1.6}
+@media(min-width:860px){.top{padding:20px 10vw 60px}.top h1{font-size:56px}.strip{grid-auto-columns:30%;padding:24px 10vw}.strip div{height:300px}.fix{justify-content:center}.fix a{max-width:260px}}
+</style></head><body>
+<div class="demo">포트폴리오용 가상 가게 샘플 · 실제 매장이 아닙니다</div>
+<section class="top"><span class="logo">결<small>HAIR</small></span>
+<h1>내일 아침,<br>드라이 한 번이면<br>정리되는 머리</h1>
+<p>머릿결부터 보고 자릅니다. 상담한 디자이너가 마무리까지 혼자 맡아요.</p>
+<div class="comb" aria-hidden="true"><i></i><i></i><i></i><i></i></div></section>
+<div class="strip"><figure><div style="background-image:url(../../img/hair/3.jpg);background-position:center 25%"></div><figcaption>결 보기</figcaption></figure><figure><div style="background-image:url(../../img/hair/1.jpg)"></div><figcaption>결 따라 자르기</figcaption></figure><figure><div style="background-image:url(../../img/hair/2.jpg)"></div><figcaption>집에서 결 정리</figcaption></figure></div>
+<div class="fix"><a>가격 보기</a><a class="on">내 결 상담 예약</a></div>
+</body></html>
