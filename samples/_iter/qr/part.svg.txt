@@ -1,0 +1,17 @@
+<svg class="dwg" viewBox="0 0 320 200" role="img" aria-label="계단 축 부품 도면: 전체 길이 120, 지름 24와 16, 공차 ±0.02">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0 10 5 0 10z" fill="currentColor"/></marker></defs>
+<g fill="none" stroke="currentColor" stroke-width="1.6">
+<path d="M40 70h70v-12h90v12h70v60h-70v12h-90v-12h-70z"/>
+<path d="M110 58v84M200 58v84" stroke-dasharray="4 3" stroke-width="1"/>
+<path d="M28 100h264" stroke-dasharray="14 4 3 4" stroke-width="1"/>
+</g>
+<g stroke="currentColor" stroke-width="1" fill="none" class="dim">
+<path d="M40 160v20M270 160v20"/><path d="M40 172h230" marker-start="url(#ar)" marker-end="url(#ar)"/>
+<path d="M286 70h18M286 130h18"/><path d="M298 70v60" marker-start="url(#ar)" marker-end="url(#ar)"/>
+<path d="M110 40h-14M200 40h14"/><path d="M110 40h90" marker-start="url(#ar)" marker-end="url(#ar)"/>
+</g>
+<g fill="currentColor" font-family="'Noto Sans KR',sans-serif" font-size="12" font-weight="700" text-anchor="middle">
+<text x="155" y="168">120.00</text><text x="155" y="34">90.00</text>
+<text x="312" y="104" transform="rotate(90 312 104)">Ø24 ±0.02</text>
+</g>
+</svg>
