@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="only light">
+<meta name="theme-color" content="#F6F1EB">
+<meta name="format-detection" content="telephone=no">
+<title>카톡 채널 자동응답 샘플 - 결 헤어</title>
+<meta name="description" content="가상 미용실 결 헤어의 카카오톡 채널 자동응답 메뉴 10개와 환영 인사 예시입니다. 동네웹공방 포트폴리오용 샘플입니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Gowun+Batang:wght@700&display=swap" rel="stylesheet">
+<!--
+  디자인 4단계: ① 역할: 동네 가게 사장님이 '내 채널에 이렇게 들어가는구나'를 한눈에 보는 결과물 예시
+  ② 핵심 질문: 누가(크몽에서 서비스를 보는 사장님) / 무엇을(메뉴 10개 + 환영 인사가 손님에게 어떻게 보이는지) / 행동(주문)
+  ③ 토큰: samples/hair.html(Kaleido Hair 레퍼런스, systems/salon.css) 그대로 — 같은 가게라 같은 색
+  ④ 문구: copy_check 80점 이상, 가게 정보는 hair.html에 있는 사실만. 없는 정보는 '사장님이 직접 답변'으로
+  채팅 화면은 실제 카카오톡 화면을 흉내 내지 않은 설명용 그림(노란색·로고 없음)
+  대비(WCAG): --ink #2F3735 / --bg #FFFFFF 11.9 · --muted #5B6461 / --surface #F6F1EB 5.4 · --on-band #F6F1EB / --band #282828 13.6
+-->
+<style>
+:root{color-scheme:only light;
+  --bg:#FFFFFF;--surface:#F6F1EB;--ink:#2F3735;--muted:#5B6461;--line:#E4DED6;--band:#282828;--on-band:#F6F1EB;
+  --font-body:'Noto Sans KR',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  --font-head:'Gowun Batang','AppleMyungjo','Batang',serif;
+  --fs-body:16px;--lh-body:1.7;--fs-h1:32px;--fs-h2:24px;--fs-small:14px;--fs-label:13px;
+  --sp-1:8px;--sp-2:16px;--sp-3:24px;--sp-4:32px;--sp-6:48px;--sp-section:64px;--max:1040px;--r:3px;--r-bubble:14px}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);word-break:keep-all;overflow-wrap:break-word}
+p,h1,h2,ol,ul{margin:0;padding:0}
+ol,ul{list-style:none}
+.demo{background:var(--band);color:var(--on-band);font-size:var(--fs-label);text-align:center;padding:6px 16px}
+.wrap{max-width:var(--max);margin:0 auto;padding:var(--sp-6) 20px var(--sp-section)}
+.label{display:block;font-size:var(--fs-label);letter-spacing:.2em;color:var(--muted);margin-bottom:var(--sp-1)}
+h1{font-family:var(--font-head);font-size:var(--fs-h1);line-height:1.35}
+h2{font-family:var(--font-head);font-size:var(--fs-h2);line-height:1.4;margin-bottom:var(--sp-2)}
+.lead{margin-top:var(--sp-2);color:var(--muted);max-width:34em}
+.grid{display:grid;gap:var(--sp-6);margin-top:var(--sp-6)}
+@media(min-width:860px){.grid{grid-template-columns:360px 1fr;align-items:start}}
+
+/* 설명용 채팅 그림 */
+.phone{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:var(--sp-3) var(--sp-2);max-width:360px;margin:0 auto;width:100%}
+.phone .top{text-align:center;font-weight:700;padding-bottom:var(--sp-2);border-bottom:1px solid var(--line)}
+.phone .top small{display:block;font-weight:400;font-size:var(--fs-label);color:var(--muted)}
+.chat{display:flex;flex-direction:column;gap:var(--sp-1);padding:var(--sp-2) 0}
+.b{max-width:85%;padding:10px 14px;border-radius:var(--r-bubble);font-size:var(--fs-small);line-height:1.6}
+.b.shop{background:var(--bg);border:1px solid var(--line);align-self:flex-start}
+.b.me{background:var(--band);color:var(--on-band);align-self:flex-end}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:6px;border-top:1px solid var(--line);padding-top:var(--sp-2)}
+.menu span{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:8px 6px;font-size:var(--fs-label);text-align:center}
+.menu span.on{background:var(--band);color:var(--on-band);border-color:var(--band)}
+.note{margin-top:var(--sp-1);font-size:var(--fs-label);color:var(--muted);text-align:center}
+
+/* 메뉴 표 */
+.list li{display:grid;grid-template-columns:36px 1fr;gap:var(--sp-2);padding:var(--sp-2) 0;border-bottom:1px solid var(--line)}
+.list li:first-child{border-top:1px solid var(--line)}
+.list i{font-style:normal;font-family:var(--font-head);font-size:20px;color:var(--muted)}
+.list b{display:block}
+.list p{color:var(--muted);font-size:var(--fs-small)}
+.list p em{font-style:normal;color:var(--ink);font-weight:700}
+.welcome{margin-top:var(--sp-6);background:var(--surface);padding:var(--sp-3);border-radius:var(--r)}
+.welcome p{font-size:var(--fs-small)}
+.welcome .count{margin-top:var(--sp-1);color:var(--muted);font-size:var(--fs-label)}
+.flow{margin-top:var(--sp-section);background:var(--band);color:var(--on-band);padding:var(--sp-4) var(--sp-3);border-radius:var(--r)}
+.flow h2{color:var(--on-band)}
+.flow ol{display:grid;gap:var(--sp-2)}
+@media(min-width:860px){.flow ol{grid-template-columns:repeat(3,1fr)}}
+.flow b{display:block;margin-bottom:4px}
+.flow p{font-size:var(--fs-small)}
+footer{text-align:center;font-size:var(--fs-label);color:var(--muted);padding:0 20px var(--sp-6)}
+</style>
+</head>
+<body>
+<div class="demo">포트폴리오용 가상 가게 샘플 · 실제 매장이 아닙니다</div>
+<main class="wrap">
+  <span class="label">KAKAO CHANNEL AUTO REPLY</span>
+  <h1>결 헤어 채널에 들어갈<br>자동응답 메뉴 10개</h1>
+  <p class="lead">손님이 메뉴를 누르면 아래 답이 바로 나갑니다. 가게 정보는 사장님이 알려 주신 것만 썼고, 모르는 내용은 사장님이 직접 답하도록 남겨 두었어요.</p>
+
+  <div class="grid">
+    <div>
+      <div class="phone" role="img" aria-label="손님이 영업시간 메뉴를 누르자 답이 나오는 채팅 예시 그림">
+        <div class="top">결 HAIR<small>채팅방 예시 그림</small></div>
+        <div class="chat">
+          <p class="b shop">안녕하세요, 결 헤어입니다. 아래 메뉴를 누르시면 바로 답을 보실 수 있어요.</p>
+          <p class="b me">영업시간·휴무</p>
+          <p class="b shop">화요일~일요일 10:00~20:00 영업하고, 월요일은 쉬어요. 예약 문의는 이 채팅에 남겨 주세요.</p>
+        </div>
+        <div class="menu" aria-hidden="true">
+          <span class="on">영업시간·휴무</span><span>예약 방법</span><span>시술 가격</span><span>주차</span><span>오시는 길</span><span>사장님과 대화</span>
+        </div>
+      </div>
+      <p class="note">설명용 그림입니다. 실제 카카오톡 화면과 모양이 다릅니다.</p>
+    </div>
+
+    <div>
+      <h2>메뉴 이름과 답</h2>
+      <ol class="list">
+        <li><i>1</i><div><b>영업시간·휴무</b><p>화요일~일요일 10:00~20:00 영업하고, 월요일은 쉬어요.</p></div></li>
+        <li><i>2</i><div><b>예약 방법</b><p>원하시는 날짜, 시간, 시술을 이 채팅에 남겨 주세요. 사장님이 확인하고 답장 드려요. 전화 02-000-0000(번호 자리)</p></div></li>
+        <li><i>3</i><div><b>시술 가격</b><p>여성 커트 25,000원, 남성 커트 18,000원, 디자인 펌 90,000원~, 뿌리 염색 50,000원~. 정확한 금액은 머리 상태를 보고 먼저 말씀드려요.</p></div></li>
+        <li><i>4</i><div><b>주차</b><p>건물 뒤편에 2대 주차할 수 있어요.</p></div></li>
+        <li><i>5</i><div><b>오시는 길</b><p>샘플시 샘플구 샘플로 00, 2층(가상 주소)이에요. 지도 링크를 함께 넣어 드려요.</p></div></li>
+        <li><i>6</i><div><b>담당 디자이너</b><p>상담한 디자이너가 시술과 마무리까지 혼자 맡아요. 중간에 사람이 바뀌지 않아요.</p></div></li>
+        <li><i>7</i><div><b>두피가 예민해요</b><p>두피가 예민한 분도 편하게 받으실 수 있는 약제를 써요. 상담 때 미리 말씀해 주세요.</p></div></li>
+        <li><i>8</i><div><b>시술 시간</b><p><em>사장님 직접 답변</em> · 시술마다 달라요. 원하시는 시술을 남겨 주시면 사장님이 알려 드려요.</p></div></li>
+        <li><i>9</i><div><b>예약 변경·취소</b><p><em>사장님 직접 답변</em> · 이 채팅으로 남겨 주시면 사장님이 확인하고 연락드려요.</p></div></li>
+        <li><i>10</i><div><b>사장님과 대화</b><p>궁금한 점을 편하게 남겨 주세요. 시술 중에는 답이 조금 늦을 수 있어요.</p></div></li>
+      </ol>
+      <div class="welcome">
+        <span class="label">WELCOME MESSAGE</span>
+        <p>결 헤어 채널을 추가해 주셔서 감사합니다. 영업시간, 가격, 주차는 아래 메뉴를 누르면 바로 보실 수 있어요. 예약은 원하시는 날짜와 시술을 남겨 주세요.</p>
+        <p class="count">86자 · 카카오 웰컴 메시지 한도 400자 안</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="flow" aria-labelledby="flow-h">
+    <h2 id="flow-h">사장님이 하실 일</h2>
+    <ol>
+      <li><b>초반 · 주문 직후</b><p>채널이 있는지 알려 주시고, 질문지 7가지에 답해 주세요.</p></li>
+      <li><b>중반 · 작업 중</b><p>표를 확인하고 고칠 곳을 한 번에 모아 주세요. 확정본을 붙여넣고 캡처 2장을 보내 주시면 저희가 점검해요.</p></li>
+      <li><b>후반 · 납품 뒤</b><p>가격·시간이 바뀌면 같은 메뉴에서 답만 고쳐 저장하세요. 한 달에 한 번 메뉴를 눌러 확인하시길 권해요.</p></li>
+    </ol>
+  </section>
+</main>
+<footer>사진 없음 · 동네웹공방 제작(AI 도구 사용)</footer>
+</body>
+</html>
