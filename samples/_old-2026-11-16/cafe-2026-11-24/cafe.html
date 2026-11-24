@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="only light">
+<meta name="theme-color" content="#F5F0EA">
+<meta name="format-detection" content="telephone=no">
+<title>온기 커피 | 로스터리 카페 샘플</title>
+<meta name="description" content="동네 로스터리 카페 온기 커피(가상 매장)의 소개 페이지 샘플입니다. 직접 볶은 원두와 시그니처 메뉴, 영업시간과 찾아오는 길을 담았습니다.">
+<link rel="canonical" href="https://ebd30.github.io/dongne-web/samples/cafe.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="온기 커피 | 로스터리 카페 샘플">
+<meta property="og:description" content="동네 로스터리 카페 온기 커피(가상 매장)의 소개 페이지 샘플입니다. 직접 볶은 원두와 시그니처 메뉴, 영업시간과 찾아오는 길을 담았습니다.">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:url" content="https://ebd30.github.io/dongne-web/samples/cafe.html">
+<meta property="og:image" content="https://ebd30.github.io/dongne-web/portfolio-img/cafe-pc.png">
+<meta property="og:image:alt" content="온기 커피 샘플 페이지 PC 화면">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='32' fill='%23B9B1A4'/><text x='32' y='42' font-size='28' font-family='Georgia,serif' text-anchor='middle' fill='%232A241F'>O</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* 레퍼런스: Monte (DOMA R&B, ref-cafe.png) 시그니처 카드 2 / 시스템: company/design/systems/cafe.css 구조에서 시작
+   바꾼 값: 바탕 미색 #F5F0EA, 하단 고정 바 회베이지 #B9B1A4, 제목 Gowun Batang 400(가는 세리프, 크게), 버튼 모서리 완전 둥근 알약
+   대비(Python WCAG 계산):
+     ink #2A241F / 바탕 #F5F0EA 13.52, / 흰 15.32
+     muted #655B52 / 바탕 5.84, / 흰 6.62
+     ink / 하단 바 #B9B1A4 7.21
+     바탕색 글자 / 채움 버튼 #2A241F 13.52
+     흰 글자 / 사진 + 막 45%(가장 밝은 사진 기준 #8C8C8C) 3.36 → 큰 제목(72px)만 둔다(기준 3)
+     흰 글자 / 사진 위쪽 막 60%(머리글 자리, #666666 기준) 5.74
+   최소 3.36(큰 제목) / 일반 글자 최소 5.74 */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-bottom:calc(var(--bar-h) + 16px + env(safe-area-inset-bottom))}
+:root{color-scheme:only light;
+  --bg:#F5F0EA; --surface:#FFFFFF; --ink:#2A241F; --muted:#655B52; --line:#D9D0C5; --bar:#B9B1A4;
+  --accent:#2A241F; --on-accent:#F5F0EA; --on-photo:#FFFFFF;
+  --overlay:linear-gradient(180deg,rgba(0,0,0,.6) 0,rgba(0,0,0,.45) 140px,rgba(0,0,0,.45) 100%);
+  --success:#1E6B45; --warning:#8A5300; --error:#B42318;
+  --font-body:'Noto Sans KR',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  --font-head:'Gowun Batang','AppleMyungjo','Batang',serif;
+  --fs-hero:72px; --fs-h2:30px; --fs-h3:20px; --fs-body:16px; --fs-small:14px; --lh-body:1.75; --lh-head:1.35; --ls-label-en:0.18em;
+  --sp-1:8px; --sp-2:16px; --sp-3:24px; --sp-4:32px; --sp-6:48px; --sp-section:72px; --max:720px;
+  --r-pill:999px; --r-card:2px; --btn-h:52px; --bar-h:56px}
+@media(min-width:861px){:root{--fs-hero:112px; --fs-h2:38px; --sp-section:112px}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);background:var(--bg);color:var(--ink);font-size:var(--fs-body);line-height:var(--lh-body);word-break:keep-all;overflow-wrap:break-word;
+     padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom))}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+h1,h2,h3{font-family:var(--font-head);font-weight:400;line-height:var(--lh-head)}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:max(var(--sp-3),env(safe-area-inset-left)) max(var(--sp-3),env(safe-area-inset-right))}
+.en{font-size:var(--fs-small);letter-spacing:var(--ls-label-en);text-transform:uppercase}
+
+/* 안내 띠 */
+.demo{background:var(--bg);color:var(--ink);text-align:center;font-size:var(--fs-small);padding:var(--sp-1) var(--sp-2);border-bottom:1px solid var(--line)}
+
+/* ①② 첫 화면: 화면 높이 사진 + 가운데 한 단어. 머리글은 사진 위에 겹침 */
+.hero{position:relative;color:var(--on-photo);background:var(--ink);min-height:600px;min-height:max(560px,calc(100vh - 92px));min-height:max(560px,calc(100svh - 92px));display:grid;place-items:center;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:var(--overlay)}
+.hero h1{position:relative;z-index:1;font-size:var(--fs-hero);line-height:1}
+.top{position:absolute;z-index:2;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;min-height:60px;
+     padding-inline:max(var(--sp-3),env(safe-area-inset-left)) max(var(--sp-3),env(safe-area-inset-right));border-bottom:1px solid rgba(255,255,255,.35)}
+.top .logo{font-family:var(--font-head);font-weight:700;font-size:var(--fs-h3)}
+.top nav{display:flex;gap:var(--sp-3)}
+.top nav a{display:inline-flex;align-items:center;min-height:48px;font-size:var(--fs-small)}
+@media(max-width:600px){.top nav a:not(:last-child){display:none}}
+
+/* 섹션 리듬: 미색 바탕, 넓은 여백, 가운데 세리프 제목 */
+section{padding:var(--sp-section) 0}
+.label{display:block;color:var(--muted);text-align:center;margin-bottom:var(--sp-2)}
+h2{font-size:var(--fs-h2);text-align:center;margin-bottom:var(--sp-3)}
+.lead{text-align:center;color:var(--muted)}
+.lead + .lead{margin-top:var(--sp-2)}
+
+/* 메뉴: 세리프 이름 + 얇은 줄 목록 */
+.menu{border-top:1px solid var(--ink)}
+.menu li{list-style:none;padding:var(--sp-3) 0;border-bottom:1px solid var(--line)}
+.menu .row{display:flex;justify-content:space-between;align-items:baseline;gap:var(--sp-2)}
+.menu h3{font-size:var(--fs-h3)}
+.menu .price{white-space:nowrap;font-weight:500}
+.menu p{color:var(--muted);font-size:var(--fs-small);margin-top:var(--sp-1)}
+.menu-note{color:var(--muted);font-size:var(--fs-small);text-align:center;margin-top:var(--sp-3)}
+
+/* 사진 전폭 */
+.photo{width:100%;aspect-ratio:4/3;object-fit:cover}
+@media(min-width:861px){.photo{aspect-ratio:21/9}}
+
+/* 원두 이야기: 숫자 3줄 */
+.facts{display:grid;gap:0;border-top:1px solid var(--line)}
+.facts div{display:flex;justify-content:space-between;align-items:baseline;gap:var(--sp-2);padding:var(--sp-2) 0;border-bottom:1px solid var(--line)}
+.facts b{font-family:var(--font-head);font-weight:700;font-size:var(--fs-h3)}
+.facts span{color:var(--muted);text-align:right}
+
+/* ⑤ 오시는 길 */
+.info dl div{display:grid;grid-template-columns:5em 1fr;gap:var(--sp-2);padding:var(--sp-2) 0;border-bottom:1px solid var(--line)}
+.info dl{border-top:1px solid var(--line)}
+.info dt{font-weight:500}
+.info dd{color:var(--muted)}
+.map{margin-top:var(--sp-3);background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card);min-height:200px;display:grid;place-items:center;text-align:center;color:var(--muted);padding:var(--sp-3)}
+.acts{display:flex;flex-wrap:wrap;gap:var(--sp-1);justify-content:center;margin-top:var(--sp-3)}
+.acts .btn{flex:1;min-width:140px;max-width:260px}
+
+/* 버튼: 알약 채움 + 테두리 */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:var(--btn-h);padding:0 var(--sp-3);border-radius:var(--r-pill);font-weight:500;border:1px solid var(--accent)}
+.btn-fill{background:var(--accent);color:var(--on-accent)}
+.btn-line{color:var(--ink)}
+
+/* ⑥ 바닥글 */
+footer{text-align:center;color:var(--muted);font-size:var(--fs-small);padding:var(--sp-6) var(--sp-3);border-top:1px solid var(--line)}
+footer .logo{display:block;font-family:var(--font-head);font-weight:700;font-size:var(--fs-h3);color:var(--ink);margin-bottom:var(--sp-1)}
+
+/* ④ 화면 맨 아래 고정 바 (playbook 규칙 5·30, 1칸) */
+.actbar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--bar);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+.actbar a{display:flex;align-items:center;justify-content:center;min-height:var(--bar-h);color:var(--ink);font-family:var(--font-head);font-weight:700;font-size:var(--fs-h3)}
+.actbar a:focus-visible{outline:3px solid var(--ink);outline-offset:-4px}
+body:has(:is(input,select,textarea):focus) .actbar{display:none}
+@media(max-height:480px){.actbar{display:none}body{padding-bottom:0}html{scroll-padding-bottom:0}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "온기 커피",
+  "description": "동네 로스터리 카페 온기 커피. 포트폴리오용 가상 샘플입니다. 실존하는 가게가 아니며 주소·전화번호는 모두 가상 값입니다.",
+  "url": "https://ebd30.github.io/dongne-web/samples/cafe.html",
+  "telephone": "+82-10-0000-0000",
+  "address": {"@type": "PostalAddress","streetAddress": "샘플동 00-0, 1층","addressLocality": "샘플구","addressRegion": "샘플시","addressCountry": "KR"},
+  "openingHoursSpecification": [{"@type": "OpeningHoursSpecification","dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens": "08:00","closes": "21:00"}]
+}
+</script>
+</head>
+<body>
+<div class="demo">포트폴리오용 가상 가게 샘플 · 실제 매장이 아닙니다</div>
+
+<main>
+  <div class="hero">
+    <header class="top">
+      <a class="logo" href="#about">온기 커피</a>
+      <nav aria-label="주 메뉴"><a href="#about">소개</a><a href="#menu">메뉴</a><a href="#info">오시는 길</a></nav>
+    </header>
+    <img src="img/cafe/1.jpg" width="1400" height="788" alt="온기 커피 매장 안 원두 진열장과 커피 바">
+    <h1>온기</h1>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <span class="label en">Coffee Roastery</span>
+      <h2>매일 아침, 직접 볶은 원두로</h2>
+      <p class="lead">볶은 지 일주일이 안 된 원두만 씁니다.</p>
+      <p class="lead">주문이 들어오면 한 잔씩 갈아서 내려 드려요.</p>
+    </div>
+  </section>
+
+  <section id="menu" style="padding-top:0">
+    <div class="wrap">
+      <span class="label en">Menu</span>
+      <h2>시그니처 메뉴</h2>
+      <ul class="menu">
+        <li><div class="row"><h3>온기 라떼</h3><span class="price">5,800원</span></div><p>흑당 시럽에 고소한 우유 거품을 올렸어요</p></li>
+        <li><div class="row"><h3>바닐라 크림 콜드브루</h3><span class="price">6,200원</span></div><p>18시간 동안 천천히 내린 콜드브루</p></li>
+        <li><div class="row"><h3>오늘의 핸드드립</h3><span class="price">6,500원</span></div><p>매주 바뀌는 싱글 오리진 원두로 내립니다</p></li>
+      </ul>
+      <p class="menu-note">원두는 200g씩 나눠서도 팔아요. 카운터에 물어봐 주세요.</p>
+    </div>
+  </section>
+
+  <img class="photo" src="img/cafe/2.jpg" width="1400" height="783" loading="lazy" alt="라떼에 우유 거품으로 그림을 그리는 모습">
+
+  <section id="beans">
+    <div class="wrap">
+      <span class="label en">Beans</span>
+      <h2>원두는 이렇게 다룹니다</h2>
+      <div class="facts">
+        <div><b>7일</b><span>볶은 뒤 이 안에만 씁니다</span></div>
+        <div><b>4종</b><span>매주 바꿔 들여오는 원두</span></div>
+        <div><b>200g</b><span>집에서 내려 드실 소분 원두</span></div>
+      </div>
+    </div>
+  </section>
+
+  <img class="photo" src="img/cafe/3.jpg" width="1400" height="1865" loading="lazy" alt="나무 탁자 위 라떼 한 잔">
+
+  <section id="info">
+    <div class="wrap info">
+      <span class="label en">Visit</span>
+      <h2>찾아오는 길</h2>
+      <dl>
+        <div><dt>주소</dt><dd>샘플시 샘플구 샘플동 00-0, 1층 (가상 주소)</dd></div>
+        <div><dt>영업</dt><dd>매일 08:00~21:00</dd></div>
+        <div><dt>전화</dt><dd>가게 번호 (납품 때 넣음)</dd></div>
+        <div><dt>인스타</dt><dd>@ongi.coffee (예시)</dd></div>
+        <div><dt>단체 주문</dt><dd>커피 10잔 이상은 전날까지 예약하시면 10% 할인해 드려요</dd></div>
+      </dl>
+      <div class="map">지도 자리<br>실제 가게는 네이버·카카오 지도 링크를 연결합니다</div>
+      <div class="acts">
+        <a class="btn btn-fill" href="#info">단체 주문 문의</a>
+        <a class="btn btn-line" href="#info">지도 보기</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span class="logo">온기 커피</span>
+  <p>샘플시 샘플구 샘플동 00-0, 1층 (가상 주소)</p>
+  <p>사진: Unsplash · 동네웹공방 제작(AI 도구 사용)</p>
+</footer>
+
+<nav class="actbar" aria-label="빠른 문의"><a href="#info">예약·주문하기</a></nav>
+</body>
+</html>

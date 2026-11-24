@@ -1,0 +1,31 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>A2 라벨 줄임</title>
+<link rel="stylesheet" href="base.css">
+<style>
+.in{max-width:980px;margin:0 auto;padding:0 16px 22px}
+header{display:flex;justify-content:space-between;align-items:center;min-height:64px}
+header a.nav{font-size:14px;font-weight:700;min-height:48px;display:flex;align-items:center}
+.label{position:relative;background:var(--motif-fiber),var(--kraft);border:1.5px solid var(--ink);padding:16px 16px 14px;margin-top:4px}
+.label .k{font-size:12px;color:var(--muted);font-weight:700}
+.label table{width:100%;border-collapse:collapse;margin-top:8px;font-size:15px}
+.label th,.label td{padding:6px 0;border-top:1px dashed var(--line);text-align:left;font-weight:400}
+.label td{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.label .stamp{position:absolute;right:14px;top:-14px;background:var(--cream)}
+h1{font-size:27px;line-height:1.35;font-weight:900;letter-spacing:-.02em;margin-top:18px}
+.lead{color:var(--muted);margin-top:8px}
+.photo{margin-top:18px;aspect-ratio:16/10;object-fit:cover;width:100%}
+@media(min-width:860px){.grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}h1{font-size:40px}}
+</style></head><body>
+<div class="demo">포트폴리오용 가상 가게 샘플 · 실제 매장이 아닙니다</div>
+<div class="in">
+<header><a class="logo" href="#">온기 커피<small>가상</small></a><a class="nav" href="#">찾아오는 길</a></header>
+<div class="grid">
+<div class="label"><span class="stamp">볶은 날<br>11.22</span><p class="k">이번 주 원두 봉투 (가상)</p>
+<table><tr><th>원두</th><td>에티오피아 · 콜롬비아</td></tr><tr><th>볶은 날</th><td>11월 22일</td></tr><tr><th>이 날까지만 씀</th><td>11월 29일</td></tr></table></div>
+<div>
+<h1>볶은 지 7일 안의 원두로,<br>한 잔씩 갈아 내립니다</h1>
+<p class="lead">매일 아침 문 열기 전에 이번 주 원두를 확인해요.</p>
+<div class="acts"><a class="btn fill" href="#">이번 주 볶은 원두 보기</a><a class="btn line" href="#">찾아오는 길</a></div>
+</div></div>
+<img class="photo" src="../../img/cafe/1.jpg" alt="">
+</div>
+</body></html>

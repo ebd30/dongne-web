@@ -1,0 +1,23 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>C 사진 위 라벨</title>
+<link rel="stylesheet" href="base.css">
+<style>
+header{display:flex;justify-content:space-between;align-items:center;min-height:64px;max-width:980px;margin:0 auto;padding:0 16px}
+header a.nav{font-size:14px;font-weight:700;min-height:48px;display:flex;align-items:center}
+.ph{position:relative}
+.ph img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.tag{position:absolute;left:16px;bottom:-34px;background:var(--motif-fiber),var(--kraft);border:1.5px solid var(--ink);padding:10px 14px;font-size:13px;font-weight:700;box-shadow:none}
+.tag b{display:block;font-size:20px;color:var(--stamp)}
+.in{max-width:980px;margin:0 auto;padding:48px 16px 22px}
+h1{font-size:27px;line-height:1.35;font-weight:900;letter-spacing:-.02em}
+.lead{color:var(--muted);margin-top:8px}
+@media(min-width:860px){h1{font-size:40px}.ph img{aspect-ratio:21/9}}
+</style></head><body>
+<div class="demo">포트폴리오용 가상 가게 샘플 · 실제 매장이 아닙니다</div>
+<header><a class="logo" href="#">온기 커피<small>가상</small></a><a class="nav" href="#">찾아오는 길</a></header>
+<div class="ph"><img src="../../img/cafe/1.jpg" alt=""><div class="tag">이번 주 원두 볶은 날<b>11월 22일</b></div></div>
+<div class="in">
+<h1>볶은 지 7일 안의 원두로, 한 잔씩 갈아 내립니다</h1>
+<p class="lead">매일 아침 문 열기 전에 이번 주 원두를 확인해요.</p>
+<div class="acts"><a class="btn fill" href="#">이번 주 볶은 원두 보기</a><a class="btn line" href="#">찾아오는 길</a></div>
+</div>
+</body></html>
