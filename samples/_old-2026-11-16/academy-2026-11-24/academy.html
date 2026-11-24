@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="only light">
+<meta name="theme-color" content="#E9EFF2">
+<meta name="format-detection" content="telephone=no">
+<title>한걸음 수학 | 중고등 수학교습소 샘플</title>
+<meta name="description" content="중1~고2 소수 정원 수학교습소 한걸음 수학(가상 학원)의 소개 페이지 샘플입니다. 진단 테스트, 수업 진행 방식, 시간표와 수강료를 담았습니다.">
+<link rel="canonical" href="https://ebd30.github.io/dongne-web/samples/academy.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="한걸음 수학 | 중고등 수학교습소 샘플">
+<meta property="og:description" content="중1~고2 소수 정원 수학교습소 한걸음 수학(가상 학원)의 소개 페이지 샘플입니다. 진단 테스트, 수업 진행 방식, 시간표와 수강료를 담았습니다.">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:url" content="https://ebd30.github.io/dongne-web/samples/academy.html">
+<meta property="og:image" content="https://ebd30.github.io/dongne-web/portfolio-img/academy-pc.png">
+<meta property="og:image:alt" content="한걸음 수학 샘플 페이지 PC 화면">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23134B5F'/><text x='32' y='43' font-size='30' font-family='serif' font-weight='700' text-anchor='middle' fill='%23ffffff'>한</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@700;900&display=swap" rel="stylesheet">
+<!--
+  디자인 4단계 기록 (workflow.md)
+  레퍼런스: Applerouth (ref-academy.png) — 시그니처 카드 3번(redesign-2026-11-16.md)
+  3질문: ① 중1~고2 자녀를 둔 학부모가 휴대폰으로 수업 방식·교습비를 확인 ② 차분하고 믿음직하게 / 시끄러운 광고·성적 과장 피하기 ③ 진단 테스트 신청(상담)
+  디자인 시스템 고정 완료 (시스템: 레퍼런스 추출값, 바꾼 값: 구리색 #B5602C → #A4521F, 흰 글자 대비 4.49 → 5.52)
+-->
+<style>
+/* ===== [공통] 휴대폰 브라우저 차이 대비 (inapp-safe.html) ===== */
+:root{color-scheme:only light;
+  /* 색 — 대비는 Python(WCAG 상대휘도)으로 계산 */
+  --bg:#E9EFF2;        /* 연한 청회색 바탕 */
+  --surface:#DCE6EA;   /* 둥근 카드 */
+  --white:#FFFFFF;
+  --ink:#134B5F;       /* 짙은 청록: bg 위 8.23 / surface 위 7.52 / 흰 바탕 9.55 */
+  --muted:#41606D;     /* 보조글: bg 위 5.80 / surface 위 5.31 */
+  --line:#B9CBD3;      /* 구분선(글자 아님) */
+  --accent:#A4521F;    /* 구리색 주 버튼: 흰 글자 5.52 / bg 위 글자 4.75 */
+  --on-accent:#FFFFFF;
+  --success:#2E6B4F;--warning:#8A5A00;--error:#A3312A;
+  /* 글꼴 */
+  --serif:'Noto Serif KR',serif;
+  --sans:'Noto Sans KR',system-ui,-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  /* 글자 위계 */
+  --fs-h1:clamp(2rem,1.4rem + 3vw,3.25rem);--fs-h2:clamp(1.625rem,1.3rem + 1.4vw,2.25rem);--fs-h3:1.125rem;--fs-body:1rem;--fs-sub:0.875rem;
+  /* 8pt 간격 */
+  --s1:8px;--s2:16px;--s3:24px;--s4:32px;--s6:48px;--s8:64px;--sec:var(--s6);
+  /* 모서리·버튼 */
+  --r-card:24px;--r-pill:999px;--btn-h:52px;
+  --gutter:20px}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:var(--fs-body);line-height:1.7;word-break:keep-all;overflow-wrap:break-word}
+img{display:block;max-width:100%;height:auto}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+h1,h2,h3,p{margin:0}
+a{color:inherit}
+.wrap{max-width:1080px;margin-inline:auto;padding-inline:max(var(--gutter),env(safe-area-inset-left)) max(var(--gutter),env(safe-area-inset-right))}
+
+/* 안내 띠 */
+.demo{background:var(--ink);color:var(--white);text-align:center;font-size:var(--fs-sub);padding:var(--s1) var(--s2)}
+.topline{text-align:center;font-size:var(--fs-sub);padding:var(--s1) var(--s2);border-bottom:1px solid var(--line)}
+.topline a{display:inline-flex;align-items:center;min-height:32px;text-underline-offset:3px}
+
+/* 머리글 */
+.head{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);min-height:64px;border-bottom:1px solid var(--line)}
+.logo{display:inline-flex;align-items:center;gap:var(--s1);font-family:var(--serif);font-weight:700;font-size:1.25rem;color:var(--accent);text-decoration:none}
+.logo svg{width:28px;height:28px}
+.head nav a{display:inline-flex;align-items:center;min-height:48px;font-weight:500;font-size:var(--fs-sub);text-underline-offset:4px}
+
+/* 첫 화면: 가운데 굵은 명조 */
+.hero{text-align:center;padding-top:var(--s6)}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:var(--fs-h1);line-height:1.25;letter-spacing:-0.02em;margin-bottom:var(--s2)}
+.hero .lead{color:var(--ink);max-width:30em;margin:0 auto var(--s4)}
+.acts{display:flex;justify-content:center;gap:12px}
+.acts .btn{padding:0 var(--s2);font-size:0.9375rem;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:var(--btn-h);padding:0 var(--s4);border-radius:var(--r-pill);font-weight:700;text-decoration:none;font-size:var(--fs-body)}
+.btn-main{background:var(--accent);color:var(--on-accent)}
+.btn-sub{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.quick{display:flex;flex-wrap:wrap;justify-content:center;gap:0 var(--s3);margin:var(--s3) 0 var(--s4);padding:0;list-style:none}
+.quick a{display:inline-flex;align-items:center;min-height:48px;color:var(--ink);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px;font-size:var(--fs-sub)}
+.hero-photo{width:100%;max-width:880px;margin:0 auto;aspect-ratio:3/2;object-fit:cover}
+
+/* 둥근 카드가 세로로 이어짐 */
+.cards{display:grid;gap:var(--s3);padding:var(--sec) 0}
+.card{background:var(--surface);border-radius:var(--r-card);overflow:hidden;text-align:center}
+.card-in{padding:var(--s6) var(--s3) var(--s4)}
+.card h2{font-family:var(--serif);font-weight:900;font-size:var(--fs-h2);line-height:1.3;margin-bottom:var(--s2)}
+.card .desc{color:var(--muted);max-width:32em;margin:0 auto}
+.card img{width:100%;aspect-ratio:3/2;object-fit:cover}
+
+.steps{list-style:none;margin:var(--s4) auto 0;padding:0;max-width:640px;text-align:left;display:grid;gap:0}
+.steps li{display:grid;grid-template-columns:auto 1fr;gap:var(--s2);padding:var(--s2) 0;border-top:1px solid var(--line)}
+.steps b{font-family:var(--serif);font-weight:900;color:var(--accent);font-size:var(--fs-h3);line-height:1.6}
+.steps strong{display:block;font-size:var(--fs-h3)}
+.steps span{color:var(--muted);font-size:var(--fs-sub)}
+
+/* 교습비 표 (playbook 규칙 55·57 .cases) */
+.cases{width:100%;max-width:640px;margin:var(--s4) auto 0;border-collapse:collapse;font-size:var(--fs-sub);text-align:left}
+.cases caption{text-align:left;color:var(--muted);padding-bottom:var(--s1);caption-side:top}
+.cases th,.cases td{padding:12px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.cases thead th{color:var(--muted);font-weight:500}
+.cases td:last-child{white-space:nowrap;color:var(--ink);font-weight:700}
+.cases th[scope=row]{font-weight:700}
+.cases small{display:block;color:var(--muted);font-weight:400}
+.table-note{color:var(--muted);font-size:var(--fs-sub);max-width:640px;margin:var(--s2) auto 0;text-align:left}
+
+/* 자주 묻는 질문 */
+.faq{max-width:640px;margin:var(--s3) auto 0;text-align:left}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{display:flex;justify-content:space-between;align-items:center;gap:var(--s2);min-height:56px;font-weight:700;cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--serif);font-size:1.25rem;color:var(--accent);flex:none}
+.faq details[open] summary::after{content:"−"}
+.faq p{color:var(--muted);padding-bottom:var(--s2)}
+
+/* 상담 카드: 짙은 청록 */
+.card.dark{background:var(--ink);color:var(--white)}
+.card.dark .desc{color:var(--white)}
+.contact{list-style:none;padding:0;margin:var(--s3) auto 0;max-width:420px;text-align:left}
+.contact li{display:flex;justify-content:space-between;gap:var(--s2);padding:var(--s1) 0;border-top:1px solid rgba(255,255,255,.3);font-size:var(--fs-sub)}
+
+footer{padding:var(--s4) 0 var(--s6);color:var(--muted);font-size:var(--fs-sub);text-align:center}
+footer p+p{margin-top:4px}
+
+@media(min-width:861px){
+  .card-in{padding:var(--s8) var(--s6) var(--s6)}
+  .cards{gap:var(--s4)}
+}
+@media(max-width:400px){
+  .acts .btn{flex:1 1 0}
+  .head nav{display:none}
+}
+</style>
+<!-- 구조화 데이터(LocalBusiness 계열). 가상 샘플이라 주소·전화는 가상 값. 납품 때는 고객이 준 정보만 넣는다 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness","EducationalOrganization"],
+  "name": "한걸음 수학",
+  "description": "중1~고2 소수 정원 수학교습소 한걸음 수학. 포트폴리오용 가상 샘플입니다. 실존하는 가게가 아니며 주소·전화번호는 모두 가상 값입니다.",
+  "url": "https://ebd30.github.io/dongne-web/samples/academy.html",
+  "address": {"@type": "PostalAddress","addressLocality": "샘플구","addressRegion": "샘플시","addressCountry": "KR"}
+}
+</script>
+</head>
+<body>
+<div class="demo">포트폴리오용 가상 가게 샘플 · 실제 매장이 아닙니다</div>
+<p class="topline"><a href="#cta">40분 진단 테스트, 먼저 받아 보세요</a></p>
+<div class="wrap">
+  <header class="head">
+    <a class="logo" href="#top"><svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="12" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 18l4-4 3 3 5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>한걸음 수학</a>
+    <nav aria-label="바로가기"><a href="#fee">시간표·교습비</a></nav>
+  </header>
+</div>
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <h1 id="hero-title">수학이 싫은 아이도<br>한 걸음씩 다시</h1>
+      <p class="lead">중1~고2, 한 반 6명. 어디서 막혔는지 찾아 그곳부터 다시 채워요.</p>
+      <div class="acts">
+        <a class="btn btn-main" href="#cta">진단 테스트 신청</a>
+        <a class="btn btn-sub" href="#fee">시간표·교습비</a>
+      </div>
+      <ul class="quick" aria-label="반 바로가기">
+        <li><a href="#fee">중등 기본반</a></li>
+        <li><a href="#fee">중등 심화반</a></li>
+        <li><a href="#fee">고등 내신반</a></li>
+      </ul>
+    </div>
+    <img class="hero-photo" src="img/academy/1.jpg" width="1400" height="933" alt="책상에서 연필로 문제를 풀고 있는 손">
+  </section>
+
+  <div class="wrap cards">
+
+    <section class="card" aria-labelledby="way-title">
+      <div class="card-in">
+        <h2 id="way-title">진단부터 하고<br>진도를 정합니다</h2>
+        <p class="desc">같은 학년이어도 막힌 곳은 다 다릅니다. 40분 테스트로 빈 곳을 먼저 찾고, 매달 학부모님께 학습 리포트를 보내드립니다.</p>
+        <ol class="steps">
+          <li><b>1</b><div><strong>진단</strong><span>40분 테스트로 막힌 단원을 찾습니다</span></div></li>
+          <li><b>2</b><div><strong>맞춤 진도표</strong><span>아이 수준에 맞춰 진도표를 짭니다</span></div></li>
+          <li><b>3</b><div><strong>소수 정원 수업</strong><span>한 반 최대 6명, 수업마다 질문 시간이 있습니다</span></div></li>
+          <li><b>4</b><div><strong>월간 리포트</strong><span>성취도와 자주 틀리는 유형을 정리해 보내드립니다</span></div></li>
+        </ol>
+      </div>
+      <img src="img/academy/2.jpg" width="1400" height="933" loading="lazy" alt="교실에서 수업을 듣는 학생들 (참고용 사진)">
+    </section>
+
+    <section class="card" id="fee" aria-labelledby="fee-title">
+      <div class="card-in">
+        <h2 id="fee-title">시간표 · 교습비</h2>
+        <p class="desc">반마다 요일과 시간이 다릅니다. 진단 결과를 보고 맞는 반을 함께 고릅니다.</p>
+        <table class="cases">
+          <caption>예시 금액 · 교육청 신고 교습비 기준</caption>
+          <thead><tr><th scope="col">반</th><th scope="col">요일 / 시간</th><th scope="col">월 교습비</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">중등 기본<small>중1~중3</small></th><td>월·수·금<br>17:00–19:00</td><td>280,000원</td></tr>
+            <tr><th scope="row">중등 심화<small>중1~중3</small></th><td>화·목<br>17:00–20:00</td><td>320,000원</td></tr>
+            <tr><th scope="row">고등 내신<small>고1~고2</small></th><td>월·수·금<br>19:30–22:00</td><td>380,000원</td></tr>
+          </tbody>
+        </table>
+        <p class="table-note">교습비 반환 기준은 상담 때 안내합니다.</p>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="faq-title">
+      <div class="card-in">
+        <h2 id="faq-title">자주 묻는 질문</h2>
+        <div class="faq">
+          <details><summary>중간에 들어와도 따라갈 수 있나요?</summary><p>진단 테스트 결과에 맞춰 보충 진도를 따로 잡아 드립니다.</p></details>
+          <details><summary>숙제는 얼마나 나오나요?</summary><p>하루 30~40분 분량이고, 다음 수업 때 꼭 같이 확인합니다.</p></details>
+          <details><summary>셔틀이 있나요?</summary><p>OO동, OO동 방향으로 셔틀을 운행합니다.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="card dark" id="cta" aria-labelledby="cta-title">
+      <div class="card-in">
+        <h2 id="cta-title">진단 테스트부터<br>받아 보세요</h2>
+        <p class="desc">전화나 카카오톡으로 편하게 물어보세요. 테스트 날짜를 같이 정해 드립니다.</p>
+        <ul class="contact">
+          <li><span>전화</span><span>번호 자리 (가상 샘플)</span></li>
+          <li><span>카카오톡 채널</span><span>납품 때 연결</span></li>
+          <li><span>위치</span><span>샘플시 샘플구 (가상 주소)</span></li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p>© 한걸음 수학교습소 · 교습소 등록번호 자리(가상) · 교습비 반환 기준은 상담 때 안내합니다</p>
+    <p>동네웹공방 제작(AI 도구 사용) · 사진: Unsplash</p>
+  </div>
+</footer>
+</body>
+</html>

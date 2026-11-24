@@ -1,0 +1,29 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>B 큰 계단</title>
+<link rel="stylesheet" href="base.css">
+<style>
+.top{background:var(--ink);color:#fff}
+.in{max-width:980px;margin:0 auto;padding:0 16px}
+header{display:flex;justify-content:space-between;align-items:center;min-height:64px}
+.logo small{color:#CFE0E6}
+header a.nav{font-size:14px;font-weight:700;min-height:48px;display:flex;align-items:center}
+h1{font-size:30px;line-height:1.3;font-weight:900;letter-spacing:-.02em;padding:10px 0 18px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);align-items:end;gap:0}
+.steps div{background:var(--motif-grid),var(--bg);color:var(--ink);font-size:12px;font-weight:700;padding:6px 6px;border-top:3px solid var(--accent)}
+.steps div:nth-child(1){height:40px}.steps div:nth-child(2){height:70px}.steps div:nth-child(3){height:100px}.steps div:nth-child(4){height:130px}
+.steps div.now{border-top-color:var(--red)}
+.steps div.now::after{content:"← 여기부터";display:block;color:var(--red)}
+.body{max-width:980px;margin:0 auto;padding:18px 16px}
+.lead{color:var(--muted)}
+@media(min-width:860px){h1{font-size:44px}}
+</style></head><body>
+<div class="demo">포트폴리오용 가상 학원 샘플 · 실제 학원이 아닙니다</div>
+<div class="top"><div class="in">
+<header><a class="logo" href="#">한걸음 수학<small>가상</small></a><a class="nav" href="#">시간표·교습비</a></header>
+<h1>수학이 싫은 아이도<br>한 계단씩 다시</h1>
+<div class="steps" aria-hidden="true"><div>정수</div><div class="now">방정식</div><div>함수</div><div>도형</div></div>
+</div></div>
+<div class="body">
+<p class="lead">중1~고2, 한 반 6명. 어느 계단에서 멈췄는지 먼저 찾고, 그 자리부터 다시 오릅니다.</p>
+<div class="acts"><a class="btn fill" href="#">우리 아이 첫 계단 찾기 (40분)</a><a class="btn line" href="#">시간표·교습비 보기</a></div>
+</div>
+</body></html>
