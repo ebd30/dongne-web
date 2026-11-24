@@ -1,0 +1,34 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>B 막대 장부</title>
+<link rel="stylesheet" href="base.css">
+<style>
+.top{background:var(--green);color:#fff;padding:0 16px 0}
+.in{max-width:980px;margin:0 auto}
+header{display:flex;justify-content:space-between;align-items:center;min-height:64px}
+.logo small{color:#D7E4DC}
+header a.nav{font-size:14px;font-weight:700;min-height:48px;display:flex;align-items:center}
+.chart{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:end;height:170px;margin-top:10px;border-bottom:2px solid #fff;padding:0 6px}
+.bar{background:rgba(255,255,255,.22);border-radius:4px 4px 0 0;position:relative}
+.bar b{position:absolute;top:-24px;left:0;right:0;text-align:center;font-size:13px}
+.bar.now{background:var(--hl)}
+.bar.now b{color:var(--hl)}
+.months{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;font-size:12px;padding:6px 6px 0;color:#D7E4DC}
+.months span{text-align:center}
+.paper{background:var(--motif-ledger),var(--paper);padding:22px 16px 24px}
+h1{font-size:30px;line-height:1.35;font-weight:900;letter-spacing:-.02em}
+.lead{color:var(--muted);margin-top:10px}
+.acts{display:grid;gap:10px;margin-top:18px}
+@media(min-width:860px){h1{font-size:42px}.chart{height:220px}}
+</style></head><body>
+<div class="demo">포트폴리오용 가상 회사 샘플 · 실제 회사가 아닙니다</div>
+<div class="top"><div class="in">
+<header><a class="logo" href="#">누리온 창업컨설팅<small>가상</small></a><a class="nav" href="#">상담 순서</a></header>
+<div class="chart" aria-label="석 달 동안 남은 돈 막대(가상)"><div class="bar" style="height:55%"><b>180만</b></div><div class="bar" style="height:48%"><b>160만</b></div><div class="bar now" style="height:66%"><b>다음 달?</b></div></div>
+<div class="months"><span>9월</span><span>10월</span><span>11월</span></div>
+<div style="height:16px"></div>
+</div></div>
+<div class="paper"><div class="in">
+<h1>가게의 <span class="hl">숫자</span>를 함께 읽고, 다음 한 걸음을 같이 정합니다</h1>
+<p class="lead">창업 준비부터 매출 점검, 정부지원사업 서류까지. 다음 달에 바로 해 볼 계획을 같이 세웁니다.</p>
+<div class="acts"><a class="btn fill" href="#">장부 들고 첫 상담 받기</a><a class="btn line" href="#">함께 읽는 순서 보기</a></div>
+</div></div>
+</body></html>

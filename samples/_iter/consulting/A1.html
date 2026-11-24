@@ -1,0 +1,37 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>A1 표 먼저</title>
+<link rel="stylesheet" href="base.css">
+<style>
+.sheet{background:var(--motif-margin),var(--motif-ledger),var(--paper);padding:0 16px 24px 38px;border-bottom:2px solid var(--ink)}
+.in{max-width:980px;margin:0 auto}
+header{display:flex;justify-content:space-between;align-items:center;min-height:64px}
+header a.nav{font-size:14px;font-weight:700;color:var(--green);min-height:48px;display:flex;align-items:center}
+h1{font-size:28px;line-height:1.35;font-weight:900;letter-spacing:-.02em;margin-top:8px}
+.lead{color:var(--muted);margin-top:12px}
+.book{margin:4px 0 18px;background:#fff;border:1.5px solid var(--ink);border-radius:var(--r);overflow:hidden}
+.book table{width:100%;border-collapse:collapse;font-size:15px}
+.book th,.book td{padding:9px 12px;border-bottom:1px solid var(--rule);text-align:left}
+.book td.n{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+.book caption{caption-side:top;text-align:left;font-size:12px;color:var(--muted);padding:8px 12px;border-bottom:1.5px solid var(--ink)}
+.book tr.mark td.n{position:relative}
+.book tr.mark td.n span{outline:2px solid var(--red);border-radius:50%;padding:2px 8px}
+.memo{font-size:14px;color:var(--red);font-weight:700;padding:8px 12px}
+.acts{display:grid;gap:10px;margin-top:18px}
+@media(min-width:860px){.in{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:end}header{grid-column:1/-1}h1{font-size:42px}}
+</style></head><body>
+<div class="demo">포트폴리오용 가상 회사 샘플 · 실제 회사가 아닙니다</div>
+<div class="sheet"><div class="in">
+<header><a class="logo" href="#">누리온 창업컨설팅<small>가상</small></a><a class="nav" href="#">상담 순서</a></header>
+<div>
+<div class="book"><table><caption>동네 분식집 한 달 장부 (가상)</caption>
+<tr><th>매출</th><td class="n">1,240만</td></tr>
+<tr><th>재료비</th><td class="n">520만</td></tr>
+<tr class="mark"><th>버려진 재료</th><td class="n"><span>68만</span></td></tr>
+<tr><th>남은 돈</th><td class="n">212만</td></tr>
+</table><p class="memo">↑ 여기부터 같이 봐요</p></div>
+<h1>가게의 <span class="hl">숫자</span>를 함께 읽고, 다음 한 걸음을 같이 정합니다</h1>
+<p class="lead">장부 한 권만 들고 오세요. 다음 달에 바로 해 볼 일 한 가지를 같이 찾습니다.</p>
+<div class="acts"><a class="btn fill" href="#">장부 들고 첫 상담 받기</a><a class="btn line" href="#">함께 읽는 순서 보기</a></div>
+</div>
+
+</div></div>
+</body></html>
