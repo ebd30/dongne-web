@@ -166,7 +166,7 @@ picture{display:contents}
 </script>
 </head>
 <body>
-<div class="demo" role="note">29일(토)은 원두 볶는 날이라 오후 1시에 엽니다.</div>
+<div class="demo" role="note" data-sheet-key="공지">29일(토)은 원두 볶는 날이라 오후 1시에 엽니다.</div>
 
 <div class="wrap">
   <header class="head">
@@ -196,9 +196,9 @@ picture{display:contents}
       <h2 id="h-menu">메뉴</h2>
       <p class="sub">이번 주 원두로 내리는 세 잔입니다.</p>
       <ul class="board num">
-        <li><div class="row"><h3>온기 라떼<span class="tag">처음이면</span></h3><span class="dots" aria-hidden="true"></span><span class="price">5,800원</span></div><p>흑당 시럽에 고소한 우유 거품을 올렸어요</p></li>
-        <li><div class="row"><h3>바닐라 크림 콜드브루</h3><span class="dots" aria-hidden="true"></span><span class="price">6,200원</span></div><p>18시간 동안 천천히 내린 콜드브루</p></li>
-        <li><div class="row"><h3>오늘의 핸드드립</h3><span class="dots" aria-hidden="true"></span><span class="price">6,500원</span></div><p>이번 주 싱글 오리진 원두 중 하나를 골라 내려요</p></li>
+        <li><div class="row"><h3>온기 라떼<span class="tag">처음이면</span></h3><span class="dots" aria-hidden="true"></span><span class="price" data-sheet-key="온기 라떼">5,800원</span></div><p>흑당 시럽에 고소한 우유 거품을 올렸어요</p></li>
+        <li><div class="row"><h3>바닐라 크림 콜드브루</h3><span class="dots" aria-hidden="true"></span><span class="price" data-sheet-key="바닐라 크림 콜드브루">6,200원</span></div><p>18시간 동안 천천히 내린 콜드브루</p></li>
+        <li><div class="row"><h3>오늘의 핸드드립</h3><span class="dots" aria-hidden="true"></span><span class="price" data-sheet-key="오늘의 핸드드립">6,500원</span></div><p>이번 주 싱글 오리진 원두 중 하나를 골라 내려요</p></li>
       </ul>
     </div>
   </section>
@@ -282,5 +282,7 @@ picture{display:contents}
   </div>
 </footer>
 <nav class="actbar" aria-label="빠른 이동"><a href="#beans">단체 주문 전날 예약 안내</a></nav>
+<!-- 사장님 구글 시트 연동(납품 때는 시트의 '웹에 게시' CSV 주소로 바꿈). 샘플은 같은 폴더의 CSV로 보여 준다 -->
+<script src="js/sheet-content.js" data-sheet="data/cafe-sheet.csv" defer></script>
 </body>
 </html>
