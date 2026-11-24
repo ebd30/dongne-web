@@ -202,6 +202,7 @@ footer strong{color:var(--ink)}
 @media (min-width:861px){.actbar{display:none}body{padding-bottom:0}html{scroll-padding-bottom:0}}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}.slides{scroll-behavior:smooth}}
 .disclose{font-weight:700;margin-bottom:6px}
+picture{display:contents}
 </style>
 </head>
 <body>
@@ -223,8 +224,8 @@ footer strong{color:var(--ink)}
 <main id="main">
   <div class="gallery" aria-label="공방 사진" role="region">
     <div class="slides" id="slides" tabindex="0">
-      <figure><img src="img/class/1.jpg" width="1400" height="1381" alt="물레 위에서 흙 그릇을 다듬는 두 손"><figcaption>공방 작업대 · 원데이 수업은 물레 없이 손으로만 빚어요 (1/2)</figcaption></figure>
-      <figure><img src="img/class/2.jpg" width="1400" height="933" loading="lazy" alt="흰 흙으로 작은 컵 모양을 잡는 손"><figcaption>컵 벽 두께는 강사가 한 분씩 손으로 짚어 드려요 (2/2)</figcaption></figure>
+      <figure><picture><source type="image/webp" srcset="img/class/r/1-480.webp 480w, img/class/r/1-960.webp 960w, img/class/r/1-1400.webp 1400w" sizes="(min-width: 860px) 50vw, 100vw"><img src="img/class/r/1-960.jpg" srcset="img/class/r/1-480.jpg 480w, img/class/r/1-960.jpg 960w, img/class/r/1-1400.jpg 1400w" sizes="(min-width: 860px) 50vw, 100vw" width="1400" height="1381" alt="물레 위에서 흙 그릇을 다듬는 두 손" fetchpriority="high" decoding="async"></picture><figcaption>공방 작업대 · 원데이 수업은 물레 없이 손으로만 빚어요 (1/2)</figcaption></figure>
+      <figure><picture><source type="image/webp" srcset="img/class/r/2-480.webp 480w, img/class/r/2-960.webp 960w, img/class/r/2-1400.webp 1400w" sizes="(min-width: 860px) 50vw, 100vw"><img src="img/class/r/2-960.jpg" srcset="img/class/r/2-480.jpg 480w, img/class/r/2-960.jpg 960w, img/class/r/2-1400.jpg 1400w" sizes="(min-width: 860px) 50vw, 100vw" width="1400" height="933" loading="lazy" alt="흰 흙으로 작은 컵 모양을 잡는 손" decoding="async"></picture><figcaption>컵 벽 두께는 강사가 한 분씩 손으로 짚어 드려요 (2/2)</figcaption></figure>
     </div>
     <div class="dots" aria-hidden="true"><i class="on"></i><i></i></div>
   </div>
@@ -266,7 +267,7 @@ footer strong{color:var(--ink)}
   </section>
 
   <figure class="photo">
-    <img src="img/class/3.jpg" width="1400" height="2100" loading="lazy" alt="손으로 빚은 머그컵 네 개를 위로 쌓아 둔 모습">
+    <picture><source type="image/webp" srcset="img/class/r/3-480.webp 480w, img/class/r/3-960.webp 960w, img/class/r/3-1400.webp 1400w" sizes="(min-width: 860px) 50vw, 100vw"><img src="img/class/r/3-960.jpg" srcset="img/class/r/3-480.jpg 480w, img/class/r/3-960.jpg 960w, img/class/r/3-1400.jpg 1400w" sizes="(min-width: 860px) 50vw, 100vw" width="1400" height="2100" loading="lazy" alt="손으로 빚은 머그컵 네 개를 위로 쌓아 둔 모습" decoding="async"></picture>
     <figcaption>굽기 전 손빚기 머그컵 · 수업에서 만드는 크기와 비슷해요</figcaption>
   </figure>
 
