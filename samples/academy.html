@@ -19,10 +19,10 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%23FFFFFF'/><path d='M8 52h14v-12h14v-12h14v-12h8' fill='none' stroke='%23134B5F' stroke-width='5'/><circle cx='43' cy='22' r='9' fill='none' stroke='%23C0392B' stroke-width='3'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
 <!--
   디자인 기록 (workflow.md, 2026-11-24 다시 만듦 · 작업 파일 samples/_iter/academy/)
-  목적: 수학이 싫은 아이도 한 걸음씩 / 콘셉트 단어: 계단 (버튼 '우리 아이 첫 계단 찾기', 섹션 '계단 오르는 순서')
+  목적: 수학이 싫은 아이도 한 걸음씩 / 콘셉트 단어: 계단 (버튼 '우리 아이 첫 계단 찾기', 섹션 '수업 방식')
   모티프: 모눈 노트(--motif-grid) · 단원 계단선 · 빨간 채점 동그라미
   레퍼런스: 수학 노트(모눈), Applerouth(차분한 청록·구리), 오답 노트·채점지(빨간 펜)
   첫 화면 3안: A 4.8 / B 3.8 / C 4.5 → A, 2바퀴 A 4.6 / A1 4.9 / A2 4.7 → A1 확정(+A2 제목 줄바꿈)
@@ -71,7 +71,7 @@ section{padding-top:var(--sec)}
 h2{font-size:var(--fs-h2);line-height:1.4;font-weight:900;letter-spacing:-.01em}
 .sub{color:var(--muted);font-size:var(--fs-sub);margin-top:4px}
 
-/* 계단 오르는 순서: 한 칸씩 오른쪽으로 올라가는 단 */
+/* 수업 방식: 한 칸씩 오른쪽으로 올라가는 단 */
 .climb{list-style:none;padding:0;margin-top:var(--s3);display:grid;gap:10px}
 .climb li{display:grid;grid-template-columns:40px 1fr;column-gap:12px;border-top:1px solid var(--line);padding:14px 0}
 .climb li::before{content:counter(c);counter-increment:c;grid-row:span 3;font-size:28px;font-weight:900;line-height:1;color:var(--accent)}
@@ -133,6 +133,7 @@ footer p+p{margin-top:4px}
   .cta .wrap{display:grid;grid-template-columns:1fr 1fr;gap:var(--s6);align-items:center}
 }
 .disclose{font-weight:700;margin-bottom:6px}
+.logo{font-family:'Jua',sans-serif !important;font-size:24px !important;font-weight:400 !important;letter-spacing:0 !important}
 </style>
 <!-- 구조화 데이터. 가상 샘플이라 주소는 가상 값. 납품 때는 고객이 준 정보만 넣는다 -->
 <script type="application/ld+json">
@@ -188,7 +189,7 @@ footer p+p{margin-top:4px}
   <section aria-labelledby="h-climb">
     <div class="wrap split">
       <div>
-        <h2 id="h-climb">계단 오르는 순서</h2>
+        <h2 id="h-climb">수업 방식</h2>
         <p class="sub">같은 학년이어도 멈춘 계단은 다 다릅니다. 그래서 진단부터 합니다.</p>
       </div>
       <ol class="climb">
@@ -203,7 +204,7 @@ footer p+p{margin-top:4px}
   <section aria-labelledby="h-report">
     <div class="wrap split">
       <div>
-        <h2 id="h-report">한 달 뒤 받는 채점지</h2>
+        <h2 id="h-report">월간 리포트</h2>
         <p class="sub">점수보다 '어느 계단까지 올랐는지'를 보여 드립니다.</p>
       </div>
       <div class="report">
@@ -220,7 +221,7 @@ footer p+p{margin-top:4px}
 
   <section aria-labelledby="h-faq">
     <div class="wrap">
-      <h2 id="h-faq">학부모님이 자주 물으시는 것</h2>
+      <h2 id="h-faq">자주 묻는 질문</h2>
       <div class="faq">
         <details><summary>학기 중간에 들어와도 따라갈 수 있나요?</summary><p>진단 결과에 맞춰 멈춘 계단부터 보충 진도를 따로 잡아 드립니다.</p></details>
         <details><summary>숙제는 얼마나 나오나요?</summary><p>하루 30~40분 분량이고, 다음 수업 때 꼭 같이 확인합니다.</p></details>
@@ -233,7 +234,7 @@ footer p+p{margin-top:4px}
   <div class="cta" id="cta">
     <div class="wrap">
       <div>
-        <h2>첫 계단부터 같이 찾아요</h2>
+        <h2>상담·진단 신청</h2>
         <p class="sub">전화나 카카오톡으로 편하게 물어보세요. 40분 진단 날짜를 같이 정합니다.</p>
       </div>
       <div>

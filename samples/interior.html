@@ -19,10 +19,10 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23F2C230'/><path d='M8 0v20M18 0v12M28 0v20M38 0v12M48 0v20M58 0v12' stroke='%231F1F1D' stroke-width='3'/><text x='32' y='54' font-size='24' font-family='sans-serif' font-weight='900' text-anchor='middle' fill='%231F1F1D'>담</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=IBM+Plex+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
 <!--
   디자인 기록 (workflow.md · anti-ai-look.md 2판, 2026-11-24 다시 만듦 · 작업 파일 samples/_iter/interior/)
-  목적: 실측한 그대로 견적하고, 견적서대로 시공 / 콘셉트 단어: 실측 (버튼 '실측 날짜 잡기', 섹션 '현장 기록')
+  목적: 실측한 그대로 견적하고, 견적서대로 시공 / 콘셉트 단어: 실측 (버튼 '견적 문의', 섹션 '시공 사례')
   모티프: 줄자 눈금(--motif-ruler) · 마스킹테이프 메모(.mask) · 항목별 견적서
   레퍼런스: 현장 줄자·마스킹테이프 표시, 시공사 항목별 견적서, 공사 현장 안내판(노랑·검정)
   첫 화면 3안: A 4.5 / B 4.5 / C 4.75 → C, 2바퀴 C 4.75 / C1 4.9 / C2 4.6 → C1 확정
@@ -93,7 +93,7 @@ h2{font-size:var(--fs-5);line-height:1.4;font-weight:900;letter-spacing:-.01em}
 .scope p{font-size:var(--fs-2);color:var(--muted)}
 .scope .it{font-size:var(--fs-1);margin-top:6px;color:var(--ink)}
 
-/* 현장 기록(사례) */
+/* 시공 사례(사례) */
 .works{display:grid;gap:var(--s3);margin-top:var(--s3)}
 .work{background:#fff;border:1.5px solid var(--ink)}
 .work .ph{position:relative}
@@ -133,7 +133,7 @@ h2{font-size:var(--fs-5);line-height:1.4;font-weight:900;letter-spacing:-.01em}
 .faq details[open] summary::after{content:"−"}
 .faq p{font-size:var(--fs-2);color:var(--muted);padding-bottom:var(--s2)}
 
-/* 실측 날짜 잡기 */
+/* 견적 문의 */
 .info{width:100%;border-collapse:collapse;margin-top:var(--s2);font-size:var(--fs-2);border-top:2px solid var(--ink)}
 .info th,.info td{text-align:left;padding:10px 4px;border-bottom:1px solid var(--line);vertical-align:top}
 .info th{width:34%;color:var(--muted);font-weight:400}
@@ -162,6 +162,7 @@ footer p+p{margin-top:4px}
   .row{display:grid;grid-template-columns:1fr 1fr;gap:var(--s2)}
 }
 .disclose{font-weight:700;margin-bottom:6px}
+.logo{font-family:'Do Hyeon',sans-serif !important;font-size:24px !important;font-weight:400 !important;letter-spacing:0 !important}
 </style>
 <!-- 구조화 데이터. 가상 샘플이라 주소는 가상 값. 납품 때는 고객이 준 정보만 넣는다 -->
 <script type="application/ld+json">
@@ -192,7 +193,7 @@ footer p+p{margin-top:4px}
     <div>
       <h1>실측한 숫자 그대로<br>견적서를 씁니다</h1>
       <p class="lead">주거 전체, 상가, 욕실·주방만. 현장에 먼저 가서 재고 항목별로 금액을 적어 드립니다.</p>
-      <div class="acts"><a class="btn fill" href="#contact">실측 날짜 잡기</a></div>
+      <div class="acts"><a class="btn fill" href="#contact">견적 문의</a></div>
     </div>
   </div>
 </div>
@@ -201,7 +202,7 @@ footer p+p{margin-top:4px}
 <main>
   <section id="scope" aria-labelledby="h-scope">
     <div class="wrap">
-      <h2 id="h-scope">어디까지 고칠지, 범위부터</h2>
+      <h2 id="h-scope">시공 범위</h2>
       <p class="sub">집 전체부터 한 공간만 바꾸는 부분 시공까지, 예산과 일정에 맞춰 범위를 정합니다.</p>
       <ul class="scope">
         <li><h3>주거 전체</h3><p>아파트·빌라·주택. 철거부터 마감까지 공정을 한 번에 관리합니다.</p><p class="it">도배 · 바닥 · 조명 · 몰딩 · 주방 · 욕실 · 붙박이장 · 확장 · 창호</p></li>
@@ -213,7 +214,7 @@ footer p+p{margin-top:4px}
 
   <section id="works" aria-labelledby="h-works">
     <div class="wrap">
-      <h2 id="h-works">현장 기록</h2>
+      <h2 id="h-works">시공 사례</h2>
       <p class="sub">평수와 기간은 디자인 예시입니다.</p>
       <div class="works">
         <article class="work">
@@ -235,7 +236,7 @@ footer p+p{margin-top:4px}
   <section id="cost" aria-labelledby="h-cost">
     <div class="wrap split">
       <div>
-        <h2 id="h-cost">견적서에 금액이 정해지는 네 칸</h2>
+        <h2 id="h-cost">비용</h2>
         <p class="sub">같은 평수라도 현장마다 금액이 다릅니다. 실측과 견적서 작성에는 비용을 받지 않습니다.</p>
         <div class="est">
       <p class="t"><span>욕실 부분 시공 견적서 예시</span><span>실측 후 작성</span></p>
@@ -259,7 +260,7 @@ footer p+p{margin-top:4px}
   <section id="process" aria-labelledby="h-process">
     <div class="wrap split">
       <div>
-        <h2 id="h-process">상담에서 A/S까지</h2>
+        <h2 id="h-process">진행 순서</h2>
         <p class="sub">견적에 동의하신 뒤에만 계약하고, 계약서에 공정 일정과 A/S 기간을 적어 드립니다.</p>
       </div>
       <div class="track"><ol>
@@ -274,7 +275,7 @@ footer p+p{margin-top:4px}
 
   <section id="faq" aria-labelledby="h-faq">
     <div class="wrap">
-      <h2 id="h-faq">실측 전에 많이 물으시는 것</h2>
+      <h2 id="h-faq">자주 묻는 질문</h2>
       <div class="faq">
         <details><summary>살면서 공사할 수 있나요?</summary><p>부분 시공은 거주 중에도 되는 경우가 많습니다. 전체 리모델링은 먼지와 소음 때문에 짐 보관이나 임시 거처를 권해 드려요.</p></details>
         <details><summary>공사 중 비용이 늘어날 수 있나요?</summary><p>철거 뒤 숨은 누수·설비 문제가 나오면 추가 공사가 필요할 수 있습니다. 이때는 사진과 함께 먼저 설명드리고, 동의하신 뒤에만 진행합니다.</p></details>
@@ -288,7 +289,7 @@ footer p+p{margin-top:4px}
   <section id="contact" aria-labelledby="h-contact">
     <div class="wrap split">
       <div>
-        <h2 id="h-contact">실측 날짜 잡기</h2>
+        <h2 id="h-contact">견적 문의</h2>
         <p class="sub">남겨 주신 내용을 확인한 뒤 실측 가능한 날짜를 안내드립니다.</p>
         <table class="info">
           <tr><th scope="row">상담 시간</th><td>평일 09:00~18:00 · 토요일 실측 가능</td></tr>
@@ -312,7 +313,7 @@ footer p+p{margin-top:4px}
         <div><label for="rq">현장 메모 (선택)</label><textarea id="rq" placeholder="예: 욕실 바닥 물빠짐이 느려요"></textarea></div>
         <label class="agree"><input type="checkbox" id="agree"> 견적 상담을 위한 개인정보 수집·이용에 동의합니다. (필수)</label>
         <p class="agree-note">수집 항목: 이름, 연락처, 지역, 평수 · 목적: 실측 일정 연락 · 보관: 상담 종료 후 파기 (데모 문구)</p>
-        <button class="btn fill" type="submit">실측 날짜 잡기</button>
+        <button class="btn fill" type="submit">견적 문의</button>
         <p class="msg" id="formMsg" role="status"></p>
       </form>
     </div>

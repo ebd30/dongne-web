@@ -95,7 +95,7 @@ section h2{font-family:var(--serif);font-size:var(--fs-h2);line-height:1.4;font-
 .promise li{display:grid;grid-template-columns:28px 1fr;gap:8px;padding:12px 0;border-bottom:1px solid var(--line);font-weight:700}
 .promise li::before{content:"✓";color:var(--red)}
 
-/* 서비스: 장부에서 보는 네 칸 */
+/* 서비스: 서비스 */
 .cols{list-style:none;padding:0;margin-top:var(--s2);border-top:2px solid var(--ink)}
 .cols li{border-bottom:1px solid var(--line);padding:12px 0}
 .cols .no{display:none}
@@ -104,7 +104,7 @@ section h2{font-family:var(--serif);font-size:var(--fs-h2);line-height:1.4;font-
 .cols .look{display:block;font-size:var(--fs-sub);margin-top:4px;color:var(--muted)}
 .cols .look b{color:var(--green)}
 
-/* 사례: 읽어 본 장부 */
+/* 사례: 상담 사례 */
 .cases{display:grid;gap:var(--s3);margin-top:var(--s2)}
 .case{background:var(--motif-margin),var(--motif-ledger),#fff;border:1.5px solid var(--ink);border-radius:var(--r);overflow:hidden}
 .case img{width:100%;aspect-ratio:16/9;object-fit:cover;border-bottom:1.5px solid var(--ink)}
@@ -167,6 +167,7 @@ footer{border-top:1px solid var(--line);margin-top:var(--sec);padding:var(--s3) 
   .about .wrap{max-width:760px}
 }
 .disclose{font-weight:700;margin-bottom:6px}
+.logo{font-family:'Nanum Myeongjo',serif !important;font-size:21px !important;font-weight:400 !important;letter-spacing:0 !important}
 </style>
 <!-- 구조화 데이터. 가상 샘플이라 주소는 가상 값. 납품 때는 고객이 준 정보만 넣는다 -->
 <script type="application/ld+json">
@@ -210,7 +211,7 @@ footer{border-top:1px solid var(--line);margin-top:var(--sec);padding:var(--s3) 
 
   <section id="service" aria-labelledby="h-svc">
     <div class="wrap">
-      <h2 id="h-svc">장부에서 보는 네 칸</h2>
+      <h2 id="h-svc">서비스</h2>
       <p class="sub">고민에 맞는 칸부터 펼칩니다. 한 칸만 골라도 됩니다.</p>
       <ul class="cols">
         <li><span class="no">첫째 칸</span><h3>창업 준비</h3><p>업종·상권 검토, 초기 투자비, 손익분기를 정리합니다.</p><span class="look"><b>보는 숫자</b> · 초기 비용, 월 고정비, 손익분기 매출</span></li>
@@ -223,7 +224,7 @@ footer{border-top:1px solid var(--line);margin-top:var(--sec);padding:var(--s3) 
 
   <section id="cases" aria-labelledby="h-case">
     <div class="wrap">
-      <h2 id="h-case">읽어 본 장부</h2>
+      <h2 id="h-case">상담 사례</h2>
       <div class="cases">
         <article class="case">
           <img src="img/consulting/1.jpg" width="1400" height="933" loading="lazy" alt="테이블에 모여 메모하며 회의하는 사람들">
@@ -274,7 +275,7 @@ footer{border-top:1px solid var(--line);margin-top:var(--sec);padding:var(--s3) 
 
   <section id="faq" aria-labelledby="h-faq">
     <div class="wrap">
-      <h2 id="h-faq">상담 전에 많이 물으시는 것</h2>
+      <h2 id="h-faq">자주 묻는 질문</h2>
       <div class="faq">
         <details><summary>장부를 제대로 안 썼는데 괜찮을까요?</summary><p>괜찮습니다. 카드 매출 내역이나 통장 내역만 있어도 시작할 수 있습니다.</p></details>
         <details><summary>아직 가게를 열기 전인데도 상담할 수 있나요?</summary><p>네. 창업 전에 비용과 상권을 미리 점검하는 상담도 자주 합니다.</p></details>
@@ -288,7 +289,7 @@ footer{border-top:1px solid var(--line);margin-top:var(--sec);padding:var(--s3) 
   <section id="contact" aria-labelledby="h-ct">
     <div class="wrap split">
       <div>
-        <h2 id="h-ct">장부 들고 오시는 날</h2>
+        <h2 id="h-ct">상담 신청</h2>
         <table class="info">
           <tr><th scope="row">상담 시간</th><td>평일 10시~18시</td></tr>
           <tr><th scope="row">사무실</th><td>샘플시 샘플구 샘플로 00</td></tr>
