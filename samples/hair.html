@@ -115,7 +115,7 @@ nav .btn{min-height:36px;padding:0 14px;font-size:13px}
 .visit dl div{display:grid;grid-template-columns:4.5em 1fr;gap:var(--s2);padding:14px 0;border-bottom:1px solid var(--line)}
 .visit dt{font-weight:700}
 .visit dd{color:var(--ink)}
-.map{margin-top:var(--s3);height:180px;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;color:var(--muted);font-size:var(--fs-small);text-align:center}
+.map{margin:var(--s3) 0 0;border-radius:var(--r);background:var(--surface);border:1px solid var(--line);padding:12px}.map svg{display:block;width:100%;height:auto}.map figcaption{color:var(--muted);font-size:var(--fs-small);border-top:1px solid var(--line);margin-top:8px;padding-top:6px}
 .visit .btns{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;margin-top:var(--s3)}
 
 footer{padding:var(--s6) var(--pad);text-align:center;font-size:var(--fs-label);color:var(--muted)}
@@ -136,7 +136,7 @@ footer strong{color:var(--ink)}
   .cards .ph{height:340px}
   .band p{font-size:32px}
   .visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:var(--s6)}
-  .map{height:100%;min-height:280px;margin-top:0}
+  .map{margin-top:0}
 }
 </style>
 </head>
@@ -224,7 +224,15 @@ footer strong{color:var(--ink)}
     </dl>
     <div class="btns"><a class="btn btn-line" href="#visit">지도 보기</a><a class="btn btn-fill" href="#visit">내 결 상담 예약</a></div>
   </div>
-  <div class="map">지도 자리<br>실제 가게는 네이버 지도 링크를 연결합니다</div>
+  <figure class="map"><svg viewBox="0 0 320 170" role="img" aria-label="약도: 샘플역 1번 출구에서 큰길을 따라 걷다가 약국 다음 건물 2층이 결 헤어">
+    <g stroke="#8A7F72" stroke-width="10" stroke-linecap="round" fill="none" opacity=".3"><path d="M10 110h300"/><path d="M220 110V20"/></g>
+    <path d="M40 110h170v-58" fill="none" stroke="#262626" stroke-width="2" stroke-dasharray="6 5"/>
+    <path d="M30 140 C80 128 120 152 170 140 S260 128 300 140" fill="none" stroke="#8A7F72" stroke-width="1.5"/>
+    <rect x="22" y="118" width="40" height="20" fill="#262626"/><text x="42" y="132" font-size="11" text-anchor="middle" fill="#F2EFEA" font-family="'Noto Sans KR',sans-serif">1번</text>
+    <rect x="150" y="62" width="44" height="28" fill="none" stroke="#5E5A55" stroke-width="1.5"/><text x="172" y="81" font-size="11" text-anchor="middle" fill="#5E5A55" font-family="'Noto Sans KR',sans-serif">약국</text>
+    <circle cx="210" cy="44" r="13" fill="#262626"/><text x="210" y="49" font-size="12" font-weight="700" text-anchor="middle" fill="#F2EFEA" font-family="'Noto Sans KR',sans-serif">결</text>
+    <g font-family="'Noto Sans KR',sans-serif" font-size="12" fill="#262626"><text x="20" y="162">샘플역</text><text x="232" y="48">결 헤어 2층</text></g>
+  </svg><figcaption>설명용 약도입니다. 실제 가게는 지도 앱 링크를 연결합니다.</figcaption></figure>
 </div></section>
 </main>
 
