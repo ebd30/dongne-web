@@ -148,6 +148,7 @@ footer p+p{margin-top:4px}
   .actbar{display:none}
   body{padding-bottom:0}
 }
+.disclose{font-weight:700;margin-bottom:6px}
 </style>
 <!-- 구조화 데이터. 가상 샘플이라 주소는 가상 값. 납품 때는 고객이 준 정보만 넣는다 -->
 <script type="application/ld+json">
@@ -163,11 +164,11 @@ footer p+p{margin-top:4px}
 </script>
 </head>
 <body>
-<div class="demo">포트폴리오용 가상 가게 샘플 · 실제 매장이 아닙니다</div>
+<div class="demo" role="note">29일(토)은 원두 볶는 날이라 오후 1시에 엽니다.</div>
 
 <div class="wrap">
   <header class="head">
-    <a class="logo" href="#top">온기 커피<small>가상</small></a>
+    <a class="logo" href="#top">온기 커피</a>
     <nav aria-label="바로가기"><a href="#visit">찾아오는 길</a></nav>
   </header>
 </div>
@@ -177,7 +178,7 @@ footer p+p{margin-top:4px}
     <div class="date">
       <p class="k">이번 주 원두 볶은 날</p>
       <p class="big num">11.22</p>
-      <p class="k2">에티오피아 · 콜롬비아 — 28일까지만 잔에 씁니다</p>
+      <p class="k2">에티오피아, 콜롬비아. 28일까지만 내립니다</p>
     </div>
     <div>
       <h1>볶은 지 7일 안의 원두로,<br>한 잔씩 갈아 내립니다</h1>
@@ -253,7 +254,7 @@ footer p+p{margin-top:4px}
       <div>
         <h2 id="h-visit">찾아오는 길</h2>
         <table class="info num">
-          <tr><th scope="row">주소</th><td>샘플시 샘플구 샘플동 00-0, 1층 (가상 주소)</td></tr>
+          <tr><th scope="row">주소</th><td>샘플시 샘플구 샘플동 00-0, 1층</td></tr>
           <tr><th scope="row">영업</th><td>매일 08:00~21:00</td></tr>
           <tr><th scope="row">전화</th><td>가게 번호 (납품 때 넣음)</td></tr>
           <tr><th scope="row">원두 볶는 날</th><td>토요일 아침 (그날도 영업)</td></tr>
@@ -268,7 +269,7 @@ footer p+p{margin-top:4px}
           <circle cx="190" cy="52" r="13" fill="#A8401F"/><text x="190" y="57" font-size="12" font-weight="900" text-anchor="middle" fill="#fff" font-family="'Noto Sans KR',sans-serif">온</text>
           <g font-family="'Noto Sans KR',sans-serif" font-size="12" fill="#2A1E17"><text x="20" y="172">샘플역</text><text x="214" y="56">온기 커피 1층</text><text x="232" y="112">큰길</text></g>
         </svg>
-        <figcaption>설명용 약도입니다. 실제 가게는 지도 앱 링크를 연결합니다. 역에서 걸어서 약 4분(가상).</figcaption>
+        <figcaption>설명용 약도입니다. 실제 가게는 지도 앱 링크를 연결합니다. 역에서 걸어서 약 4분.</figcaption>
       </figure>
     </div>
   </section>
@@ -276,7 +277,8 @@ footer p+p{margin-top:4px}
 
 <footer>
   <div class="wrap">
-    <p>© 온기 커피 (가상 가게) · 샘플시 샘플구 샘플동 00-0, 1층</p>
+    <p class="disclose">포트폴리오용 가상 가게 샘플입니다(실제 매장 아님). 이름·가격·일정은 지어낸 값이고, 동네웹공방이 AI 도구로 만들었습니다.</p>
+    <p>© 온기 커피 · 샘플시 샘플구 샘플동 00-0, 1층</p>
     <p>사진: Unsplash · 동네웹공방 제작(AI 도구 사용)</p>
   </div>
 </footer>

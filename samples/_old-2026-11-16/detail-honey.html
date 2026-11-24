@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>상세페이지 샘플 - 산골 아카시아 꿀</title>
+<meta name="description" content="온라인 쇼핑몰용 상품 상세페이지 샘플입니다. 가상 상품 산골 아카시아 꿀을 예로, 상품 소개·특징·구성 표를 세로 한 장에 담았습니다.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="상세페이지 샘플 - 산골 아카시아 꿀">
+<meta property="og:description" content="온라인 쇼핑몰용 상품 상세페이지 샘플입니다. 가상 상품 산골 아카시아 꿀을 예로, 상품 소개·특징·구성 표를 세로 한 장에 담았습니다.">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:url" content="https://ebd30.github.io/dongne-web/samples/detail-honey.html">
+<meta property="og:image" content="https://ebd30.github.io/dongne-web/portfolio-img/detail-honey.png">
+<meta property="og:image:alt" content="산골 아카시아 꿀 상세페이지 샘플 화면">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+<!-- 제목용 명조: 제목 글자 56자만 받음(text=). 제목 문구를 바꾸면 다시 만든다 -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@700&text=%2C%EA%B3%84%EA%B3%A0%EA%B3%A8%EA%B8%B4%EA%B9%8C%EA%BF%80%EB%84%A4%EB%88%88%EB%8A%94%EB%8A%98%EB%8B%88%EB%8B%A4%EB%8B%A8%EB%8B%B4%EB%8C%80%EB%A7%9B%EB%A9%B4%EB%B2%8C%EB%B3%91%EB%B3%B4%EB%B6%80%EB%B6%84%EC%82%B0%EC%83%81%EC%84%9C%EC%84%A4%EC%84%B8%EC%85%A8%EC%8A%A4%EC%8B%9C%EC%8B%A0%EC%95%84%EC%97%90%EC%97%B0%EC%98%A4%EC%9A%94%EC%9D%84%EC%9D%98%EC%9D%B4%EC%9E%90%EC%9E%91%EC%A0%95%EC%A7%80%EC%B0%BE%EC%B6%A9%EC%B9%A8%EC%B9%B4%ED%83%95%ED%84%B0%ED%86%B5%ED%91%BC%ED%92%88%ED%95%9C%ED%95%A9%ED%95%B4&display=swap" rel="stylesheet">
+<style>
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#eee;font-family:'Noto Sans KR',sans-serif;color:#2b2118}
+.page{width:auto;max-width:860px;margin:0 auto;background:#fffaf0}
+.note{background:#2b2118;color:#f5d58a;text-align:center;font-size:15px;padding:10px}
+section{padding:90px 70px;text-align:center}
+.hero{background:linear-gradient(180deg,#f7c948 0%,#f2a93b 100%);color:#2b2118;padding:120px 70px 110px}
+.hero small{font-size:22px;letter-spacing:6px;font-weight:700}
+.hero h1{font-family:'Noto Serif KR',serif;font-size:74px;line-height:1.2;margin:24px 0}
+.hero p{font-size:26px;line-height:1.6}
+.jar{width:260px;height:320px;margin:60px auto 0;background:#ffe39a;border:10px solid #fff;border-radius:40px 40px 60px 60px;position:relative;box-shadow:0 30px 60px rgba(0,0,0,.18)}
+.jar:before{content:"";position:absolute;top:-56px;left:40px;width:160px;height:50px;background:#8a5a2b;border-radius:12px}
+.jar span{position:absolute;top:110px;left:0;right:0;font-family:'Noto Serif KR',serif;font-size:40px;font-weight:900;color:#8a5a2b}
+h2{font-family:'Noto Serif KR',serif;font-size:48px;line-height:1.35;margin-bottom:24px}
+.lead{font-size:24px;line-height:1.8;color:#5b4a3a}
+.tag{display:inline-block;background:#f2a93b;color:#2B2118;font-weight:700;font-size:20px;padding:8px 22px;border-radius:30px;margin-bottom:26px}
+.points{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;margin-top:50px}
+.pt{background:#fff;border-radius:24px;padding:40px 18px;box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.pt b{display:block;font-size:54px;color:#A0620A;font-weight:900}
+.pt span{font-size:21px;font-weight:700}
+.dark{background:#2b2118;color:#fff}
+.dark .lead{color:#e9dccb}
+.steps{margin-top:46px;text-align:left}
+.step{display:flex;gap:26px;align-items:center;background:rgba(255,255,255,.07);border-radius:20px;padding:26px 30px;margin-bottom:16px}
+.step i{font-style:normal;flex:none;width:64px;height:64px;border-radius:50%;background:#f7c948;color:#2b2118;font-size:28px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.step p{font-size:23px;line-height:1.5}
+table{width:100%;border-collapse:collapse;margin-top:40px;font-size:22px;background:#fff;border-radius:20px;overflow:hidden}
+td{padding:22px 26px;border-bottom:1px solid #f0e4cf;text-align:left}
+td:first-child{width:34%;font-weight:700;background:#fff3d6}
+.faq{text-align:left;margin-top:40px}
+.q{background:#fff;border-radius:20px;padding:28px 32px;margin-bottom:16px}
+.q b{font-size:23px;display:block;margin-bottom:10px}
+.q p{font-size:21px;color:#5b4a3a;line-height:1.6}
+.cta{background:#f7c948;padding:100px 70px}
+.cta h2{font-size:54px}
+@media(max-width:600px){section{padding:56px 20px}.hero{padding:72px 20px 64px}.hero h1{font-size:clamp(28px,8vw,44px)}h2,.cta h2{font-size:clamp(24px,7vw,48px);word-break:keep-all}.pt{padding:24px 6px}.pt b{font-size:30px}.pt span{font-size:15px;word-break:keep-all}}
+</style></head><body><div class="page">
+<div class="note">포트폴리오용 샘플 상세페이지입니다 · 실제 판매 상품이 아닙니다 · AI 도구로 제작한 샘플</div>
+
+<section class="hero">
+  <small>SANGOL HONEY</small>
+  <h1>아침 한 스푼,<br>산골이 담긴 꿀</h1>
+  <p>해발 600m 산골 양봉장에서<br>봄 한철에만 뜨는 아카시아 꿀</p>
+  <div class="jar"><span>아카시아<br>꿀</span></div>
+</section>
+
+<section>
+  <div class="tag">이런 분께 추천해요</div>
+  <h2>설탕 대신 자연의 단맛을<br>찾고 계셨다면</h2>
+  <p class="lead">요거트, 토스트, 따뜻한 차에 한 스푼.<br>향은 은은하고 끝맛은 깔끔해서 매일 먹기 좋습니다.</p>
+  <div class="points">
+    <div class="pt"><b>단일</b><span>아카시아 밀원</span></div>
+    <div class="pt"><b>1회</b><span>봄 한철 채밀</span></div>
+    <div class="pt"><b>0</b><span>설탕·첨가물</span></div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="tag">만드는 과정</div>
+  <h2>벌통에서 병까지,<br>네 단계면 충분합니다</h2>
+  <div class="steps">
+    <div class="step"><i>1</i><p>5월, 아카시아 꽃이 필 때만 채밀합니다</p></div>
+    <div class="step"><i>2</i><p>충분히 숙성된 벌집에서만 꿀을 뜹니다</p></div>
+    <div class="step"><i>3</i><p>가열하지 않고 거름망으로만 걸러 냅니다</p></div>
+    <div class="step"><i>4</i><p>유리병에 담아 그대로 보내 드립니다</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="tag">상품 정보</div>
+  <h2>한눈에 보는 상품 정보</h2>
+  <table>
+    <tr><td>품목</td><td>아카시아 꿀 (샘플 문구)</td></tr>
+    <tr><td>용량</td><td>500g / 1kg</td></tr>
+    <tr><td>보관</td><td>직사광선을 피해 실온 보관</td></tr>
+    <tr><td>참고</td><td>기온이 낮으면 하얗게 굳을 수 있으며 품질에는 문제가 없습니다</td></tr>
+  </table>
+  <div class="faq">
+    <div class="q"><b>Q. 꿀이 하얗게 굳었어요.</b><p>A. 꿀의 포도당이 굳는 자연스러운 현상입니다. 따뜻한 물에 병째 담가 두면 다시 풀립니다.</p></div>
+    <div class="q"><b>Q. 아이도 먹어도 되나요?</b><p>A. 돌이 지나지 않은 아기에게는 꿀을 먹이지 않는 것이 좋습니다.</p></div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>오늘 아침부터<br>한 스푼 시작해 보세요</h2>
+  <p class="lead" style="color:#2b2118">지금 주문하시면 산골에서 바로 보내 드립니다</p>
+</section>
+</div></body></html>

@@ -1,0 +1,67 @@
+/* QR 회사 소개 모바일 페이지 — 가상 회사 샘플 (방향 E 신뢰 전문, 대비는 reference-guide 3절) */
+:root{
+  --bg:#FFFFFF; --surface:#EEF3F8; --ink:#0F2238; --muted:#4A5B6E; --accent:#1B4F8A; --on:#FFFFFF; --line:#D9E2EC;
+  --r:12px; --sp-1:8px; --sp-2:16px; --sp-3:24px; --sp-4:32px; --sp-6:48px;
+  --font:'Noto Sans KR',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);font-size:16px;line-height:1.7;word-break:keep-all}
+a{color:inherit}
+.wrap{max-width:560px;margin:0 auto;padding:0 var(--sp-2)}
+.notice{background:var(--ink);color:#fff;font-size:13px;text-align:center;padding:6px var(--sp-2)}
+header{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-weight:700;font-size:18px;text-decoration:none}
+.logo small{font-weight:400;font-size:13px;color:var(--muted);margin-left:6px}
+
+/* 회사 사진 자리: 실제 사진으로 교체 (가상 샘플이라 그림으로 표시) */
+.photo{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:16/10;
+  background:linear-gradient(135deg,#C9D7E6 0%,#8FA9C4 55%,#5E7FA3 100%)}
+.photo::before{content:"";position:absolute;left:8%;right:8%;bottom:0;height:46%;background:#3F5E80;
+  clip-path:polygon(0 100%,0 40%,18% 40%,18% 20%,40% 20%,40% 45%,62% 45%,62% 10%,82% 10%,82% 35%,100% 35%,100% 100%)}
+.photo span{position:absolute;left:var(--sp-2);top:var(--sp-2);background:rgba(255,255,255,.92);color:var(--ink);
+  font-size:13px;border-radius:999px;padding:4px 10px}
+.photo.sm{aspect-ratio:16/9}
+
+.hero{padding:var(--sp-3) 0 var(--sp-4)}
+.hero h1{font-size:28px;line-height:1.35;margin:var(--sp-3) 0 var(--sp-1)}
+.hero p{color:var(--muted)}
+
+/* 목차 버튼 */
+.toc{display:grid;gap:12px;margin-top:var(--sp-3)}
+.toc a{display:flex;align-items:center;gap:12px;min-height:64px;padding:12px var(--sp-2);border:1.5px solid var(--line);
+  border-radius:var(--r);text-decoration:none;background:#fff}
+.toc a:active,.toc a:hover{border-color:var(--accent)}
+.toc .no{flex:0 0 32px;height:32px;border-radius:50%;background:var(--surface);color:var(--accent);font-weight:700;
+  display:flex;align-items:center;justify-content:center;font-size:15px}
+.toc b{display:block;font-size:17px;line-height:1.4}
+.toc small{display:block;color:var(--muted);font-size:14px;line-height:1.5}
+.toc .go{margin-left:auto;color:var(--accent);font-size:20px}
+
+.btn{display:flex;align-items:center;justify-content:center;min-height:52px;border-radius:var(--r);font-weight:700;
+  text-decoration:none;font-size:16px}
+.btn.fill{background:var(--accent);color:var(--on)}
+.btn.line{border:1.5px solid var(--ink)}
+.acts{display:grid;gap:12px;margin-top:var(--sp-3)}
+
+/* 상세 페이지 */
+.back{display:inline-flex;align-items:center;gap:6px;min-height:48px;font-weight:700;color:var(--accent);text-decoration:none}
+.page h1{font-size:26px;line-height:1.35;margin:var(--sp-1) 0 var(--sp-2)}
+.page h2{font-size:19px;margin:var(--sp-4) 0 var(--sp-1)}
+.page p,.page li{color:var(--ink)}
+.page .lead{color:var(--muted);margin-bottom:var(--sp-3)}
+.page ul{padding-left:1.2em}
+.card{background:var(--surface);border-radius:var(--r);padding:var(--sp-2);margin-top:12px}
+.card b{display:block}
+.card span{color:var(--muted);font-size:15px}
+table{width:100%;border-collapse:collapse;margin-top:var(--sp-1);font-size:15px}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{width:34%;color:var(--muted);font-weight:400}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:var(--sp-6) 0 var(--sp-3)}
+.pager a{min-height:56px;border:1.5px solid var(--line);border-radius:var(--r);padding:8px 12px;text-decoration:none;font-size:14px;color:var(--muted)}
+.pager a b{display:block;color:var(--ink);font-size:15px}
+.pager .next{text-align:right}
+
+footer{border-top:1px solid var(--line);margin-top:var(--sp-6);padding:var(--sp-3) 0 var(--sp-6);color:var(--muted);font-size:14px}
+:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+@media (min-width:768px){.hero h1{font-size:34px}.toc{grid-template-columns:1fr 1fr}}

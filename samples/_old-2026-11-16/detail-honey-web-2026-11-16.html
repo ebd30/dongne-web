@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="only light">
+<meta name="theme-color" content="#F3F0D8">
+<meta name="format-detection" content="telephone=no">
+<title>상세페이지 샘플 - 산골 아카시아 꿀</title>
+<meta name="description" content="온라인 쇼핑몰용 상품 상세페이지 샘플입니다. 가상 상품 산골 아카시아 꿀을 예로, 상품 소개·특징·만드는 과정·상품 정보를 860px 세로 한 장에 담았습니다.">
+<link rel="canonical" href="https://ebd30.github.io/dongne-web/samples/detail-honey.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="상세페이지 샘플 - 산골 아카시아 꿀">
+<meta property="og:description" content="온라인 쇼핑몰용 상품 상세페이지 샘플입니다. 가상 상품 산골 아카시아 꿀을 예로, 상품 소개·특징·만드는 과정·상품 정보를 세로 한 장에 담았습니다.">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:url" content="https://ebd30.github.io/dongne-web/samples/detail-honey.html">
+<meta property="og:image" content="https://ebd30.github.io/dongne-web/portfolio-img/detail-honey.png">
+<meta property="og:image:alt" content="산골 아카시아 꿀 상세페이지 샘플 화면">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='32' fill='%235E1A47'/><text x='32' y='42' font-size='28' font-family='Georgia,serif' text-anchor='middle' fill='%23F4D86A'>S</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Noto+Serif+KR:wght@400;700&display=swap" rel="stylesheet">
+<!--
+  레퍼런스: Rare Beehive (company/design/references/ref-honey2.png, 할인 팝업은 무시)
+  시그니처 5칸: ① 크림·연두 바탕 + 둥근 모서리 사진 카드 → 가는 세리프 큰 제목 두 줄 가운데 + 소개 문단 가운데
+  ② 가는 세리프(자주색), 강조어만 굵게 ③ 작은 아이콘+짧은 말 3개 줄, 아이콘 제목+얇은 줄+설명 반복, 가로로 늘어선 글자 띠(움직임 없음)
+  ④ 자주색 굵은 띠 섹션 + 벌집 사진 ⑤ 자주색 채움 알약 + 노란 글자
+  디자인 시스템 고정 완료 (시스템: 이 파일 :root. 폭 860px 기준, 600px 이하에서 글자·여백만 줄임)
+  식품 상세라 '효능' 대신 맛·먹는 법·만드는 법으로 바꿨다(건강 효과 단정 문구는 넣지 않음).
+-->
+<style>
+/* ===== 디자인 토큰 — 아래 규칙은 변수만 쓴다 =====
+   대비(WCAG, Python 계산 2026-11-16)
+   --plum #5E1A47 / --bg #F3F0D8 10.65 · / --card #FFFFFF 12.25
+   --ink #3B2B34 / --bg 11.55 · --muted #5E5258 / --bg 6.47 · / --card 7.44
+   --honey #F4D86A / --plum 8.68 (버튼·띠 글자) · --on-plum #F3F0D8 / --plum 10.65 · --on-plum-soft #E3D3DC / --plum 8.52 */
+:root{color-scheme:only light;
+  /* Primary: 자주(제목·버튼·띠) / 노랑(자주 위 글자만) */
+  --plum:#5E1A47;--honey:#F4D86A;
+  /* Neutral */
+  --bg:#F3F0D8;--card:#FFFFFF;--line:#C9B9BF;--ink:#3B2B34;--muted:#5E5258;--on-plum:#F3F0D8;--on-plum-soft:#E3D3DC;
+  /* State (이 페이지엔 폼이 없어 표시용만) */
+  --success:#3F5F3A;--warning:#7A5A12;--error:#8A3B25;
+  --f-serif:'Noto Serif KR','AppleMyungjo','Batang',serif;
+  --f-body:'Noto Sans KR',system-ui,-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  /* 글자 위계 5단계 (860px 기준) */
+  --fs-h1:56px;--fs-h2:42px;--fs-h3:24px;--fs-body:20px;--fs-cap:16px;
+  /* 간격 8pt */
+  --s1:8px;--s2:16px;--s3:24px;--s4:32px;--s5:48px;--s6:64px;--sec:96px;--pad:56px;
+  /* 모서리·버튼 */
+  --r:24px;--r-pill:999px;--btn-h:64px}
+@media(max-width:600px){:root{--fs-h1:32px;--fs-h2:27px;--fs-h3:19px;--fs-body:16px;--fs-cap:14px;--sec:64px;--pad:20px;--r:16px;--btn-h:52px}}
+
+/* ===== [공통] ===== */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:var(--fs-body);line-height:1.75;
+     word-break:keep-all;overflow-wrap:break-word;overflow-x:hidden}
+img,svg{display:block;max-width:100%;height:auto}
+:focus-visible{outline:3px solid var(--plum);outline-offset:3px}
+p{margin:0}
+h1,h2,h3{margin:0;font-family:var(--f-serif);font-weight:400;color:var(--plum)}
+h1{font-size:var(--fs-h1);line-height:1.3;letter-spacing:-0.02em}
+h2{font-size:var(--fs-h2);line-height:1.35;letter-spacing:-0.01em}
+h3{font-size:var(--fs-h3);line-height:1.45}
+h1 b,h2 b{font-weight:700}
+.page{max-width:860px;margin:0 auto;overflow:hidden}
+.in{padding-inline:var(--pad)}
+.center{text-align:center}
+
+.demo{background:var(--plum);color:var(--on-plum);font-size:var(--fs-cap);line-height:1.5;text-align:center;padding:8px 12px}
+
+/* 머리줄: 가운데 세리프 로고 */
+.top{display:flex;align-items:center;justify-content:center;min-height:80px}
+.brand{font-family:var(--f-serif);font-weight:700;font-size:26px;letter-spacing:.12em;color:var(--plum)}
+
+/* ① 첫 화면 */
+.hero-card{border-radius:var(--r);overflow:hidden;background:var(--card)}
+.hero-card img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 45%}
+.hero h1{margin:var(--s5) 0 var(--s3)}
+.hero .lead{max-width:30em;margin-inline:auto;color:var(--muted)}
+.hero .lead b{color:var(--ink)}
+
+/* 아이콘 + 짧은 말 3개 */
+.chips{list-style:none;margin:var(--s5) 0 0;padding:0;display:flex;justify-content:center;flex-wrap:wrap;gap:var(--s2) var(--s4)}
+.chips li{display:flex;align-items:center;gap:var(--s1);font-size:var(--fs-cap);font-weight:700;color:var(--ink)}
+.chips svg{width:22px;height:22px;flex:none;color:var(--plum)}
+
+/* ⑤ 버튼: 자주 채움 알약 + 노란 글자 (한 종류) */
+.pill{display:flex;align-items:center;justify-content:center;width:100%;min-height:var(--btn-h);margin-top:var(--s5);
+      border-radius:var(--r-pill);background:var(--plum);color:var(--honey);font-weight:700;font-size:var(--fs-body);text-decoration:none;
+      box-shadow:inset 0 0 0 2px var(--plum)}
+
+/* 가로 글자 띠 (움직이지 않음, 규칙 59) */
+.ribbon{margin:var(--sec) 0 0;padding:var(--s3) 0;border-block:1px solid var(--line);white-space:nowrap;overflow:hidden}
+.ribbon p{display:flex;align-items:center;gap:var(--s3);margin-left:-40px;font-family:var(--f-serif);font-size:var(--fs-h2);line-height:1.2;color:var(--plum)}
+.ribbon svg{width:22px;height:22px;flex:none;color:var(--plum)}
+
+section{padding:var(--sec) 0}
+.tag{display:block;font-size:var(--fs-cap);font-weight:700;color:var(--plum);margin-bottom:var(--s2)}
+
+/* 아이콘 제목 + 얇은 줄 + 설명 반복 */
+.uses{list-style:none;margin:var(--s5) 0 0;padding:0}
+.uses li + li{margin-top:var(--s5)}
+.uses h3{display:flex;align-items:center;gap:12px;padding-bottom:var(--s2);border-bottom:1px solid var(--plum);font-family:var(--f-body);font-weight:700;color:var(--ink)}
+.uses h3 svg{width:26px;height:26px;flex:none;color:var(--plum)}
+.uses p{padding-top:var(--s2);color:var(--muted)}
+.uses p b{color:var(--ink)}
+
+/* ④ 자주색 띠 */
+.plum{background:var(--plum);color:var(--on-plum)}
+.plum h2{color:var(--on-plum)}
+.plum .tag{color:var(--honey)}
+.plum .lead{color:var(--on-plum-soft)}
+.comb{margin-top:var(--s5);border-radius:var(--r);overflow:hidden}
+.comb img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.steps{list-style:none;margin:var(--s5) 0 0;padding:0}
+.steps li{display:grid;grid-template-columns:72px 1fr;gap:var(--s2);align-items:baseline;padding:var(--s3) 0;border-bottom:1px solid var(--on-plum-soft)}
+.steps li:first-child{border-top:1px solid var(--on-plum-soft)}
+.steps i{font-style:normal;font-family:var(--f-serif);font-size:var(--fs-h2);line-height:1;color:var(--honey)}
+.steps b{display:block;color:var(--on-plum)}
+.steps span{display:block;color:var(--on-plum-soft);font-size:var(--fs-cap)}
+@media(max-width:600px){.steps li{grid-template-columns:44px 1fr}}
+
+/* 상품 정보 */
+.info{margin-top:var(--s5);background:var(--card);border-radius:var(--r);padding:var(--s2) var(--s4)}
+.info dl{margin:0}
+.info div{display:grid;grid-template-columns:7em 1fr;gap:var(--s2);padding:var(--s3) 0;border-bottom:1px solid var(--line)}
+.info div:last-child{border-bottom:0}
+.info dt{font-weight:700;color:var(--plum)}
+.info dd{margin:0;color:var(--ink)}
+@media(max-width:600px){.info{padding:var(--s1) var(--s3)}.info div{grid-template-columns:4.5em 1fr;gap:12px}}
+.qa{margin-top:var(--s5)}
+.qa div{padding:var(--s3) 0;border-bottom:1px solid var(--line)}
+.qa b{display:block;color:var(--ink);margin-bottom:4px}
+.qa p{color:var(--muted)}
+
+/* 마무리 */
+.end-ph{border-radius:var(--r);overflow:hidden;margin-bottom:var(--s5)}
+.end-ph img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 55%}
+
+footer{padding:var(--s5) var(--pad) var(--s6);text-align:center;font-size:var(--fs-cap);color:var(--muted);border-top:1px solid var(--line)}
+footer p + p{margin-top:4px}
+footer strong{color:var(--ink)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-flower" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="2.2"/><path d="M12 9.8C10 6 14 6 12 9.8ZM12 9.8c-1-4.5 3-5 2.2-1M14.2 12c3.8-2 3.8 2 0 0ZM12 14.2c2 3.8-2 3.8 0 0ZM9.8 12c-3.8 2-3.8-2 0 0Z"/></g></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="5.5" width="16" height="14" rx="2"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4"/></g></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3.5s5.5 6 5.5 10a5.5 5.5 0 0 1-11 0c0-4 5.5-10 5.5-10z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-spoon" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><ellipse cx="8" cy="8" rx="3.6" ry="4.6" transform="rotate(-45 8 8)"/><path d="M10.6 10.6 19.5 19.5"/></g></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M5 8h11v6a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5z"/><path d="M16 9.5h1.5a2.5 2.5 0 0 1 0 5H16M9 3.5v2M12 3.5v2"/></g></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></g></symbol>
+</svg>
+
+<div class="page">
+  <div class="demo">포트폴리오용 가상 가게 샘플 · 실제 매장이 아닙니다</div>
+
+  <div class="top"><span class="brand">SANGOL HONEY</span></div>
+
+  <div class="hero in center">
+    <div class="hero-card"><img src="img/honey/1.jpg" width="1400" height="2100" alt="나무 꿀 스푼에서 유리병으로 흘러내리는 꿀"></div>
+    <h1>아침 한 스푼,<br><b>산골</b>이 담긴 꿀</h1>
+    <p class="lead">해발 600m <b>산골 양봉장</b>에서 <b>봄 한철에만</b> 뜨는 아카시아 꿀입니다. 향은 은은하고 끝맛은 깔끔해서 매일 먹기 좋아요.</p>
+    <ul class="chips" aria-label="상품 요약">
+      <li><svg aria-hidden="true"><use href="#i-flower"/></svg>아카시아 단일 밀원</li>
+      <li><svg aria-hidden="true"><use href="#i-cal"/></svg>봄 한철 1회 채밀</li>
+      <li><svg aria-hidden="true"><use href="#i-drop"/></svg>설탕·첨가물 0</li>
+    </ul>
+    <a class="pill" href="#info">용량과 보관법 보기</a>
+  </div>
+
+  <div class="ribbon" aria-hidden="true">
+    <p>요거트에 <svg><use href="#i-flower"/></svg> 토스트에 <svg><use href="#i-flower"/></svg> 따뜻한 차에 <svg><use href="#i-flower"/></svg> 아침 한 스푼</p>
+  </div>
+
+  <section class="in" aria-labelledby="who-h">
+    <span class="tag center">이런 분께 추천해요</span>
+    <h2 id="who-h" class="center">설탕 대신 자연의 단맛을<br><b>찾고 계셨다면</b></h2>
+    <ul class="uses">
+      <li><h3><svg aria-hidden="true"><use href="#i-spoon"/></svg>요거트·토스트에 한 스푼</h3><p>설탕이나 시럽 대신 꿀을 뿌려 보세요. <b>향이 강하지 않아</b> 다른 재료 맛을 덮지 않습니다.</p></li>
+      <li><h3><svg aria-hidden="true"><use href="#i-cup"/></svg>따뜻한 차에 녹여서</h3><p>너무 뜨거운 물보다는 <b>한 김 식힌 물</b>에 타면 꿀 향이 그대로 남아요.</p></li>
+      <li><h3><svg aria-hidden="true"><use href="#i-sun"/></svg>매일 아침 같은 맛으로</h3><p>한 곳의 꽃에서만 뜬 꿀이라 병마다 맛이 고르고, <b>끝맛이 깔끔</b>합니다.</p></li>
+    </ul>
+  </section>
+
+  <section class="plum in" aria-labelledby="make-h">
+    <span class="tag center">만드는 과정</span>
+    <h2 id="make-h" class="center">벌통에서 병까지,<br><b>네 단계면 충분합니다</b></h2>
+    <div class="comb"><img src="img/honey/2.jpg" width="1400" height="1867" loading="lazy" alt="꿀이 차오른 육각형 벌집 칸"></div>
+    <ol class="steps">
+      <li><i>1</i><div><b>5월, 아카시아 꽃이 필 때만 채밀합니다</b><span>다른 꽃꿀이 섞이지 않게 꽃 피는 기간에만 뜹니다.</span></div></li>
+      <li><i>2</i><div><b>충분히 숙성된 벌집에서만 꿀을 뜹니다</b><span>벌이 밀랍으로 덮은 칸만 골라 뜹니다.</span></div></li>
+      <li><i>3</i><div><b>가열하지 않고 거름망으로만 걸러 냅니다</b><span>데우지 않아 꽃 향이 남아 있어요.</span></div></li>
+      <li><i>4</i><div><b>유리병에 담아 그대로 보내 드립니다</b><span>병에 담는 날짜를 라벨에 적어 둡니다.</span></div></li>
+    </ol>
+  </section>
+
+  <section class="in" id="info" aria-labelledby="info-h">
+    <span class="tag center">상품 정보</span>
+    <h2 id="info-h" class="center">한눈에 보는<br><b>상품 정보</b></h2>
+    <div class="info">
+      <dl>
+        <div><dt>품목</dt><dd>아카시아 꿀 (샘플 문구)</dd></div>
+        <div><dt>용량</dt><dd>500g / 1kg</dd></div>
+        <div><dt>보관</dt><dd>직사광선을 피해 실온 보관</dd></div>
+        <div><dt>참고</dt><dd>기온이 낮으면 하얗게 굳을 수 있으며 품질에는 문제가 없습니다</dd></div>
+      </dl>
+    </div>
+    <div class="qa">
+      <div><b>Q. 꿀이 하얗게 굳었어요.</b><p>꿀 속 포도당이 굳는 자연스러운 현상이에요. 따뜻한 물에 병째 담가 두면 다시 풀립니다.</p></div>
+      <div><b>Q. 아이도 먹어도 되나요?</b><p>돌이 지나지 않은 아기에게는 꿀을 먹이지 않는 것이 좋습니다.</p></div>
+    </div>
+  </section>
+
+  <section class="in center" aria-labelledby="end-h" style="padding-top:0">
+    <div class="end-ph"><img src="img/honey/3.jpg" width="1400" height="2100" loading="lazy" alt="나무 그릇 위로 꿀 스푼에서 꿀이 흘러내리는 모습"></div>
+    <h2 id="end-h">오늘 아침부터<br><b>한 스푼</b> 시작해 보세요</h2>
+    <p class="lead" style="margin-top:var(--s3);color:var(--muted)">주문하시면 산골 양봉장에서 바로 보내 드립니다.</p>
+    <a class="pill" href="#info">용량 다시 보기</a>
+  </section>
+
+  <footer>
+    <p><strong>포트폴리오용 가상 가게 샘플 · 실제 매장이 아닙니다</strong></p>
+    <p>동네웹공방 제작(AI 도구 사용) · 사진: Unsplash</p>
+  </footer>
+</div>
+</body>
+</html>
