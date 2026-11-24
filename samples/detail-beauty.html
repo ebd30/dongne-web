@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<!-- 상세페이지는 860px 이미지로 올라가 휴대폰에서 줄어 보인다. detail-honey와 같이 폭을 860으로 고정 -->
+<meta name="viewport" content="width=860">
+<meta name="color-scheme" content="only light">
+<meta name="theme-color" content="#F4F1EC">
+<meta name="format-detection" content="telephone=no">
+<title>상세페이지 샘플 - 느린손 핸드크림(가상 상품)</title>
+<meta name="description" content="자사몰·스마트스토어용 뷰티 상품 상세페이지 샘플입니다. 가상 상품 느린손 핸드크림을 예로, 사진 없이 글자와 도형으로 860px 폭에 맞춰 만들었습니다.">
+<link rel="canonical" href="https://ebd30.github.io/dongne-web/samples/detail-beauty.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="상세페이지 샘플 - 느린손 핸드크림(가상 상품)">
+<meta property="og:description" content="뷰티 상품 상세페이지 샘플입니다. 860px 폭 이미지 기준으로 휴대폰에서도 글자가 읽히게 만들었습니다.">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:url" content="https://ebd30.github.io/dongne-web/samples/detail-beauty.html">
+<meta property="og:image" content="https://ebd30.github.io/dongne-web/portfolio-img/detail-beauty-860/thumb.png">
+<meta property="og:image:alt" content="느린손 핸드크림 상세페이지 샘플 첫 화면">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='32' fill='%233C4A3E'/><path d='M32 14C24 28 20 34 20 40a12 12 0 0 0 24 0c0-6-4-12-12-26z' fill='%23D6E4C8'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&family=Noto+Serif+KR:wght@600&display=swap" rel="stylesheet">
+<!--
+  2026-11-18 제작부 — 라우드 지원서용 가상 뷰티 상세페이지 샘플(DELUXE 구성: 860px, 구역 7개, 대표 이미지 1장)
+  목적 한 줄: 손을 씻고 바르고, 바로 하던 일로 돌아가게 하는 핸드크림
+   - 하위 목표: 얇게 펴지는 질감 / 진하지 않은 향 / 주머니에 들어가는 50mL
+   - 콘셉트 단어: '바로'  (섹션 이름: 바로 펴는 순서, 바로 쓰는 분 …)
+   - 시각 모티프: 크림 한 방울(물방울 도형) + 튜브 끝 주름(가는 줄무늬 띠)
+  핵심 질문: ① 자사몰에서 핸드크림을 고르는 30대 직장인이 휴대폰으로 ② 순하고 깔끔한 인상, 과장·의약품 같은 인상은 피함 ③ 사용감·향·용량을 보고 장바구니
+  레퍼런스(design/detail-page-guide.md 4절 + references.md): R1 닥터웰(후렴·강조어 1개·짙은 띠 교차) · R2 한둘아(정보 표는 끝에) · R3 아이리치(번호 원+세로 연결선 카드) · Rare Beehive(크림 바탕·둥근 카드)
+   공통 규칙: 바탕 1 + 짙은 띠 1 + 강조 1, 목적 한 줄 반복, 번호 카드, 근거 구역은 실제 증거만(→ 후기·순위 구역 없음), 표는 끝에
+   독창 포인트(가져온 1개): R3 번호 원 + 세로 연결선 → 사용 순서에 씀
+  시스템: design/systems/detail.css 고정 칸 그대로 + [브랜드] 칸만 세이지 그린 계열로 교체
+  문구: 화장품 광고 규정에 맞춰 효능 단정 없이 사용감·향·용량·사용법만. 사진 없음(CSS 도형만).
+-->
+<style>
+/* 대비(WCAG, Python 계산 2026-11-18): --ink/--bg 12.93 · --muted/--bg 5.80 · --muted/--card 6.53 · --brand/--bg 8.32 · --on-brand/--brand 8.32 · --on-brand-soft/--brand 6.62 · --accent/--brand 7.05 */
+:root{color-scheme:only light;
+  /* [고정] systems/detail.css */
+  --w:860px;--pad:64px;--sec:160px;
+  --s1:12px;--s2:24px;--s3:40px;--s4:64px;--s5:96px;
+  --r:32px;--r-pill:4px;
+  --fs-h1:84px;--fs-h2:60px;--fs-h3:44px;--fs-body:34px;--fs-cap:28px;--fs-num:120px;
+  --lh-title:1.25;--lh-body:1.6;--measure:22em;
+  /* [브랜드] 세이지 그린 + 웜 화이트 (바탕 1 · 짙은 띠 1 · 강조 1) */
+  --bg:#F4F1EC;--card:#FFFFFF;--ink:#262A26;--muted:#56605A;--line:#D8D3CA;
+  --brand:#3C4A3E;--on-brand:#F4F1EC;--on-brand-soft:#D3DBD2;--accent:#D6E4C8;
+  --f-title:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  --f-num:'Noto Serif KR','AppleMyungjo','Batang',serif;
+  --f-body:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  /* [모티프] 크림 한 방울 · 튜브 끝 주름 */
+  --motif-drop:50% 50% 50% 50% / 62% 62% 38% 38%;
+  --motif-tear:0 50% 50% 50%; /* 작은 크림 방울: 정사각형 + rotate(45deg) */
+  --motif-crimp:repeating-linear-gradient(90deg,var(--line) 0 3px,transparent 3px 14px);
+  --motif-crimp-dark:repeating-linear-gradient(90deg,rgba(244,241,236,.35) 0 3px,transparent 3px 14px)}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;background:var(--line)}
+body{margin:0;background:var(--line);color:var(--ink);font-family:var(--f-body);font-size:var(--fs-body);line-height:var(--lh-body);word-break:keep-all;overflow-wrap:break-word}
+p,h1,h2,h3,ul,ol,dl,dd{margin:0;padding:0}
+ul,ol{list-style:none}
+h1,h2,h3{font-family:var(--f-title);font-weight:700;color:var(--ink);line-height:var(--lh-title);letter-spacing:-0.03em}
+h1{font-size:var(--fs-h1);font-weight:800}
+h2{font-size:var(--fs-h2)}
+h3{font-size:var(--fs-h3)}
+/* 강조어 1개: 형광 밑줄(R3) — 한 제목에 한 곳만 */
+.hl{background:linear-gradient(transparent 62%,var(--accent) 62% 92%,transparent 92%)}
+.page{width:var(--w);margin:0 auto;background:var(--bg);overflow:hidden}
+.blk{padding:var(--sec) var(--pad)}
+.c{text-align:center}
+.lead{max-width:var(--measure);margin:var(--s3) auto 0;color:var(--muted)}
+.tag{display:inline-block;font-size:var(--fs-cap);font-weight:700;color:var(--brand);margin-bottom:var(--s2);padding:4px var(--s2);border:2px solid var(--brand);border-radius:var(--r-pill);line-height:1.5}
+.demo{background:var(--brand);color:var(--on-brand);font-size:var(--fs-cap);line-height:1.4;text-align:center;padding:var(--s1) var(--pad)}
+.crimp{height:28px;background:var(--motif-crimp)}
+
+/* 튜브(CSS 도형) — 사진 대신 */
+.tube{position:relative;width:220px;height:440px;margin:0 auto}
+.tube .end{position:absolute;top:0;left:0;right:0;height:44px;border-radius:6px;background:var(--card);border:3px solid var(--brand);background-image:repeating-linear-gradient(90deg,var(--line) 0 3px,transparent 3px 12px)}
+.tube .body{position:absolute;top:40px;left:0;right:0;height:330px;background:var(--brand);clip-path:polygon(0 0,100% 0,86% 100%,14% 100%)}
+.tube .in{position:absolute;top:0;left:4px;right:4px;bottom:4px;background:var(--card);clip-path:polygon(0 0,100% 0,86% 100%,14% 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding-bottom:var(--s3)}
+.tube .name{font-family:var(--f-title);font-weight:800;font-size:40px;color:var(--brand);letter-spacing:-.04em;line-height:1.1}
+.tube .sub{font-size:20px;color:var(--muted);line-height:1.3}
+.tube .ml{margin-top:var(--s1);font-family:var(--f-num);font-size:22px;color:var(--brand)}
+.tube .cap{position:absolute;top:366px;left:50%;transform:translateX(-50%);width:120px;height:74px;background:var(--brand);border-radius:0 0 18px 18px}
+.drop{width:180px;height:220px;border-radius:var(--motif-drop);background:var(--accent)}
+
+/* 1 첫 화면 (확정: A1 — R1 규칙 + 크림 방울 배경, company/design/portfolio/detail-beauty/compare-*.png) */
+.top{padding:var(--s4) var(--pad) 0;font-weight:900;font-size:22px;color:var(--brand)}
+.hero{padding:var(--s4) var(--pad) var(--sec)}
+.hero h1 .s{display:block;font-size:var(--fs-h3);font-weight:500;color:var(--muted);letter-spacing:-.02em;margin-bottom:var(--s2)}
+.stage{position:relative;margin:var(--s4) 0 0 auto;width:560px;height:560px;display:grid;place-items:center}
+.stage::before{content:"";position:absolute;left:0;right:0;bottom:40px;height:2px;background:var(--brand)}
+.stage .tube{transform:rotate(-8deg)}
+.stage .dab{position:absolute;right:70px;bottom:84px;width:60px;height:60px;transform:rotate(45deg);border-radius:var(--motif-tear);background:var(--card);border:3px solid var(--brand)}
+.facts-line{margin-top:var(--s3);font-size:var(--fs-body);color:var(--muted);border-top:1px solid var(--line);padding-top:var(--s2)}
+.facts{display:flex;justify-content:center;gap:10px;margin-top:var(--s4);flex-wrap:wrap}
+.facts li{padding:6px var(--s2);border-radius:var(--r-pill);background:var(--card);font-size:var(--fs-cap);font-weight:700;color:var(--brand);border:2px solid var(--line)}
+
+/* 2 판매 포인트 3개: 번호 카드(카드 = 도형 1 + 두 줄) */
+.pts{margin-top:var(--s4);display:grid;gap:var(--s2)}
+.pts li{display:grid;grid-template-columns:200px 1fr;gap:var(--s3);align-items:center;background:var(--card);border-radius:var(--r);padding:var(--s3)}
+.pts .fig{position:relative;width:200px;height:200px;border-radius:var(--r);background:var(--bg);display:grid;place-items:center;overflow:hidden}
+.pts .no{position:absolute;top:14px;left:18px;font-family:var(--f-num);font-size:var(--fs-cap);color:var(--brand)}
+.pts b{display:block;font-size:var(--fs-h3);line-height:1.3;color:var(--ink);letter-spacing:-.03em}
+.pts span{display:block;margin-top:var(--s1);color:var(--muted);line-height:1.5}
+/* 포인트 도형: 얇게 편 크림 / 향 / 크기 */
+.f-thin{width:150px;height:40px;border-radius:var(--r-pill);background:var(--accent);box-shadow:0 0 0 3px var(--brand) inset}
+.f-scent{position:relative;width:120px;height:120px}
+.f-scent i{position:absolute;left:50%;bottom:0;width:20px;height:20px;margin-left:-10px;border-radius:50%;background:var(--brand)}
+.f-scent i:nth-child(2){bottom:44px;width:30px;height:30px;margin-left:-15px;background:none;border:3px solid var(--brand);opacity:.7}
+.f-scent i:nth-child(3){bottom:84px;width:40px;height:40px;margin-left:-20px;background:none;border:3px solid var(--brand);opacity:.35}
+.f-size{display:flex;align-items:flex-end;gap:10px}
+.f-size .t{width:46px;height:120px;border:3px solid var(--brand);border-radius:6px 6px 12px 12px;background:var(--accent)}
+.f-size .r{width:16px;height:150px;background:repeating-linear-gradient(0deg,var(--brand) 0 2px,transparent 2px 15px);border-left:3px solid var(--brand)}
+
+/* 후렴 띠(R1) */
+.band{background:var(--brand);color:var(--on-brand)}
+.band h2,.band h3{color:var(--on-brand)}
+.band .tag{color:var(--accent);border-color:var(--accent)}
+.band .lead{color:var(--on-brand-soft)}
+.refrain{padding:var(--s5) var(--pad);text-align:center;background:var(--brand)}
+.refrain p{font-family:var(--f-title);font-size:var(--fs-h2);font-weight:700;line-height:1.3;color:var(--on-brand);letter-spacing:-.03em}
+.refrain p em{font-style:normal;color:var(--accent)}
+.refrain .crimp{height:20px;width:240px;margin:var(--s3) auto 0;background:var(--motif-crimp-dark)}
+
+/* 3 사용 방법: 번호 원 + 세로 연결선(R3 독창 포인트) */
+.steps{position:relative;margin-top:var(--s4)}
+.steps::before{content:"";position:absolute;left:47px;top:48px;bottom:48px;width:4px;background:var(--line)}
+.steps li{position:relative;display:grid;grid-template-columns:96px 1fr;gap:var(--s3);align-items:start;padding:var(--s3) 0}
+.steps i{display:grid;place-items:center;width:96px;height:96px;border-radius:50%;background:var(--brand);color:var(--on-brand);font-style:normal;font-family:var(--f-num);font-size:var(--fs-h3);line-height:1}
+.steps b{display:block;font-size:var(--fs-h3);line-height:1.3;letter-spacing:-.03em;padding-top:var(--s1)}
+.steps span{display:block;margin-top:var(--s1);color:var(--muted)}
+.amt{display:flex;align-items:center;gap:var(--s2);margin-top:var(--s2)}
+.amt .pea{width:40px;height:40px;transform:rotate(45deg);border-radius:var(--motif-tear);background:var(--accent);border:3px solid var(--brand)}
+.amt small{font-size:var(--fs-cap);color:var(--muted)}
+
+/* 4 성분·특징: 짙은 띠 + 큰 숫자 + 성분 칩 */
+.nums{display:grid;grid-template-columns:repeat(3,1fr);margin-top:var(--s4);border-block:2px solid var(--on-brand-soft)}
+.nums li{padding:var(--s3) 0;text-align:center}
+.nums li + li{border-left:2px solid var(--on-brand-soft)}
+.nums b{display:block;font-family:var(--f-num);font-weight:600;font-size:var(--fs-num);line-height:1;color:var(--accent)}
+.nums b small{font-size:var(--fs-h3)}
+.nums span{display:block;margin-top:var(--s1);font-size:var(--fs-cap);color:var(--on-brand-soft)}
+.ing{margin-top:var(--s4);display:grid;gap:var(--s2);text-align:left}
+.ing li{display:grid;grid-template-columns:230px 1fr;gap:var(--s3);align-items:center;padding:var(--s3);border-radius:var(--r);border:2px solid rgba(244,241,236,.35)}
+.ing b{justify-self:start;display:inline-block;padding:6px var(--s2);border-radius:var(--r-pill);background:var(--accent);color:var(--brand);font-size:var(--fs-cap);line-height:1.5;white-space:nowrap}
+.ing span{color:var(--on-brand)}
+.band .note{color:var(--on-brand-soft)}
+.note{margin-top:var(--s3);font-size:var(--fs-cap);color:var(--muted);line-height:1.5}
+
+/* 5 이런 분께 */
+.who{margin-top:var(--s4);display:grid;grid-template-columns:1fr 1fr;gap:var(--s2)}
+.who li{background:var(--card);border-radius:var(--r);padding:var(--s3);text-align:left}
+.who li:last-child{grid-column:1/-1}
+.who b{display:block;font-size:var(--fs-body);font-weight:700;color:var(--ink);line-height:1.4}
+.who span{display:block;margin-top:var(--s1);font-size:var(--fs-cap);color:var(--muted);line-height:1.5}
+.who .d{display:block;width:34px;height:34px;transform:rotate(45deg);border-radius:var(--motif-tear);margin-left:6px;background:var(--accent);border:3px solid var(--brand);margin-bottom:var(--s2)}
+
+/* 6 상품 정보 표 */
+.tbl{margin-top:var(--s4);background:var(--card);border-radius:var(--r);padding:var(--s1) var(--s3);text-align:left}
+.tbl div{display:grid;grid-template-columns:6.2em 1fr;gap:var(--s2);padding:var(--s2) 0;border-bottom:2px solid var(--line);font-size:30px}
+.tbl div:last-child{border-bottom:0}
+.tbl dt{font-weight:700;color:var(--brand)}
+.tbl dd{color:var(--ink);line-height:1.5}
+
+/* 7 마무리 */
+.end{text-align:center}
+.end .stage{width:420px;height:420px;margin-top:0}
+.end .stage .tube{transform:rotate(6deg) scale(.78)}
+.end h2{margin-top:var(--s4)}
+.ship{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s1);margin-top:var(--s4)}
+.ship li{background:var(--card);border-radius:var(--r);padding:var(--s2);font-size:var(--fs-cap);line-height:1.45;color:var(--muted)}
+.ship b{display:block;color:var(--brand);font-size:var(--fs-cap)}
+footer{padding:var(--s4) var(--pad);text-align:center;font-size:var(--fs-cap);line-height:1.5;color:var(--muted);border-top:2px solid var(--line)}
+footer strong{color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="demo">예시 화면(가상 상품) · 실제 판매 상품이 아닙니다</div>
+
+  <!-- HERO-START -->
+  <!-- 1 첫 화면 -->
+  <div class="top">느린손 핸드크림</div>
+  <div class="hero">
+    <h1><span class="s">손을 자주 씻는 분을 위한 핸드크림</span>얇게 펴 바르고<br>하던 일로 돌아가요</h1>
+    <div class="stage" aria-hidden="true">
+      <div class="tube"><div class="end"></div><div class="body"><div class="in"><span class="name">느린손</span><span class="sub">핸드크림</span><span class="ml">50 mL</span></div></div><div class="cap"></div></div>
+    </div>
+    <p class="facts-line">얇게 펴지는 질감 · 은은한 풀잎 향 · 50mL 튜브</p>
+  </div>
+  <!-- HERO-END -->
+
+  <div class="crimp" aria-hidden="true"></div>
+
+  <!-- 2 판매 포인트 3개 -->
+  <div class="blk c">
+    <span class="tag">바로 느껴지는 세 가지</span>
+    <h2>왜 바로 일할 수 있을까요</h2>
+    <ol class="pts" style="text-align:left">
+      <li><div class="fig"><span class="no">01</span><span class="f-thin"></span></div><div><b>콩알 하나로 두 손</b><span>로션처럼 묽은 질감이라 얇게 펴져요. 바른 뒤 손이 미끄럽지 않게 만들었어요.</span></div></li>
+      <li><div class="fig"><span class="no">02</span><span class="f-scent"><i></i><i></i><i></i></span></div><div><b>은은한 풀잎 향</b><span>바를 때 잠깐 맡아지고 진하게 남지 않아요. 옆자리까지 번지지 않는 정도예요.</span></div></li>
+      <li><div class="fig"><span class="no">03</span><span class="f-size"><span class="t"></span><span class="r"></span></span></div><div><b>주머니에 쏙, 50mL</b><span>길이 13cm 튜브라 필통·코트 주머니에 들어가요. 뚜껑은 한 손으로 열어요.</span></div></li>
+    </ol>
+  </div>
+
+  <!-- 후렴(R1) -->
+  <div class="refrain">
+    <p>손 씻고 얇게 한 번,<br><em>하던 일로</em></p>
+    <div class="crimp" aria-hidden="true"></div>
+  </div>
+
+  <!-- 3 사용 방법 -->
+  <div class="blk">
+    <div class="c"><span class="tag">바로 펴는 순서</span>
+    <h2>세 번이면 끝나요</h2></div>
+    <ol class="steps">
+      <li><i>1</i><div><b>물기를 닦아요</b><span>손을 씻은 뒤 수건으로 가볍게 닦아 주세요.</span></div></li>
+      <li><i>2</i><div><b>콩알만큼 짜요</b><span>한 번에 이 정도면 두 손에 충분해요.</span><div class="amt" aria-hidden="true"><span class="pea"></span><small>실제 크기 약 1cm</small></div></div></li>
+      <li><i>3</i><div><b>손등끼리 비벼 펴요</b><span>손등에서 손가락 사이, 손끝까지 밀어 주세요.</span></div></li>
+    </ol>
+  </div>
+
+  <!-- 4 성분·특징 -->
+  <div class="blk band c">
+    <span class="tag">바로 보는 성분과 특징</span>
+    <h2>무엇이 들었는지<br>먼저 보여 드려요</h2>
+    <ul class="nums">
+      <li><b>50<small>mL</small></b><span>용량</span></li>
+      <li><b>13<small>cm</small></b><span>튜브 길이</span></li>
+      <li><b>3</b><span>주요 성분 수</span></li>
+    </ul>
+    <ul class="ing">
+      <li><b>시어버터</b><span>크림이 부드럽게 펴지도록 넣었어요</span></li>
+      <li><b>글리세린</b><span>튜브 속 크림이 굳지 않고 부드럽게 나오도록</span></li>
+      <li><b>호호바씨오일</b><span>번들거리지 않게 가벼운 오일로 골랐어요</span></li>
+    </ul>
+    <p class="note">예시 성분입니다. 실제 상품은 전성분 표기를 그대로 싣습니다.</p>
+  </div>
+
+  <!-- 5 이런 분께 -->
+  <div class="blk c">
+    <span class="tag">바로 쓰는 분</span>
+    <h2>이런 분께 맞춰 만들었어요</h2>
+    <ul class="who">
+      <li><span class="d"></span><b>하루에 손을 자주 씻는 분</b><span>바르고 바로 키보드를 쳐야 할 때</span></li>
+      <li><span class="d"></span><b>향이 진한 크림이 부담스러운 분</b><span>사무실·카페처럼 사람 많은 곳</span></li>
+      <li><span class="d"></span><b>가방 없이 다니는 날이 많은 분</b><span>주머니에 넣고 꺼내 쓰는 크기를 찾을 때</span></li>
+    </ul>
+  </div>
+
+  <!-- 6 상품 정보 표 -->
+  <div class="blk" style="padding-top:0">
+    <div class="c"><span class="tag">상품 정보</span>
+    <h2>한눈에 보는 상품 정보</h2></div>
+    <dl class="tbl">
+      <div><dt>제품명</dt><dd>느린손 핸드크림(가상 상품)</dd></div>
+      <div><dt>용량</dt><dd>50mL</dd></div>
+      <div><dt>사용기한</dt><dd>제조일로부터 ○개월, 개봉 후 ○개월(실제 표기로 교체)</dd></div>
+      <div><dt>사용 방법</dt><dd>적당량을 덜어 손에 고루 펴 바릅니다</dd></div>
+      <div><dt>주의 사항</dt><dd>상처가 있는 부위에는 사용하지 마세요. 사용 중 피부에 이상이 생기면 사용을 멈추고 전문의와 상담하세요. 어린이 손이 닿지 않는 곳에 보관하세요.</dd></div>
+      <div><dt>제조·판매</dt><dd>실제 상품의 제조업자·책임판매업자를 넣는 칸</dd></div>
+    </dl>
+  </div>
+
+  <!-- 7 마무리 + 배송·교환 -->
+  <div class="blk band end">
+    <div class="stage" aria-hidden="true">
+      <div class="tube"><div class="end"></div><div class="body"><div class="in"><span class="name">느린손</span><span class="sub">핸드크림</span><span class="ml">50 mL</span></div></div><div class="cap"></div></div>
+    </div>
+    <h2>오늘 손 씻은 다음,<br><span style="color:var(--accent)">바로</span> 한 번</h2>
+    <ul class="ship">
+      <li><b>배송</b>판매자가 정한 발송 기준을 넣습니다</li>
+      <li><b>교환</b>판매자가 정한 교환 기준을 넣습니다</li>
+      <li><b>보관</b>직사광선을 피해 실온에 두세요</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p><strong>예시 화면(가상 상품) · 실제 판매 상품이 아닙니다</strong></p>
+    <p>동네웹공방 제작(AI 도구 사용) · 글자·도형으로 만듦</p>
+  </footer>
+</div>
+</body>
+</html>

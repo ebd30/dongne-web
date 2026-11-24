@@ -22,7 +22,7 @@
 -->
 <style>
 :root{color-scheme:only light;
-  --bg:#FFFFFF;--surface:#F6F1EB;--ink:#2F3735;--muted:#5B6461;--line:#E4DED6;--band:#282828;--on-band:#F6F1EB;
+  --bg:#FFFFFF;--motif-chat:#BACEE0;--kakao-y:#FEE500;--surface:#F6F1EB;--ink:#2F3735;--muted:#5B6461;--line:#E4DED6;--band:#282828;--on-band:#F6F1EB;
   --font-body:'Noto Sans KR',-apple-system,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
   --font-head:'Gowun Batang','AppleMyungjo','Batang',serif;
   --fs-body:16px;--lh-body:1.7;--fs-h1:32px;--fs-h2:24px;--fs-small:14px;--fs-label:13px;
@@ -33,31 +33,31 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body)
 p,h1,h2,ol,ul{margin:0;padding:0}
 ol,ul{list-style:none}
 .demo{background:var(--band);color:var(--on-band);font-size:var(--fs-label);text-align:center;padding:6px 16px}
-.wrap{max-width:var(--max);margin:0 auto;padding:var(--sp-6) 20px var(--sp-section)}
-.label{display:block;font-size:var(--fs-label);letter-spacing:.2em;color:var(--muted);margin-bottom:var(--sp-1)}
+.wrap{max-width:var(--max);margin:0 auto;padding:var(--sp-3) 20px var(--sp-section)}
+.label{display:block;font-size:var(--fs-label);font-weight:700;color:var(--muted);margin-bottom:var(--sp-1)}
 h1{font-family:var(--font-head);font-size:var(--fs-h1);line-height:1.35}
 h2{font-family:var(--font-head);font-size:var(--fs-h2);line-height:1.4;margin-bottom:var(--sp-2)}
 .lead{margin-top:var(--sp-2);color:var(--muted);max-width:34em}
-.grid{display:grid;gap:var(--sp-6);margin-top:var(--sp-6)}
+.grid{display:grid;gap:var(--sp-4);margin-top:0}
 @media(min-width:860px){.grid{grid-template-columns:360px 1fr;align-items:start}}
 
 /* 설명용 채팅 그림 */
-.phone{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:var(--sp-3) var(--sp-2);max-width:360px;margin:0 auto;width:100%}
-.phone .top{text-align:center;font-weight:700;padding-bottom:var(--sp-2);border-bottom:1px solid var(--line)}
-.phone .top small{display:block;font-weight:400;font-size:var(--fs-label);color:var(--muted)}
+.phone{background:var(--motif-chat);border:1px solid #9FB3C6;border-radius:24px;padding:var(--sp-3) var(--sp-2);max-width:360px;margin:0 auto;width:100%}
+.phone .top{font-weight:700;padding-bottom:var(--sp-2);border-bottom:1px solid #9FB3C6}
+.phone .top small{display:block;font-weight:400;font-size:var(--fs-label);color:#3E4B57}
 .chat{display:flex;flex-direction:column;gap:var(--sp-1);padding:var(--sp-2) 0}
 .b{max-width:85%;padding:10px 14px;border-radius:var(--r-bubble);font-size:var(--fs-small);line-height:1.6}
-.b.shop{background:var(--bg);border:1px solid var(--line);align-self:flex-start}
-.b.me{background:var(--band);color:var(--on-band);align-self:flex-end}
-.menu{display:grid;grid-template-columns:1fr 1fr;gap:6px;border-top:1px solid var(--line);padding-top:var(--sp-2)}
-.menu span{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:8px 6px;font-size:var(--fs-label);text-align:center}
-.menu span.on{background:var(--band);color:var(--on-band);border-color:var(--band)}
-.note{margin-top:var(--sp-1);font-size:var(--fs-label);color:var(--muted);text-align:center}
+.b.shop{background:#fff;align-self:flex-start;border-top-left-radius:4px}
+.b.me{background:var(--kakao-y);color:#191919;align-self:flex-end;border-top-right-radius:4px}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:6px;border-top:1px solid #9FB3C6;padding-top:var(--sp-2)}
+.menu span{background:#fff;border:1px solid #fff;border-radius:var(--r);padding:8px 6px;font-size:var(--fs-label);text-align:center}
+.menu span.on{background:var(--kakao-y);color:#191919;border-color:var(--kakao-y)}
+.note{margin-top:var(--sp-1);font-size:var(--fs-label);color:var(--muted)}
 
 /* 메뉴 표 */
-.list li{display:grid;grid-template-columns:36px 1fr;gap:var(--sp-2);padding:var(--sp-2) 0;border-bottom:1px solid var(--line)}
+.list li{display:grid;grid-template-columns:1fr;gap:var(--sp-2);padding:var(--sp-2) 0;border-bottom:1px solid var(--line)}
 .list li:first-child{border-top:1px solid var(--line)}
-.list i{font-style:normal;font-family:var(--font-head);font-size:20px;color:var(--muted)}
+.list i{display:none}
 .list b{display:block}
 .list p{color:var(--muted);font-size:var(--fs-small)}
 .list p em{font-style:normal;color:var(--ink);font-weight:700}
@@ -76,10 +76,6 @@ footer{text-align:center;font-size:var(--fs-label);color:var(--muted);padding:0 
 <body>
 <div class="demo">포트폴리오용 가상 가게 샘플 · 실제 매장이 아닙니다</div>
 <main class="wrap">
-  <span class="label">KAKAO CHANNEL AUTO REPLY</span>
-  <h1>결 헤어 채널에 들어갈<br>자동응답 메뉴 10개</h1>
-  <p class="lead">손님이 메뉴를 누르면 아래 답이 바로 나갑니다. 가게 정보는 사장님이 알려 주신 것만 썼고, 모르는 내용은 사장님이 직접 답하도록 남겨 두었어요.</p>
-
   <div class="grid">
     <div>
       <div class="phone" role="img" aria-label="손님이 영업시간 메뉴를 누르자 답이 나오는 채팅 예시 그림">
@@ -95,9 +91,10 @@ footer{text-align:center;font-size:var(--fs-label);color:var(--muted);padding:0 
       </div>
       <p class="note">설명용 그림입니다. 실제 카카오톡 화면과 모양이 다릅니다.</p>
     </div>
-
     <div>
-      <h2>메뉴 이름과 답</h2>
+      <h1>손님이 메뉴를 누르면<br>이 답이 바로 나갑니다</h1>
+      <p class="lead">결 헤어 카카오톡 채널 자동응답 10개. 시술 시간처럼 매번 다른 답은 사장님이 직접 받습니다.</p>
+      <h2 style="margin-top:var(--sp-4)">메뉴 이름과 답</h2>
       <ol class="list">
         <li><i>1</i><div><b>영업시간·휴무</b><p>화요일~일요일 10:00~20:00 영업하고, 월요일은 쉬어요.</p></div></li>
         <li><i>2</i><div><b>예약 방법</b><p>원하시는 날짜, 시간, 시술을 이 채팅에 남겨 주세요. 사장님이 확인하고 답장 드려요. 전화번호는 납품 때 가게 번호로 넣어요</p></div></li>
@@ -111,7 +108,7 @@ footer{text-align:center;font-size:var(--fs-label);color:var(--muted);padding:0 
         <li><i>10</i><div><b>사장님과 대화</b><p>궁금한 점을 편하게 남겨 주세요. 시술 중에는 답이 조금 늦을 수 있어요.</p></div></li>
       </ol>
       <div class="welcome">
-        <span class="label">WELCOME MESSAGE</span>
+        <span class="label">채널을 처음 추가한 손님께 나가는 인사</span>
         <p>결 헤어 채널을 추가해 주셔서 감사합니다. 영업시간, 가격, 주차는 아래 메뉴를 누르면 바로 보실 수 있어요. 예약은 원하시는 날짜와 시술을 남겨 주세요.</p>
         <p class="count">86자 · 카카오 웰컴 메시지 한도 400자 안</p>
       </div>

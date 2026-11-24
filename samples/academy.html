@@ -60,10 +60,12 @@ a{color:inherit;text-decoration:none}
 .note .wrap{padding-bottom:var(--s3)}
 .head{display:flex;justify-content:space-between;align-items:center;min-height:64px}
 .head nav a{display:inline-flex;align-items:center;min-height:48px;font-size:var(--fs-sub);font-weight:700}
-.hero h1{font-size:var(--fs-h1);line-height:1.3;font-weight:900;letter-spacing:-.02em;margin-top:6px}
+.hero h1{font-size:var(--fs-h1);line-height:1.3;font-weight:900;letter-spacing:-.02em;margin-top:var(--s4)}
 .stair{display:block;width:100%;height:auto;margin-top:10px}
+.stair-btn{margin-top:8px}
 .hero .lead{color:var(--muted);margin-top:8px}
-.acts{display:grid;gap:10px;margin-top:var(--s2)}
+.acts{display:grid;gap:4px;margin-top:var(--s2)}
+.tlink{display:inline-flex;align-items:center;min-height:48px;font-weight:700;text-decoration:underline;text-underline-offset:4px}
 
 section{padding-top:var(--sec)}
 h2{font-size:var(--fs-h2);line-height:1.4;font-weight:900;letter-spacing:-.01em}
@@ -71,9 +73,11 @@ h2{font-size:var(--fs-h2);line-height:1.4;font-weight:900;letter-spacing:-.01em}
 
 /* 계단 오르는 순서: 한 칸씩 오른쪽으로 올라가는 단 */
 .climb{list-style:none;padding:0;margin-top:var(--s3);display:grid;gap:10px}
-.climb li{background:#fff;border:1.5px solid var(--ink);border-left-width:6px;border-radius:var(--r);padding:12px 14px}
-.climb li:nth-child(2){margin-left:14px}.climb li:nth-child(3){margin-left:28px}.climb li:nth-child(4){margin-left:42px;border-left-color:var(--accent)}
-.climb b{display:block;font-size:var(--fs-small);color:var(--accent)}
+.climb li{display:grid;grid-template-columns:40px 1fr;column-gap:12px;border-top:1px solid var(--line);padding:14px 0}
+.climb li::before{content:counter(c);counter-increment:c;grid-row:span 3;font-size:28px;font-weight:900;line-height:1;color:var(--accent)}
+.climb{counter-reset:c}
+
+.climb b{display:none}
 .climb h3{font-size:var(--fs-h3);line-height:1.45}
 .climb p{font-size:var(--fs-sub);color:var(--muted)}
 .photo{margin-top:var(--s3);border-radius:var(--r);overflow:hidden;border:1.5px solid var(--ink)}
@@ -124,10 +128,8 @@ footer p+p{margin-top:4px}
 
 @media(min-width:860px){
   :root{--fs-h1:44px;--fs-h2:28px}
-  .hero{display:grid;grid-template-columns:1fr 1fr;gap:var(--s6);align-items:end;grid-template-areas:"h stair" "lead stair" "acts stair"}
-  .hero h1{grid-area:h}.hero .stair{grid-area:stair;margin:0}.hero .lead{grid-area:lead}.hero .acts{grid-area:acts;grid-template-columns:1fr 1fr}
+  .hero{max-width:640px}
   .split{display:grid;grid-template-columns:1fr 1fr;gap:var(--s6);align-items:start}
-  .climb li:nth-child(2){margin-left:40px}.climb li:nth-child(3){margin-left:80px}.climb li:nth-child(4){margin-left:120px}
   .cta .wrap{display:grid;grid-template-columns:1fr 1fr;gap:var(--s6);align-items:center}
 }
 </style>
@@ -153,34 +155,41 @@ footer p+p{margin-top:4px}
       <nav aria-label="바로가기"><a href="#fee">시간표·교습비</a></nav>
     </header>
     <div class="hero" id="top">
-      <h1>수학이 싫은 아이도<br>한 계단씩 다시</h1>
-      <svg class="stair" viewBox="0 0 340 178" role="img" aria-label="단원 계단 예시: 정수와 유리수, 일차방정식은 통과, 일차함수에서 멈춤 표시, 그다음 이차방정식">
-        <g fill="none" stroke="#134B5F" stroke-width="2.5"><path d="M10 160h80v-35h80v-35h80v-35h80"/></g>
+      <svg class="stair" viewBox="0 0 340 178" role="img" aria-label="단원 계단 예시: 정수와 유리수, 일차방정식을 지나 일차함수에서 멈춤, 그다음 이차방정식">
+        <g fill="none" stroke-width="2.5"><path d="M10 160h80v-35h80v-35" stroke="#134B5F"/><path d="M170 90h80" stroke="#C0392B" stroke-width="5"/><path d="M250 90v-35h80" stroke="#134B5F" stroke-dasharray="5 4"/></g>
         <g font-family="'Noto Sans KR',sans-serif" font-size="13" fill="#134B5F" font-weight="700">
           <text x="16" y="150">정수와 유리수</text><text x="96" y="115">일차방정식</text><text x="176" y="80">일차함수</text><text x="256" y="45">이차방정식</text></g>
-        <g fill="#A4521F" font-family="'Noto Sans KR',sans-serif" font-size="12" font-weight="700"><text x="72" y="176">✓</text><text x="152" y="141">✓</text></g>
-        <ellipse cx="206" cy="76" rx="38" ry="15" fill="none" stroke="#C0392B" stroke-width="2"/>
-        <text x="176" y="104" font-family="'Noto Sans KR',sans-serif" font-size="12" font-weight="700" fill="#C0392B">여기서 멈췄어요</text>
       </svg>
+      <a class="btn fill stair-btn" href="#cta">빨간 칸이 어디인지 40분 진단으로 찾기</a>
+      <h1>수학이 싫은 아이도<br>한 계단씩 다시</h1>
       <p class="lead">중1~고2, 한 반 6명. 어느 계단에서 멈췄는지 먼저 찾고, 그 자리부터 다시 오릅니다.</p>
-      <div class="acts">
-        <a class="btn fill" href="#cta">우리 아이 첫 계단 찾기 (40분)</a>
-        <a class="btn line" href="#fee">시간표·교습비 보기</a>
-      </div>
     </div>
   </div>
 </div>
 
 <main>
+  <section id="fee" aria-labelledby="h-fee">
+    <div class="wrap">
+      <h2 id="h-fee">반과 교습비</h2>
+      <p class="sub">반마다 요일과 시간이 다릅니다. 진단 결과를 보고 맞는 반을 함께 고릅니다.</p>
+      <table class="fee">
+        <caption>예시 금액 · 교육청 신고 교습비 기준</caption>
+        <thead><tr><th scope="col">반</th><th scope="col">요일 / 시간</th><th scope="col">월 교습비</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">중등 기본<small>중1~중3</small></th><td>월·수·금<br>17:00–19:00</td><td>280,000원</td></tr>
+          <tr><th scope="row">중등 심화<small>중1~중3</small></th><td>화·목<br>17:00–20:00</td><td>320,000원</td></tr>
+          <tr><th scope="row">고등 내신<small>고1~고2</small></th><td>월·수·금<br>19:30–22:00</td><td>380,000원</td></tr>
+        </tbody>
+      </table>
+      <p class="fine">교습비 반환 기준은 상담 때 안내합니다.</p>
+    </div>
+  </section>
+
   <section aria-labelledby="h-climb">
     <div class="wrap split">
       <div>
         <h2 id="h-climb">계단 오르는 순서</h2>
         <p class="sub">같은 학년이어도 멈춘 계단은 다 다릅니다. 그래서 진단부터 합니다.</p>
-        <figure class="photo">
-          <img src="img/academy/1.jpg" width="1400" height="933" loading="lazy" alt="책상에서 연필로 문제를 풀고 있는 손">
-          <figcaption>참고용 사진 · 납품 때 학원 사진으로 바꿉니다</figcaption>
-        </figure>
       </div>
       <ol class="climb">
         <li><b>첫 계단</b><h3>40분 진단</h3><p>학년 아래 단원까지 거슬러 올라가 멈춘 곳을 찾습니다.</p></li>
@@ -206,23 +215,6 @@ footer p+p{margin-top:4px}
         </ul>
         <p class="pen"><b>선생님 메모</b> · 기울기 부호에서 자주 멈춥니다. 다음 달은 <span class="circle">그래프 그리기</span>부터.</p>
       </div>
-    </div>
-  </section>
-
-  <section id="fee" aria-labelledby="h-fee">
-    <div class="wrap">
-      <h2 id="h-fee">반과 교습비</h2>
-      <p class="sub">반마다 요일과 시간이 다릅니다. 진단 결과를 보고 맞는 반을 함께 고릅니다.</p>
-      <table class="fee">
-        <caption>예시 금액 · 교육청 신고 교습비 기준</caption>
-        <thead><tr><th scope="col">반</th><th scope="col">요일 / 시간</th><th scope="col">월 교습비</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">중등 기본<small>중1~중3</small></th><td>월·수·금<br>17:00–19:00</td><td>280,000원</td></tr>
-          <tr><th scope="row">중등 심화<small>중1~중3</small></th><td>화·목<br>17:00–20:00</td><td>320,000원</td></tr>
-          <tr><th scope="row">고등 내신<small>고1~고2</small></th><td>월·수·금<br>19:30–22:00</td><td>380,000원</td></tr>
-        </tbody>
-      </table>
-      <p class="fine">교습비 반환 기준은 상담 때 안내합니다.</p>
     </div>
   </section>
 

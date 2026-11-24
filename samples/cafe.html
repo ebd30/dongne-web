@@ -19,7 +19,7 @@
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='6' fill='%23E9DCC6'/><circle cx='32' cy='32' r='20' fill='none' stroke='%23A8401F' stroke-width='4'/><text x='32' y='40' font-size='20' font-family='sans-serif' font-weight='900' text-anchor='middle' fill='%23A8401F'>7</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
 <!--
   디자인 기록 (workflow.md · anti-ai-look.md 2판, 2026-11-24 다시 만듦 · 작업 파일 samples/_iter/cafe/)
   목적: 볶은 지 7일 안 된 원두를 한 잔씩 / 콘셉트 단어: 볶은 날 (버튼 '이번 주 볶은 원두 보기', 섹션 '볶은 날부터 7일')
@@ -69,8 +69,14 @@ a{color:inherit;text-decoration:none}
 .label .stamp{position:absolute;right:14px;top:-14px}
 .hero h1{font-size:var(--fs-6);line-height:1.35;font-weight:900;letter-spacing:-.02em;margin-top:18px}
 .hero .lead{color:var(--muted);margin-top:8px}
-.acts{display:grid;gap:10px;margin-top:18px}
-.hero-photo{margin-top:var(--s3);width:100%;aspect-ratio:16/10;object-fit:cover}
+.acts{display:grid;gap:4px;margin-top:18px}
+.date{border-bottom:2px solid var(--ink);padding:8px 0 14px}
+.date .k{font-size:var(--fs-2);font-weight:700;color:var(--muted)}
+.date .big{font-family:'Black Han Sans',var(--font);font-size:96px;line-height:1;font-weight:400;letter-spacing:-.01em;color:var(--stamp);margin-top:4px}
+.date .k2{font-size:var(--fs-2);margin-top:8px}
+.tlink{display:inline-flex;align-items:center;min-height:48px;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+
+.hero-photo{margin-top:var(--s3);width:100%;aspect-ratio:1/1;object-fit:cover;object-position:60% 50%}
 
 section{padding-top:var(--sec)}
 h2{font-size:var(--fs-5);line-height:1.4;font-weight:900;letter-spacing:-.01em}
@@ -106,7 +112,7 @@ h2{font-size:var(--fs-5);line-height:1.4;font-weight:900;letter-spacing:-.01em}
 .pics figcaption{font-size:12px;color:var(--muted);padding-top:4px}
 
 /* 원두 소분 봉투 */
-.bag{padding:16px;margin-top:var(--s3);position:relative}
+.bag{padding:16px;margin-top:var(--s3)}
 .bag .stamp{position:absolute;right:12px;top:-16px}
 .bag h3{font-size:var(--fs-4)}
 .bag dl{display:grid;grid-template-columns:96px 1fr;gap:6px 8px;margin-top:10px;font-size:var(--fs-2)}
@@ -135,7 +141,8 @@ footer p+p{margin-top:4px}
   :root{--fs-6:40px;--fs-5:28px}
   .hero{display:grid;grid-template-columns:1fr 1fr;gap:var(--s6);align-items:center}
   .hero .label{order:0}
-  .hero .acts{grid-template-columns:1fr 1fr}
+  .hero .acts{grid-template-columns:auto auto;justify-content:start;gap:24px;align-items:center}
+  .date .big{font-size:120px}
   .split{display:grid;grid-template-columns:1fr 1fr;gap:var(--s6);align-items:start}
   .pics{grid-template-columns:2fr 1fr}
   .actbar{display:none}
@@ -167,26 +174,21 @@ footer p+p{margin-top:4px}
 
 <main id="top">
   <div class="wrap hero">
-    <div class="label paper">
-      <span class="stamp">볶은 날<br>11.22</span>
-      <p class="k">이번 주 원두 봉투 (가상)</p>
-      <table class="num">
-        <tr><th scope="row">원두</th><td>에티오피아 · 콜롬비아</td></tr>
-        <tr><th scope="row">볶은 날</th><td>11월 22일</td></tr>
-        <tr><th scope="row">이 날까지만 씀</th><td>11월 28일</td></tr>
-      </table>
+    <div class="date">
+      <p class="k">이번 주 원두 볶은 날</p>
+      <p class="big num">11.22</p>
+      <p class="k2">에티오피아 · 콜롬비아 — 28일까지만 잔에 씁니다</p>
     </div>
     <div>
       <h1>볶은 지 7일 안의 원두로,<br>한 잔씩 갈아 내립니다</h1>
       <p class="lead">매일 아침 문 열기 전에 이번 주 원두를 확인해요.</p>
       <div class="acts">
-        <a class="btn fill" href="#week">이번 주 볶은 원두 보기</a>
-        <a class="btn line" href="#visit">찾아오는 길</a>
+        <a class="tlink" href="#week">이번 주 원두가 7일 동안 어떻게 쓰이는지</a>
       </div>
     </div>
   </div>
   <div class="wrap">
-    <img class="hero-photo" src="img/cafe/1.jpg" width="1400" height="788" alt="온기 커피 매장 안 원두 진열장과 커피 바">
+    <img class="hero-photo" src="img/cafe/2.jpg" width="1400" height="783" alt="라떼에 우유 거품을 붓는 손">
   </div>
 
   <section id="menu" aria-labelledby="h-menu">
@@ -205,7 +207,7 @@ footer p+p{margin-top:4px}
     <div class="wrap split">
       <div>
         <h2 id="h-week">볶은 날부터 7일</h2>
-        <p class="sub">일주일이 지난 원두는 잔에 넣지 않습니다. 남은 원두는 직원들이 마셔요.</p>
+        <p class="sub">남은 원두는 직원들이 마셔요.</p>
         <div class="week num" aria-label="볶은 날 11월 22일부터 마지막 날 11월 28일까지 7일">
           <div class="on"><b>22</b>볶음</div><div><b>23</b></div><div><b>24</b></div><div><b>25</b></div><div><b>26</b></div><div><b>27</b></div><div class="end"><b>28</b>마지막</div>
         </div>
@@ -222,7 +224,7 @@ footer p+p{margin-top:4px}
 
   <div class="wrap pics">
     <figure><img src="img/cafe/3.jpg" width="1400" height="1865" loading="lazy" alt="나무 탁자 위 라떼 한 잔"><figcaption>온기 라떼</figcaption></figure>
-    <figure><img src="img/cafe/2.jpg" width="1400" height="783" loading="lazy" alt="라떼에 우유 거품으로 그림을 그리는 모습"><figcaption>한 잔씩 갈아 내리는 바</figcaption></figure>
+    <figure><img src="img/cafe/1.jpg" width="1400" height="788" loading="lazy" alt="온기 커피 매장 안 원두 진열장과 커피 바"><figcaption>원두 진열장과 바</figcaption></figure>
   </div>
 
   <section id="beans" aria-labelledby="h-beans">
@@ -235,7 +237,6 @@ footer p+p{margin-top:4px}
         </div>
       </div>
       <div class="bag paper">
-        <span class="stamp">볶은 날<br>11.22</span>
         <h3>소분 원두 봉투</h3>
         <dl class="num">
           <dt>무게</dt><dd>200g</dd>
