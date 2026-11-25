@@ -168,6 +168,9 @@ footer p+p{margin-top:4px}
 .chat-fab{position:fixed;right:14px;bottom:16px;z-index:9;display:flex;align-items:center;min-height:48px;padding:0 16px;border-radius:24px;background:#FEE500;color:#191919;font-weight:700;font-size:14px;box-shadow:0 2px 6px rgba(0,0,0,.18)}
 @media(min-width:860px){.works .work:first-child{margin:0}}
 picture{display:contents}
+.field-err{color:var(--error);font-size:var(--fs-1);margin-top:4px}
+.form-summary{color:var(--error);font-weight:700;border:1.5px solid var(--error);padding:10px 12px}
+[aria-invalid="true"]{border-color:var(--error) !important;outline-color:var(--error)}
 </style>
 <!-- 구조화 데이터. 가상 샘플이라 주소는 가상 값. 납품 때는 고객이 준 정보만 넣는다 -->
 <script type="application/ld+json">
@@ -302,10 +305,10 @@ picture{display:contents}
           <tr><th scope="row">있으면 좋은 것</th><td>평면도나 현장 사진, 참고 사진 (없어도 괜찮아요)</td></tr>
         </table>
       </div>
-      <form id="demoForm" novalidate>
+      <form id="demoForm" data-check novalidate>
         <div class="row">
-          <div><label for="nm">이름</label><input id="nm" type="text" autocomplete="off"></div>
-          <div><label for="ph">연락처</label><input id="ph" type="tel" autocomplete="off"></div>
+          <div><label for="nm">이름</label><input id="nm" type="text" autocomplete="name" required></div>
+          <div><label for="ph">연락처</label><input id="ph" type="tel" inputmode="tel" autocomplete="tel" required data-check="tel"></div>
         </div>
         <div class="row">
           <div><label for="ar">지역</label><input id="ar" type="text" autocomplete="off"></div>
@@ -316,7 +319,7 @@ picture{display:contents}
           <div><label for="wh">희망 일정</label><select id="wh"><option>1개월 이내</option><option>1~3개월 이내</option><option>3개월 이후</option><option>일정 미정</option></select></div>
         </div>
         <div><label for="rq">현장 메모 (선택)</label><textarea id="rq" placeholder="예: 욕실 바닥 물빠짐이 느려요"></textarea></div>
-        <label class="agree"><input type="checkbox" id="agree"> 견적 상담을 위한 개인정보 수집·이용에 동의합니다. (필수)</label>
+        <label class="agree"><input type="checkbox" id="agree" required> 견적 상담을 위한 개인정보 수집·이용에 동의합니다. (필수)</label>
         <p class="agree-note">수집 항목: 이름, 연락처, 지역, 평수 · 목적: 실측 일정 연락 · 보관: 상담 종료 후 파기 (데모 문구)</p>
         <button class="btn fill" type="submit">견적 문의</button>
         <p class="msg" id="formMsg" role="status"></p>
@@ -332,11 +335,10 @@ picture{display:contents}
     <p>동네웹공방 제작(AI 도구 사용) · 사진: Unsplash</p>
   </div>
 </footer>
+<script src="js/form-check.js" defer></script>
 <script>
-document.getElementById('demoForm').addEventListener('submit',function(e){
-  e.preventDefault();
+document.getElementById('demoForm').addEventListener('checked-submit',function(){
   var m=document.getElementById('formMsg');
-  if(!document.getElementById('agree').checked){m.className='msg err show';m.textContent='개인정보 수집·이용에 동의해 주세요.';return;}
   m.className='msg show';m.textContent='데모 폼입니다. 실제로 전송되지 않으며 입력한 내용은 저장되지 않습니다.';
 });
 </script>
