@@ -18,10 +18,15 @@
     return l ? l.textContent.replace(/\(.*?\)|\*/g, '').trim() : '이 칸';
   }
 
+  function eulReul(word) { // 받침 있으면 '을', 없으면 '를'
+    var c = word.charCodeAt(word.length - 1) - 0xAC00;
+    return (c >= 0 && c <= 11171 && c % 28) ? '을' : '를';
+  }
+
   function problem(el) {
     var v = (el.type === 'checkbox') ? el.checked : el.value.trim();
     if (el.required && !v) {
-      return el.getAttribute('data-msg') || (el.type === 'checkbox' ? '동의해 주셔야 보낼 수 있어요.' : label(el) + '을(를) 적어 주세요.');
+      return el.getAttribute('data-msg') || (el.type === 'checkbox' ? '동의해 주셔야 보낼 수 있어요.' : label(el) + eulReul(label(el)) + ' 적어 주세요.');
     }
     var kind = el.getAttribute('data-check');
     if (v && kind && RULES[kind] && !RULES[kind].re.test(el.value.replace(/\s/g, ''))) {
